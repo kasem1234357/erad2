@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Menu, X, Phone } from 'lucide-react';
 import { mockData } from '../data/mock';
-
+import logo from '../assets/logo.png'
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -40,7 +40,7 @@ export const Header = () => {
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-primary">Erad</span>
+              <span className="text-2xl font-bold text-primary"><img className='w-[90px]' src={logo} alt="" srcset="" /></span>
               <span className="ml-2 text-xs text-muted-foreground">Odoo Ready Partner</span>
             </div>
           </Link>
