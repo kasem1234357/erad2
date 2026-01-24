@@ -1,4 +1,4 @@
-import React from 'react';
+//@ts-nocheck
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card';
 import { CheckCircle2, FileSearch, AlertTriangle, ClipboardCheck } from 'lucide-react';

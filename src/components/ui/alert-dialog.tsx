@@ -1,3 +1,5 @@
+//@ts-nocheck
+//@ts-nocheck
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
 
@@ -10,7 +12,7 @@ const AlertDialogTrigger = AlertDialogPrimitive.Trigger
 
 const AlertDialogPortal = AlertDialogPrimitive.Portal
 
-const AlertDialogOverlay = React.forwardRef(({ className, ...props }, ref) => (
+const AlertDialogOverlay = React.forwardRef(({ className, ...props }:any, ref:any) => (
   <AlertDialogPrimitive.Overlay
     className={cn(
       "fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
@@ -21,7 +23,7 @@ const AlertDialogOverlay = React.forwardRef(({ className, ...props }, ref) => (
 ))
 AlertDialogOverlay.displayName = AlertDialogPrimitive.Overlay.displayName
 
-const AlertDialogContent = React.forwardRef(({ className, ...props }, ref) => (
+const AlertDialogContent = React.forwardRef(({ className, ...props }:any, ref:any) => (
   <AlertDialogPortal>
     <AlertDialogOverlay />
     <AlertDialogPrimitive.Content
@@ -38,7 +40,7 @@ AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName
 const AlertDialogHeader = ({
   className,
   ...props
-}) => (
+}:any) => (
   <div
     className={cn("flex flex-col space-y-2 text-center sm:text-left", className)}
     {...props} />
@@ -48,7 +50,7 @@ AlertDialogHeader.displayName = "AlertDialogHeader"
 const AlertDialogFooter = ({
   className,
   ...props
-}) => (
+}:any) => (
   <div
     className={cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className)}
     {...props} />

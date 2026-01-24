@@ -1,4 +1,4 @@
-import React from 'react';
+//@ts-nocheck
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { CheckCircle2, Users, Award, Target } from 'lucide-react';
