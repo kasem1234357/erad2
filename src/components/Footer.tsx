@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import {  Mail, MapPin, MessageCircle } from 'lucide-react';
 import { mockData } from '../data/mock';
 
 export const Footer = () => {
