@@ -142,7 +142,7 @@ export const Home = () => {
             <div className="mt-12 text-center">
               <div className="inline-block bg-muted p-6 rounded-lg">
                 <p className="text-sm font-medium mb-2">Official Certifications</p>
-                <div className="flex items-center gap-4 justify-center">
+                <div className="flex items-center gap-4 justify-center flex-wrap">
                   <div className="h-40 w-52 bg-white rounded border flex items-center justify-center">
                      <img className='w-full h-full' src={certificate1} alt="" />
                   </div>
