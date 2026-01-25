@@ -5,8 +5,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Badge } from '../components/ui/badge';
 import { Calculator, Shield, Settings, Award, BookCheck, Users, Target, ArrowRight, CheckCircle2, TrendingUp } from 'lucide-react';
 import { mockData } from '../data/mock';
+import bg4 from '../assets/4.jpg'
+import bg2 from '../assets/2.jpg'
+import bg3 from '../assets/3.jpg'
 import certificate1 from '../assets/لقطة شاشة 2026-01-24 113705.png';
 import certificate2 from '../assets/photo_2026-01-24_11-28-33.jpg';
+import ModernSection from '../components/ui/test';
+import { StarButton } from '../components/ui/CustmBusston';
+import { CertificateCard } from '../components/ui/Certifications';
 const iconMap = {
   Calculator,
   Shield,
@@ -16,31 +22,63 @@ const iconMap = {
   Users,
   Target
 };
+const certifications = [
+  {
+    id: 1,
+    title: "Diploma in UAE Corporate Tax",
+    issuer: "Association of Tax Technicians (ATT)",
+    recipient: "Abdulraouf Abbas",
+    description: "Awarded for successfully completing the professional requirements in UAE Corporate Tax legislation and practice.",
+    details: [
+      { label: "Issue Date", value: "08/05/23" },
+      { label: "Certificate No", value: "266116" }
+    ],
+    image: certificate1,
+    fallbackText: "Diploma in UAE Corporate Tax"
+  },
+  {
+    id: 2,
+    title: "Fellowship Certificate",
+    issuer: "Emirates Association for Accountants & Auditors",
+    recipient: "Abdulraouf Abdollatif Abbas",
+    description: "Awarded as \"Fellow Member\" based on Board Decision. Accredited in the United Arab Emirates under the UAE Professional Fellowship Programme.",
+    details: [
+      { label: "Fellowship No", value: "505" },
+      { label: "Validity", value: "25/01/2024 - 25/01/2025" }
+    ],
+    image: certificate2,
+    fallbackText: "Fellowship Certificate"
+  }
+];
 
 export const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-50 via-white to-teal-50 py-20 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-linear-to-br from-slate-50 via-white to-secondary/10 py-20 pb-0 lg:py-32 min-h-screen flex">
+      <div className="absolute inset-0 w-full h-full   bg-black/60">
+        <img src={bg2} alt="" className='w-full h-full object-cover opacity-50'/>
+      </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-30">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-secondary text-white">Odoo Ready Partner</Badge>
+            <Badge className="mb-4 bg-[#714B67] text-white">Odoo Ready Partner</Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               Accounting, VAT & Odoo ERP Solutions for UAE SMEs
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
               We help SMEs stay VAT-compliant, FTA-ready, and financially organized using practical accounting expertise and smart automation powered by Odoo ERP.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white">
+                <Button size="lg" className="bg-secondary hover:bg-secondary scaleHover">
                   Free VAT Health Check
                 </Button>
               </a>
               <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline">
+                {/* <Button size="lg" className="bg-white hover:bg-white/90 text-primary">
                   Talk to an Accounting Expert
-                </Button>
+                </Button> */}
+                <StarButton>Talk to an Accounting Expert</StarButton>
               </a>
             </div>
           </div>
@@ -48,9 +86,10 @@ export const Home = () => {
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+      <section className=" bg-white">
+       
+          <ModernSection/>
+          {/* <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-4">The UAE SME Challenge</h2>
             <p className="text-center text-muted-foreground mb-12">
               Running a business in the UAE is challenging enough — these issues shouldn't slow you down
@@ -72,8 +111,8 @@ export const Home = () => {
                 </Card>
               ))}
             </div>
-          </div>
-        </div>
+          </div> */}
+       
       </section>
 
       {/* Core Services */}
@@ -139,19 +178,32 @@ export const Home = () => {
                 );
               })}
             </div>
-            <div className="mt-12 text-center">
-              <div className="inline-block bg-muted p-6 rounded-lg">
-                <p className="text-sm font-medium mb-2">Official Certifications</p>
+            <header className="text-center mt-24 mb-12">
+          <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
+            Official Certifications
+          </h2>
+          <div className="mt-4 h-1.5 w-24 bg-blue-600 mx-auto rounded-full"></div>
+        </header>
+
+        {/* Certification Entries */}
+        <main className="space-y-32">
+          {certifications.map((cert, index) => (
+            <CertificateCard key={cert.id} cert={cert} index={index} />
+          ))}
+        </main>
+            {/* <div className="mt-12 text-center bg-muted">
+              <div className="inline-block  p-6 rounded-lg">
+                <p className="text-lg  font-bold mb-5 ">Official Certifications</p>
                 <div className="flex items-center gap-4 justify-center flex-wrap">
-                  <div className="h-40 w-52 bg-white rounded border flex items-center justify-center">
+                  <div className=" w-[500px]  aspect-[3/2] bg-white rounded border flex items-center justify-center">
                      <img className='w-full h-full' src={certificate1} alt="" />
                   </div>
-                  <div className="h-40 w-52 bg-white rounded border flex items-center justify-center">
+                  <div className=" w-[500px]  aspect-[3/2] bg-white rounded border flex items-center justify-center">
                      <img className='w-full h-full' src={certificate2} alt="" />
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

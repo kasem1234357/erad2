@@ -83,7 +83,7 @@ export const Header = () => {
 
           <div className="hidden md:flex items-center space-x-4">
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className='hover:bg-[#714B67] hover:text-white'>
                 <Phone className="h-4 w-4 mr-2" />
                 Contact Us
               </Button>

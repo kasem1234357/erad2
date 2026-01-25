@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import {  Mail, MapPin, MessageCircle } from 'lucide-react';
 import { mockData } from '../data/mock';
-
+import OdooPartner from '../assets/odoo_ready_partners_rgb.png'
 export const Footer = () => {
   const services = [
     { name: 'Accounting Services', path: '/accounting-services-uae' },
@@ -38,8 +38,8 @@ export const Footer = () => {
               {mockData.company.tagline}
             </p>
             <div className="flex items-center space-x-4 mb-2">
-              <div className="h-12 w-12 bg-slate-700 rounded flex items-center justify-center">
-                <span className="text-xs text-slate-400">Odoo Partner</span>
+              <div className="h-12 w-[100px]  rounded flex items-center justify-center">
+                <img src={OdooPartner} alt="" />
               </div>
               <div className="h-12 w-12 bg-slate-700 rounded flex items-center justify-center">
                 <span className="text-xs text-slate-400">Certified</span>

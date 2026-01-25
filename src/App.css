@@ -7,6 +7,7 @@ html {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+        background: white;
 }
 
 /* Smooth transitions for interactive elements */
@@ -16,6 +17,9 @@ input,
 select,
 textarea {
     transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+button{
+    cursor: pointer;
 }
 
 /* Ensure proper contrast for links */
@@ -32,3 +36,41 @@ a:hover {
 .hover\:shadow-lg:hover {
     transition: box-shadow 0.3s ease;
 }
+.scaleHover{
+  transition: transform 0.3s ease;
+}
+.scaleHover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.custom-button {
+  cursor: pointer;
+  padding: 8px 32px;
+  font-size: 1em;
+  width: fit-content;
+
+  color: white;
+  background: #212121;
+  background-size: cover;
+  background-blend-mode: overlay;
+  border-radius: 0.5em;
+  outline: 0.1em solid #353535;
+  border: 0;
+  box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.custom-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1em 0.45em rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #212121, #252525);
+  background: radial-gradient(
+    circle at bottom,
+    rgb(113, 75, 103, 0.5) 10%,
+    #212121 70%
+  );
+  outline: 0;
+}
+
+

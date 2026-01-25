@@ -6,6 +6,36 @@ import { mockData } from '../data/mock';
 import certificate1 from '../assets/rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg';
 import certificate2 from '../assets/photo_2026-01-24_11-28-33.jpg';
 import certificate3 from '../assets/لقطة شاشة 2026-01-24 113705.png'
+import { CertificateCard } from '../components/ui/Certifications';
+const certifications = [
+  {
+    id: 1,
+    title: "Diploma in UAE Corporate Tax",
+    issuer: "Association of Tax Technicians (ATT)",
+    recipient: "Abdulraouf Abbas",
+    description: "Awarded for successfully completing the professional requirements in UAE Corporate Tax legislation and practice.",
+    details: [
+      { label: "Issue Date", value: "08/05/23" },
+      { label: "Certificate No", value: "266116" }
+    ],
+    image: certificate3,
+    fallbackText: "Diploma in UAE Corporate Tax"
+  },
+  {
+    id: 2,
+    title: "Fellowship Certificate",
+    issuer: "Emirates Association for Accountants & Auditors",
+    recipient: "Abdulraouf Abdollatif Abbas",
+    description: "Awarded as \"Fellow Member\" based on Board Decision. Accredited in the United Arab Emirates under the UAE Professional Fellowship Programme.",
+    details: [
+      { label: "Fellowship No", value: "505" },
+      { label: "Validity", value: "25/01/2024 - 25/01/2025" }
+    ],
+    image: certificate2,
+    fallbackText: "Fellowship Certificate"
+  }
+];
+
 export const About = () => {
   return (
     <div className="min-h-screen">
@@ -152,19 +182,19 @@ export const About = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Our Certifications</h2>
-            <div className="flex justify-center items-center gap-8 flex-wrap">
-              <div className="h-40 w-52 bg-white rounded border flex items-center justify-center">
-                <img className='w-full h-full' src={certificate1} alt="" />
-                {/* <span className="text-sm text-muted-foreground">Odoo Ready Partner</span> */}
-              </div>
-              <div className="h-40 w-52 bg-white rounded border flex items-center justify-center">
-                <img className='w-full h-full' src={certificate2} alt="" />
-              </div>
-                <div className="h-40 w-52 bg-white rounded border flex items-center justify-center">
-                <img className='w-full h-full' src={certificate3} alt="" />
-              </div>
-            </div>
+            <header className="text-center mt-24 mb-12">
+                    <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
+                      Official Certifications
+                    </h2>
+                    <div className="mt-4 h-1.5 w-24 bg-blue-600 mx-auto rounded-full"></div>
+                  </header>
+          
+                  {/* Certification Entries */}
+                  <main className="space-y-32">
+                    {certifications.map((cert, index) => (
+                      <CertificateCard key={cert.id} cert={cert} index={index} />
+                    ))}
+                  </main>
           </div>
         </div>
       </section>
