@@ -10,7 +10,7 @@ import bg2 from '../assets/2.jpg'
 import bg3 from '../assets/3.jpg'
 import certificate1 from '../assets/لقطة شاشة 2026-01-24 113705.png';
 import certificate2 from '../assets/photo_2026-01-24_11-28-33.jpg';
-import ModernSection from '../components/ui/test';
+import ModernSection from '../components/ui/Test';
 import { StarButton } from '../components/ui/CustmBusston';
 import { CertificateCard } from '../components/ui/Certifications';
 const iconMap = {
