@@ -1,0 +1,176 @@
+{
+    "Header":{
+        "Services":{
+            "title":"Services",
+            "Accounting_Services_title":"Accounting Services",
+            "VAT_Consultant_title":"VAT Consultant",
+            "FTA_Compliance_title":"FTA Compliance",
+            "System_Cleanup_title":"System Cleanup"
+        },
+        "Odoo_Partner":{
+            "title":"Odoo Partner",
+            "Odoo_Implementation_title":"Odoo Implementation",
+            "Odoo_Partner_UAE_title":"Odoo Partner UAE"
+        },
+        "About_Erad":"About Erad",
+        "Home_title":"Home",
+        "About_title":"About",
+        "Services_title":"Services",
+        "Odoo_Partner_title":"Odoo Partner",
+        "VAT_Health_Check_title":"VAT Health Check",
+        "Small_Business_title":"Small Business",
+        "About_Erad_title":"About Erad"
+    },
+    "Home":{
+      "h1_title":"Accounting, VAT & Odoo ERP Solutions for UAE SMEs",
+      "description":"We help SMEs stay VAT-compliant, FTA-ready, and financially organized using practical accounting expertise and smart automation powered by Odoo ERP.",
+      "buttons":{
+        "Talk_to_an_Accounting_Expert":"Talk to an Accounting Expert",
+        "Free_VAT_Health_Check":"Free VAT Health Check"
+      
+      },
+      "SME_Challenge_section":{
+        "title":"The UAE SME Challenge",
+        "description":"Running a business in the UAE is challenging enough — these issues shouldn't slow you down",
+        "cards":{
+            "VAT_Compliance_title":"VAT Compliance & FTA Audits",
+            "VAT_Compliance_risk":"Heavy penalties and business disruption",
+            "Manual_Accounting_Errors_title":"Manual Accounting Errors",
+            "Manual_Accounting_Errors_risk":"Inaccurate financial decisions",
+            "Slow_Reporting_title":"Slow Reporting & Cash Flow Visibility",
+            "Slow_Reporting_risk":"Missed opportunities and delays",
+            "Complex_Multi_Branch_Management_title":"Complex Multi-Branch Management",
+            "Complex_Multi_Branch_Management_risk":"Inconsistent data and control issues"
+        }
+      },
+      "Core_Services_section":{
+        "title":"What We Do",
+        "description":"Practical Finance Solutions for Growing UAE Businesses",
+        "cards":{
+            "Accounting_Services_title":"Accounting Services",
+            "Accounting_Services_description":"Accurate bookkeeping, financial reporting, and month-end closing — fully aligned with UAE VAT regulations.",
+            "FTA_Compliance_title":"Tax & FTA Compliance",
+            "FTA_Compliance_description":"From VAT registration to filings and audit preparation, we protect your business from penalties.",
+            "Odoo_Implementation_title":"Odoo ERP Implementation",
+            "Odoo_Implementation_description":"Accounting-led ERP implementation designed for SMEs — not generic IT projects."
+        }
+      },
+      "Why_Erad_Odoo_section":{
+        "title":"Why Erad + Odoo",
+        "description":"Not just Odoo implementation — we combine ERP + accounting + FTA compliance expertise",
+        "cards":{
+            "Odoo Ready Partner":"Odoo Ready Partner",
+             "Odoo Ready Partner description":"Official certified partner for Odoo ERP implementation",
+             "UAE VAT Expertise":"UAE VAT Expertise",
+             "UAE VAT Expertise description":"15+ years of experience with UAE tax regulations",
+             "SME-Focused":"SME-Focused",
+             "SME-Focused description":"Solutions designed specifically for small and medium businesses",
+             "Practical title":"Practical, Not Theoretical",
+             "Practical description":"Real-world solutions that work for your business"
+        }
+      },
+      "Our_UAE_Specific_Packages_section":{
+        "title":"Our UAE-Specific Packages",
+        "description":"Solutions tailored for SMEs at every growth stage",
+        "cards":{
+            "card1":{
+                "title":"Starter VAT & Accounting",
+                 "count":"10 – 25 Staff",
+                 "description_title":"Contact for Pricing",
+                 "item1":"Odoo Accounting & Invoicing",
+                    "item2":"VAT setup & filing",
+                    "item3":"Chart of Accounts setup",
+                    "item4":"Basic staff training",
+                    "item5":"Monthly VAT returns"
+            },
+            "card2":{
+                "title":"Growth ERP",
+                 "count":"20 – 50 Staff",
+                 "description_title":"Contact for Pricing",
+                 "item1":"Odoo Accounting, Inventory, Sales, Purchase",
+                    "item2":"Automated reports & dashboards",
+                    "item3":"Staff training (up to 5 users)",
+                    "item4":"VAT & FTA compliance review",
+                    "item5":"Custom workflows"
+            },
+            "card3":{
+                "title":"Compliance & Automation Pro",
+                 "count":"Multi-branch SME",
+                 "description_title":"Contact for Pricing",
+                 "item1":"Multi-company / multi-branch setup",
+                    "item2":"Advanced inventory & asset management",
+                    "item3":"Automated bank reconciliation",
+                    "item4":"FTA-ready VAT automation",
+                    "item5":"Accounting system cleanup",
+                    "item6":"Priority support"
+            }
+
+      },
+      "Real_Results_for_UAE_SMEs_section":{
+        "title":"Real Results for UAE SMEs",
+        "description":"UAE Trading Company - 25 staff",
+        "description 2":"Challenge: Manual accounting with frequent VAT errors",
+        "item1":{
+            "title":"90%",
+            "description":"VAT errors reduced"
+        },
+        "item2":{
+            "title":"5 days → 1 day",
+            "description":"Monthly reporting time"
+        },
+        "item3":{
+            "title":"AED 50,000+",
+            "description":"Annual cost savings"
+        }
+      },
+      "How_We_Work_section":{
+        "title":"How We Work",
+        "step1":{
+            "title":"Discovery & Health Check",
+            "description":"Comprehensive review of your current accounting and Tax compliance"
+        },
+        "step2":{
+            "title":"Accounting System Cleanup",
+            "description":"Fix errors, reconcile accounts, and prepare clean books"
+        },
+        "step3":{
+            "title":"Odoo ERP Implementation",
+            "description":"Custom setup and configuration for your business needs"      
+        },
+        "step4":{
+            "title":"Staff Training & Support",
+            "description":"Comprehensive training to ensure your team is ready"      
+        },
+        "step5":{
+            "title":"Ongoing Advisory",
+            "description":"Continuous support and compliance monitoring"      
+        }
+      },
+      "Industries_We_Serve_section":{
+        "title":"Industries We Serve",
+        "type1":"Trading & Distribution",
+        "type2":"Professional Services",
+        "type3":"Hospitality",
+        "type4":"Property Management",
+       
+        "type5":"Contracting & Construction",
+        "type6":"Startups",
+        "description":"<strong>15+ years</strong> of experience in UAE and Middle East"
+      },
+      "Ready_to_Transform_Your_Business_section":{
+        "title":"Ready to Transform Your Business?",
+        "description":"Book your free consultation today and discover how we can help you stay compliant and grow",
+        "button":"Book Your Free Consultation Today"
+      }
+    },
+    "Footer":{
+      "About_Erad_section":{
+        "title":"About Erad",
+        "description":"Accounting, VAT & Odoo ERP Solutions for UAE SMEs. Official Odoo Ready Partner."
+      }
+      
+     
+    }
+        
+}
+}

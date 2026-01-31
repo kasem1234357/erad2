@@ -41,18 +41,18 @@ const ModernSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 relative z-10">
         
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-4">
           
-          <h2 className="text-3xl font-bold text-center mb-4">The UAE SME Challenge</h2>
-         <p className="text-center text-muted-foreground mb-12">Running a business in the UAE is challenging enough — these issues shouldn't slow you down</p>
+          <h2 className="text-3xl font-bold text-center mb-4">The UAE SME Challenge :</h2>
+         <p className="text-center text-muted-foreground mb-6">Running a business in the UAE is challenging enough — these issues shouldn't slow you down</p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-[90%] lg:w-[80%] mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:-translate-y-2 relative overflow-hidden"
+              className="group bg-white rounded-2xl p-8 lg:p-4 shadow-sm hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:-translate-y-2 relative overflow-hidden"
             >
               {/* Top Accent Line */}
               <div className={`absolute top-0 left-0 w-full h-1 ${feature.color.replace('bg-', 'bg-linear-to-r from-transparent to-')}`}></div>

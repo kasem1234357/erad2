@@ -41,9 +41,9 @@ export const Footer = () => {
               <div className="h-12 w-[100px]  rounded flex items-center justify-center">
                 <img src={OdooPartner} alt="" />
               </div>
-              <div className="h-12 w-12 bg-slate-700 rounded flex items-center justify-center">
+              {/* <div className="h-12 w-12 bg-slate-700 rounded flex items-center justify-center">
                 <span className="text-xs text-slate-400">Certified</span>
-              </div>
+              </div> */}
             </div>
           </div>
 
