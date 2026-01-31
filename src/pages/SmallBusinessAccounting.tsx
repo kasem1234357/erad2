@@ -7,7 +7,7 @@ import { mockData } from '../data/mock';
 export const SmallBusinessAccounting = () => {
   const challenges = [
     'Limited accounting staff or expertise',
-    'Difficulty staying VAT-compliant',
+    'Difficulty staying TAX-compliant',
     'Manual processes prone to errors',
     'Lack of real-time financial visibility',
     'Inability to scale systems as business grows'
@@ -15,7 +15,7 @@ export const SmallBusinessAccounting = () => {
 
   const smeApproach = [
     { title: 'Scalable Accounting Systems', description: 'Start simple, grow as you need', icon: TrendingUp },
-    { title: 'VAT-Ready from Day One', description: 'Compliant from your first transaction', icon: Shield },
+    { title: 'TAX-Ready from Day One', description: 'Compliant from your first transaction', icon: Shield },
     { title: 'Automation Using Odoo', description: 'Eliminate manual work and errors', icon: Zap },
     { title: 'Clear Reporting for Owners', description: 'Understand your numbers at a glance', icon: Users }
   ];
@@ -108,8 +108,8 @@ export const SmallBusinessAccounting = () => {
                   description: 'Daily transaction recording, bank reconciliation, and month-end closing'
                 },
                 {
-                  title: 'VAT Services',
-                  description: 'VAT registration, filing, compliance, and health checks'
+                  title: 'TAX Services',
+                  description: 'TAX registration, filing, compliance, and health checks'
                 },
                 {
                   title: 'Financial Reporting',
@@ -177,7 +177,7 @@ export const SmallBusinessAccounting = () => {
                   </div>
                   <CardTitle className="text-lg mb-2">UAE Compliant</CardTitle>
                   <CardDescription>
-                    Deep expertise in UAE VAT regulations and FTA requirements
+                    Deep expertise in UAE TAX regulations and TAX requirements
                   </CardDescription>
                 </CardHeader>
               </Card>

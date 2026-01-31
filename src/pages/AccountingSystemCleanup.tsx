@@ -6,24 +6,24 @@ import { mockData } from '../data/mock';
 
 export const AccountingSystemCleanup = () => {
   const signs = [
-    'VAT returns don\'t match accounting records',
+    'TAX returns don\'t match accounting records',
     'Financial reports don\'t make sense',
     'Multiple unreconciled balances',
     'ERP or accounting software misconfigured',
-    'Unable to pass FTA audits',
+    'Unable to pass TAX audits',
     'Historical data is incomplete or inaccurate'
   ];
 
   const whatWeFix = [
     { issue: 'Incorrect Postings', description: 'Fix misclassified transactions and journal entries' },
-    { issue: 'VAT Errors', description: 'Correct VAT rates, codes, and reconciliation issues' },
+    { issue: 'TAX Errors', description: 'Correct TAX rates, codes, and reconciliation issues' },
     { issue: 'Opening Balances', description: 'Reconcile and validate all opening balances' },
     { issue: 'Chart of Accounts', description: 'Restructure for UAE compliance and clarity' }
   ];
 
   const benefits = [
     { title: 'Accurate Financial Reports', icon: TrendingUp },
-    { title: 'VAT-Ready Records', icon: CheckCircle2 },
+    { title: 'TAX-Ready Records', icon: CheckCircle2 },
     { title: 'Audit-Ready Systems', icon: CheckCircle2 },
     { title: 'Clean Foundation for ERP', icon: Wrench }
   ];
@@ -168,7 +168,7 @@ export const AccountingSystemCleanup = () => {
                 <ul className="space-y-2">
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
-                    <span>Failed FTA audits and heavy penalties</span>
+                    <span>Failed TAX audits and heavy penalties</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>

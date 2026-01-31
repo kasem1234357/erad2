@@ -22,12 +22,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-erad" element={<About />} />
           <Route path="/accounting-services-uae" element={<AccountingServices />} />
-          <Route path="/vat-consultant-uae" element={<VATConsultant />} />
-          <Route path="/fta-compliance-uae" element={<FTACompliance />} />
+          <Route path="/tax-consultant-uae" element={<VATConsultant />} />
+          <Route path="/tax-compliance-uae" element={<FTACompliance />} />
           <Route path="/accounting-system-cleanup" element={<AccountingSystemCleanup />} />
           <Route path="/odoo-accounting-implementation-uae" element={<OdooImplementation />} />
           <Route path="/odoo-partner-uae" element={<OdooPartner />} />
-          <Route path="/vat-health-check-uae" element={<VATHealthCheck />} />
+          <Route path="/tax-health-check-uae" element={<VATHealthCheck />} />
           <Route path="/accounting-for-small-business-uae" element={<SmallBusinessAccounting />} />
         </Routes>
         <Footer />

@@ -19,7 +19,7 @@ export const OdooImplementation = () => {
 
   const whyErad = [
     'Official Odoo Ready Partner',
-    'UAE VAT-first setup',
+    'UAE TAX-first setup',
     'Implementation based on your specific business requirements',
     'Practical training and ongoing support',
     'Accountants leading the implementation, not just IT'
@@ -156,7 +156,7 @@ export const OdooImplementation = () => {
                 { title: 'Real-Time Data', description: 'Instant access to accurate business information' },
                 { title: 'Automation', description: 'Reduce manual work and human errors' },
                 { title: 'Scalability', description: 'Add modules as your business grows' },
-                { title: 'UAE Compliance', description: 'VAT-ready and FTA-compliant from day one' },
+                { title: 'UAE Compliance', description: 'TAX-ready and TAX-compliant from day one' },
                 { title: 'Cost-Effective', description: 'Open-source with no hidden licensing fees' }
               ].map((benefit, index) => (
                 <Card key={index}>

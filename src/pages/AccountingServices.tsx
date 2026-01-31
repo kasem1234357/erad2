@@ -9,19 +9,19 @@ export const AccountingServices = () => {
     'Bookkeeping & transaction recording',
     'Monthly & quarterly closing',
     'Financial statements (P&L, Balance Sheet, Cash Flow)',
-    'VAT-ready chart of accounts',
+    'TAX-ready chart of accounts',
     'Management & performance reports'
   ];
 
   const whoItsFor = [
     'SMEs and startups',
     'Growing companies without in-house finance teams',
-    'Businesses struggling with VAT compliance',
+    'Businesses struggling with TAX compliance',
     'Companies preparing for audits or ERP implementation'
   ];
 
   const whyErad = [
-    { title: 'UAE Standards & VAT Expertise', icon: Shield },
+    { title: 'UAE Standards & TAX Expertise', icon: Shield },
     { title: 'Clear Reporting for Business Owners', icon: BarChart3 },
     { title: 'Automation-Ready Systems', icon: Database },
     { title: 'Seamless Odoo ERP Integration', icon: FileText }
@@ -37,7 +37,7 @@ export const AccountingServices = () => {
               Professional Accounting Services for UAE SMEs
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Reliable accounting is the backbone of every successful business. At Erad, we deliver VAT-compliant accounting services tailored specifically for UAE small and medium-sized businesses.
+              Reliable accounting is the backbone of every successful business. At Erad, we deliver TAX-compliant accounting services tailored specifically for UAE small and medium-sized businesses.
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90">

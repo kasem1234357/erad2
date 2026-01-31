@@ -41,7 +41,7 @@ export const OdooPartner = () => {
                   Odoo Ready Partners are officially recognized by Odoo S.A. for their expertise in implementing and customizing Odoo ERP solutions. This certification ensures you're working with qualified professionals who understand both the technical and business aspects of Odoo.
                 </p>
                 <p className="text-lg">
-                  At Erad, we combine this technical certification with deep UAE accounting and VAT compliance expertise — making us uniquely qualified to serve UAE SMEs.
+                  At Erad, we combine this technical certification with deep UAE accounting and TAX compliance expertise — making us uniquely qualified to serve UAE SMEs.
                 </p>
               </CardContent>
             </Card>
@@ -85,9 +85,9 @@ export const OdooPartner = () => {
                   <div className="h-12 w-12 rounded-lg bg-[#D5872D] flex items-center justify-center mb-4">
                     <CheckCircle2 className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle>UAE VAT Compliance</CardTitle>
+                  <CardTitle>UAE TAX Compliance</CardTitle>
                   <CardDescription className="text-base">
-                    Pre-configured for UAE tax regulations and FTA requirements
+                    Pre-configured for UAE tax regulations and TAX requirements
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -167,7 +167,7 @@ export const OdooPartner = () => {
               <div className="h-40 w-56 bg-white rounded-lg border-2 flex items-center justify-center shadow-lg">
                 <div className="text-center">
                   <CheckCircle2 className="h-12 w-12 text-primary mx-auto mb-2" />
-                  <span className="text-lg font-semibold">UAE VAT Certified</span>
+                  <span className="text-lg font-semibold">UAE TAX Certified</span>
                 </div>
               </div>
             </div>

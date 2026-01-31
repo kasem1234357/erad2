@@ -65,15 +65,15 @@ export const Home = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-[#714B67] text-white">Odoo Ready Partner</Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Accounting, VAT & Odoo ERP Solutions for UAE SMEs
+              Accounting, TAX & Odoo ERP Solutions for UAE SMEs
             </h1>
             <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
-              We help SMEs stay VAT-compliant, FTA-ready, and financially organized using practical accounting expertise and smart automation powered by Odoo ERP.
+              We help SMEs stay TAX-compliant, TAX-ready, and financially organized using practical accounting expertise and smart automation powered by Odoo ERP.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-secondary hover:bg-secondary scaleHover">
-                  Free VAT Health Check
+                  Free TAX Health Check
                 </Button>
               </a>
               <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">

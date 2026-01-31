@@ -6,15 +6,15 @@ import OdooPartner from '../assets/odoo_ready_partners_rgb.png'
 export const Footer = () => {
   const services = [
     { name: 'Accounting Services', path: '/accounting-services-uae' },
-    { name: 'VAT Consultant', path: '/vat-consultant-uae' },
-    { name: 'FTA Compliance', path: '/fta-compliance-uae' },
+    { name: 'TAX Consultant', path: '/tax-consultant-uae' },
+    { name: 'TAX Compliance', path: '/tax-compliance-uae' },
     { name: 'System Cleanup', path: '/accounting-system-cleanup' }
   ];
 
   const odoo = [
     { name: 'Odoo Implementation', path: '/odoo-accounting-implementation-uae' },
     { name: 'Odoo Partner UAE', path: '/odoo-partner-uae' },
-    { name: 'VAT Health Check', path: '/vat-health-check-uae' },
+    { name: 'TAX Health Check', path: '/tax-health-check-uae' },
     { name: 'Small Business', path: '/accounting-for-small-business-uae' }
   ];
 
@@ -32,7 +32,7 @@ export const Footer = () => {
               <span className="text-2xl font-bold text-white">Erad</span>
             </div>
             <p className="text-sm mb-4 text-slate-400">
-              Accounting, VAT & Odoo ERP Solutions for UAE SMEs. Official Odoo Ready Partner.
+              Accounting, TAX & Odoo ERP Solutions for UAE SMEs. Official Odoo Ready Partner.
             </p>
             <p className="text-xs text-slate-500 mb-4">
               {mockData.company.tagline}

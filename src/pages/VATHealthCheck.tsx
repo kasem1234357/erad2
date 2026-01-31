@@ -6,15 +6,15 @@ import { mockData } from '../data/mock';
 
 export const VATHealthCheck = () => {
   const whatWeReview = [
-    'VAT returns accuracy and completeness',
+    'TAX returns accuracy and completeness',
     'Tax invoices format and compliance',
     'Accounting records and reconciliation',
-    'VAT codes and rate applications',
-    'Input and output VAT calculations'
+    'TAX codes and rate applications',
+    'Input and output TAX calculations'
   ];
 
   const deliverables = [
-    { title: 'Risk Assessment Report', description: 'Comprehensive analysis of VAT compliance status', icon: FileSearch },
+    { title: 'Risk Assessment Report', description: 'Comprehensive analysis of TAX compliance status', icon: FileSearch },
     { title: 'List of Errors & Gaps', description: 'Detailed identification of all issues found', icon: AlertTriangle },
     { title: 'Clear Corrective Actions', description: 'Step-by-step remediation plan', icon: ClipboardCheck }
   ];
@@ -26,14 +26,14 @@ export const VATHealthCheck = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              VAT Health Check for UAE SMEs
+              TAX Health Check for UAE SMEs
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              A VAT health check identifies risks before the FTA does. Get peace of mind with a comprehensive review of your VAT compliance.
+              A TAX health check identifies risks before the TAX does. Get peace of mind with a comprehensive review of your TAX compliance.
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90">
-                Book a Free VAT Health Check
+                Book a Free TAX Health Check
               </Button>
             </a>
           </div>
@@ -65,21 +65,21 @@ export const VATHealthCheck = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Why You Need a VAT Health Check</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Why You Need a TAX Health Check</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg text-destructive">Without VAT Health Check</CardTitle>
+                  <CardTitle className="text-lg text-destructive">Without TAX Health Check</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     <li className="flex items-start">
                       <span className="text-destructive mr-2">✗</span>
-                      <span>Hidden VAT errors accumulating</span>
+                      <span>Hidden TAX errors accumulating</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-destructive mr-2">✗</span>
-                      <span>Risk of FTA penalties and fines</span>
+                      <span>Risk of TAX penalties and fines</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-destructive mr-2">✗</span>
@@ -95,7 +95,7 @@ export const VATHealthCheck = () => {
 
               <Card className="border-2 border-secondary">
                 <CardHeader>
-                  <CardTitle className="text-lg text-secondary">With VAT Health Check</CardTitle>
+                  <CardTitle className="text-lg text-secondary">With TAX Health Check</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
@@ -157,9 +157,9 @@ export const VATHealthCheck = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">How It Works</h2>
             <div className="space-y-4">
               {[
-                { step: 1, title: 'Book Your Check', description: 'Contact us via WhatsApp or phone to schedule your VAT health check' },
-                { step: 2, title: 'Share Documents', description: 'Provide VAT returns, invoices, and accounting records for review' },
-                { step: 3, title: 'Expert Analysis', description: 'Our team conducts comprehensive analysis of your VAT compliance' },
+                { step: 1, title: 'Book Your Check', description: 'Contact us via WhatsApp or phone to schedule your TAX health check' },
+                { step: 2, title: 'Share Documents', description: 'Provide TAX returns, invoices, and accounting records for review' },
+                { step: 3, title: 'Expert Analysis', description: 'Our team conducts comprehensive analysis of your TAX compliance' },
                 { step: 4, title: 'Receive Report', description: 'Get detailed report with findings and action plan' },
                 { step: 5, title: 'Fix Issues', description: 'We help you implement corrections and achieve full compliance' }
               ].map((item) => (
@@ -186,15 +186,15 @@ export const VATHealthCheck = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Who Should Get a VAT Health Check?</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Who Should Get a TAX Health Check?</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                'Businesses registered for VAT in the UAE',
-                'Companies preparing for FTA audits',
+                'Businesses registered for TAX in the UAE',
+                'Companies preparing for TAX audits',
                 'SMEs with frequent accounting changes',
-                'Businesses that have received FTA notices',
+                'Businesses that have received TAX notices',
                 'Companies planning ERP implementation',
-                'Startups ensuring VAT compliance from day one'
+                'Startups ensuring TAX compliance from day one'
               ].map((item, index) => (
                 <Card key={index}>
                   <CardContent className="pt-6">
@@ -214,9 +214,9 @@ export const VATHealthCheck = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Don't Wait for an FTA Audit</h2>
+            <h2 className="text-3xl font-bold mb-4">Don't Wait for an TAX Audit</h2>
             <p className="text-xl mb-8 text-white/90">
-              Book a free VAT health check now and identify risks before they become penalties
+              Book a free TAX health check now and identify risks before they become penalties
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">

@@ -112,7 +112,7 @@ export const About = () => {
                   <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
                     <CheckCircle2 className="h-6 w-6 text-accent" />
                   </div>
-                  <CardTitle>VAT & FTA Expertise</CardTitle>
+                  <CardTitle>TAX & TAX Expertise</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">

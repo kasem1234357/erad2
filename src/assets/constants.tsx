@@ -3,27 +3,27 @@ import { AlertCircle, Award, BarChart3, Calculator, CheckCircle2, FileCheck, Fil
 export const features = [
     {
       icon: <FileCheck className="w-8 h-8 text-white" />,
-      title: "VAT compliance & FTA audits", 
-      description: "Ensure seamless tax filing and full compliance with UAE tax laws, staying ready for any FTA audit with precise documentation.",
-      color: "bg-blue-500"
+      title: "TAX compliance & TAX audits", 
+      description: "Ensure seamless tax filing and full compliance with UAE tax laws, staying ready for any TAX audit with precise documentation.",
+      color: "bg-[#D5872D]"
     },
     {
       icon: <AlertCircle className="w-8 h-8 text-white" />,
       title: "Manual accounting errors",
       description: "Replace risky manual entries with automated workflows to eliminate discrepancies and ensure 100% data integrity.",
-      color: "bg-indigo-500"
+      color: "bg-[#D5872D]"
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: "Slow reporting & cash flow visibility",
       description: "Gain real-time access to financial health and cash flow movements through instant, automated reporting dashboards.",
-      color: "bg-sky-500"
+      color: "bg-[#D5872D]"
     },
     {
       icon: <Network className="w-8 h-8 text-white" />,
       title: "Complex multi-branch or multi-company management",
       description: "Consolidate operations across multiple entities and branches into one unified system for centralized control and visibility.",
-      color: "bg-blue-600"
+      color: "bg-[#D5872D]"
     }
   ];
 export const features2 = [
@@ -37,7 +37,7 @@ Accurate bookkeeping, financial reporting, and period-end closing — fully alig
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: "TAX and AML Compliance",
-        description: "From VAT registration to filings and audit preparation for Taxes and AML, we help protecting your business from penalties.",
+        description: "From TAX registration to filings and audit preparation for Taxes and AML, we help protecting your business from penalties.",
       color: "bg-[#714B67]"
     },
     {
@@ -54,8 +54,8 @@ Accurate bookkeeping, financial reporting, and period-end closing — fully alig
   export const features3 = [
     {
       icon: <FileWarning className="w-8 h-8 text-white" />,
-      title: "Wrong invoices and incorrect VAT rates", 
-      description: "Penalty fines from FTA",
+      title: "Wrong invoices and incorrect TAX rates", 
+      description: "Penalty fines from TAX",
       color: "bg-[#D5872D]"
     },
     {
@@ -66,7 +66,7 @@ Accurate bookkeeping, financial reporting, and period-end closing — fully alig
     },
     {
       icon: <FileClock className="w-8 h-8 text-white" />,
-      title: "Late or incorrect VAT filings",
+      title: "Late or incorrect TAX filings",
       description: "Accumulated penalties and interest",
       color: "bg-[#D5872D]"
     },
@@ -92,8 +92,8 @@ Accurate bookkeeping, financial reporting, and period-end closing — fully alig
     },
     {
       icon: <CheckCircle2 className="w-8 h-8 text-white" />,
-      title: "UAE VAT Compliance",
-      description: "Pre-configured for UAE tax regulations and FTA requirements",
+      title: "UAE TAX Compliance",
+      description: "Pre-configured for UAE tax regulations and TAX requirements",
       color: "bg-[#D5872D]"
     },
     {

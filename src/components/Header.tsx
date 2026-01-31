@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import { Menu, X, Phone } from 'lucide-react';
 import { mockData } from '../data/mock';
 import logo from '../assets/logo.png'
+import odooPartner from '../assets/odoo_ready_partners_rgb.png'
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -16,10 +17,10 @@ export const Header = () => {
       name: 'Services',
       submenu: [
         { name: 'Accounting Services', path: '/accounting-services-uae' },
-        { name: 'VAT Consultant', path: '/vat-consultant-uae' },
-        { name: 'FTA Compliance', path: '/fta-compliance-uae' },
+        { name: 'TAX Consultant', path: '/tax-consultant-uae' },
+        { name: 'TAX Compliance', path: '/tax-compliance-uae' },
         { name: 'System Cleanup', path: '/accounting-system-cleanup' },
-        { name: 'VAT Health Check', path: '/vat-health-check-uae' },
+        { name: 'TAX Health Check', path: '/tax-health-check-uae' },
         { name: 'Small Business Accounting', path: '/accounting-for-small-business-uae' }
       ]
     },
@@ -41,7 +42,9 @@ export const Header = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="flex items-center">
               <span className="text-2xl font-bold text-primary"><img className='w-[90px]' src={logo} alt="" srcset="" /></span>
-              <span className="ml-2 text-xs text-muted-foreground">Odoo Ready Partner</span>
+              <span className=" text-xs text-muted-foreground">
+                <img src={odooPartner} className='w-[100px]' alt="" />
+              </span>
             </div>
           </Link>
 
@@ -90,7 +93,7 @@ export const Header = () => {
             </a>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="bg-secondary hover:bg-secondary/90">
-                Free VAT Check
+                Free TAX Check
               </Button>
             </a>
           </div>
@@ -141,7 +144,7 @@ export const Header = () => {
               </a>
               <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="w-full bg-secondary hover:bg-secondary/90">
-                  Free VAT Check
+                  Free TAX Check
                 </Button>
               </a>
             </div>

@@ -6,27 +6,27 @@ import { mockData } from '../data/mock';
 
 export const FTACompliance = () => {
   const ftaReviews = [
-    'VAT returns & calculations',
+    'TAX returns & calculations',
     'Tax invoices & credit notes',
     'Accounting records',
-    'VAT reconciliation',
+    'TAX reconciliation',
     'Supporting documentation'
   ];
 
   const complianceProcess = [
     {
-      step: 'VAT Risk Assessment',
+      step: 'TAX Risk Assessment',
       description: 'Identify potential compliance gaps and audit triggers',
       icon: AlertCircle
     },
     {
       step: 'Records & Invoice Review',
-      description: 'Verify all tax invoices and documentation meet FTA standards',
+      description: 'Verify all tax invoices and documentation meet TAX standards',
       icon: FileCheck
     },
     {
       step: 'System Reconciliation',
-      description: 'Ensure accounting records match VAT returns accurately',
+      description: 'Ensure accounting records match TAX returns accurately',
       icon: CheckCircle2
     },
     {
@@ -43,7 +43,7 @@ export const FTACompliance = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              FTA Compliance Services for UAE SMEs
+              TAX Compliance Services for UAE SMEs
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               The Federal Tax Authority expects accurate records, timely filings, and proper documentation. Erad helps you prepare before the audit happens.
@@ -57,11 +57,11 @@ export const FTACompliance = () => {
         </div>
       </section>
 
-      {/* What FTA Reviews */}
+      {/* What TAX Reviews */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">What the FTA Reviews</h2>
+            <h2 className="text-3xl font-bold mb-4">What the TAX Reviews</h2>
             <p className="text-lg text-muted-foreground mb-8">
               During an audit, the Federal Tax Authority scrutinizes these critical areas
             </p>
@@ -125,7 +125,7 @@ export const FTACompliance = () => {
                   </div>
                   <CardTitle>Avoid Penalties</CardTitle>
                   <CardDescription>
-                    Identify and fix issues before FTA audits find them
+                    Identify and fix issues before TAX audits find them
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -137,7 +137,7 @@ export const FTACompliance = () => {
                   </div>
                   <CardTitle>Complete Documentation</CardTitle>
                   <CardDescription>
-                    Ensure all records meet FTA standards
+                    Ensure all records meet TAX standards
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -171,7 +171,7 @@ export const FTACompliance = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-lg mb-4">
-                  FTA audits can happen at any time. Being unprepared can result in:
+                  TAX audits can happen at any time. Being unprepared can result in:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
@@ -201,7 +201,7 @@ export const FTACompliance = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Prepare Before the FTA Audits You</h2>
+            <h2 className="text-3xl font-bold mb-4">Prepare Before the TAX Audits You</h2>
             <p className="text-xl mb-8 text-white/90">
               Get a comprehensive compliance review and action plan to protect your business
             </p>

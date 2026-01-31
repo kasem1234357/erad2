@@ -11,33 +11,33 @@ export default function Test2() {
   const steps = [
     {
       id: 1,
-      title: "Discovery & FTA Health Check",
-      description: "Comprehensive review of your current accounting and VAT compliance",
-      color: "bg-blue-500"
+      title: "Discovery & TAX Health Check",
+      description: "Comprehensive review of your current accounting and TAX compliance",
+      color: "bg-[#D5872D]"
     },
     {
       id: 2,
       title: "Accounting System Cleanup",
       description: "Fix errors, reconcile accounts, and prepare clean books",
-      color: "bg-indigo-500"
+      color: "bg-[#D5872D]"
     },
     {
       id: 3,
       title: "Odoo ERP Implementation",
       description: "Custom setup and configuration for your business needs",
-      color: "bg-violet-500"
+      color: "bg-[#D5872D]"
     },
     {
       id: 4,
       title: "Staff Training & Support",
       description: "Comprehensive training to ensure your team is ready",
-      color: "bg-purple-500"
+      color: "bg-[#D5872D]"
     },
     {
       id: 5,
       title: "Ongoing Advisory",
       description: "Continuous support and compliance monitoring",
-      color: "bg-fuchsia-500"
+      color: "bg-[#D5872D]"
     }
   ];
 
@@ -83,7 +83,7 @@ export default function Test2() {
               <div className={`absolute top-0 left-0 right-0 h-1.5 ${step.color} transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
 
               {/* Number Watermark */}
-              <div className="absolute -right-4 -top-4 text-9xl font-bold text-slate-50 opacity-50 group-hover:text-slate-100 group-hover:scale-110 transition-all duration-500 select-none z-0">
+              <div className="absolute -right-4 -top-[80px] text-[200px] font-bold text-slate-100 opacity-50 group-hover:text-slate-100 group-hover:scale-110 transition-all duration-500 select-none z-0">
                 {step.id}
               </div>
 

@@ -16,7 +16,7 @@ export const mockData = {
       price: "Contact for Pricing",
       features: [
         "Setup Odoo Accounting + 2 essential modules to your business (3 Odoo Users - 1 year)",
-        "VAT and Tax setup",
+        "TAX and Tax setup",
         "Chart of accounts setup",
         "9 hours of executive training",
         "Periodic Tax filling"
@@ -30,7 +30,7 @@ export const mockData = {
       price: "Contact for Pricing",
       features: [
         "Setup Odoo Accounting + 4 essential modules to your business (5 Odoo Users - 1 year)",
-        "VAT and Tax setup",
+        "TAX and Tax setup",
         "Chart of accounts setup",
         "15 hours of executive training",
         "Periodic Tax filling",
@@ -60,16 +60,16 @@ export const mockData = {
     {
       id: 1,
       title: "Accounting Services",
-      description: "Accurate bookkeeping, financial reporting, and month-end closing — fully aligned with UAE VAT regulations.",
+      description: "Accurate bookkeeping, financial reporting, and month-end closing — fully aligned with UAE TAX regulations.",
       icon: "Calculator",
       link: "/accounting-services-uae"
     },
     {
       id: 2,
-      title: "VAT & FTA Compliance",
-      description: "From VAT registration to filings and audit preparation, we protect your business from penalties.",
+      title: "TAX & TAX Compliance",
+      description: "From TAX registration to filings and audit preparation, we protect your business from penalties.",
       icon: "Shield",
-      link: "/vat-consultant-uae"
+      link: "/tax-consultant-uae"
     },
     {
       id: 3,
@@ -115,8 +115,8 @@ export const mockData = {
   process: [
     {
       step: 1,
-      title: "Discovery & FTA Health Check",
-      description: "Comprehensive review of your current accounting and VAT compliance"
+      title: "Discovery & TAX Health Check",
+      description: "Comprehensive review of your current accounting and TAX compliance"
     },
     {
       step: 2,
@@ -143,9 +143,9 @@ export const mockData = {
   caseStudy: {
     company: "UAE Trading Company",
     staff: "25 staff",
-    challenge: "Manual accounting with frequent VAT errors",
+    challenge: "Manual accounting with frequent TAX errors",
     results: [
-      { metric: "VAT errors reduced", value: "90%" },
+      { metric: "TAX errors reduced", value: "90%" },
       { metric: "Monthly reporting time", value: "5 days → 1 day" },
       { metric: "Annual cost savings", value: "AED 50,000+" }
     ]

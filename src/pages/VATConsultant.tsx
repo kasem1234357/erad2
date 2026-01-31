@@ -8,17 +8,17 @@ import { features, features3 } from '../assets/constants';
 
 export const VATConsultant = () => {
   const services = [
-    'VAT registration & deregistration',
-    'VAT return preparation & filing',
-    'VAT health checks',
+    'TAX registration & deregistration',
+    'TAX return preparation & filing',
+    'TAX health checks',
     'Review of tax invoices & records',
-    'FTA audit preparation & support'
+    'TAX audit preparation & support'
   ];
 
   const risks = [
-    { issue: 'Wrong invoices and incorrect VAT rates', consequence: 'Penalty fines from FTA' },
+    { issue: 'Wrong invoices and incorrect TAX rates', consequence: 'Penalty fines from TAX' },
     { issue: 'Missing or invalid tax invoices', consequence: 'Audit triggers and business disruption' },
-    { issue: 'Late or incorrect VAT filings', consequence: 'Accumulated penalties and interest' },
+    { issue: 'Late or incorrect TAX filings', consequence: 'Accumulated penalties and interest' },
     { issue: 'Poor record-keeping', consequence: 'Compliance failures during audits' }
   ];
 
@@ -29,25 +29,25 @@ export const VATConsultant = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              VAT Compliance Without Penalties
+              TAX Compliance Without Penalties
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              VAT compliance in the UAE is not optional. Mistakes can lead to fines, audits, and business disruption. Erad provides end-to-end VAT consultancy services to help SMEs stay compliant, accurate, and protected.
+              TAX compliance in the UAE is not optional. Mistakes can lead to fines, audits, and business disruption. Erad provides end-to-end TAX consultancy services to help SMEs stay compliant, accurate, and protected.
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90">
-                Book a Free VAT Health Check
+                Book a Free TAX Health Check
               </Button>
             </a>
           </div>
         </div>
       </section>
 
-      {/* Our VAT Services */}
+      {/* Our TAX Services */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Our VAT Services</h2>
+            <h2 className="text-3xl font-bold mb-8">Our TAX Services</h2>
             <Card className="border-l-4 border-l-secondary">
               <CardContent className="pt-6">
                 <ul className="space-y-4">
@@ -64,12 +64,12 @@ export const VATConsultant = () => {
         </div>
       </section>
 
-      {/* Common VAT Risks */}
+      {/* Common TAX Risks */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <ModernSection features={features3} title={'Common VAT Risks We Fix'} desc={'Don\'t let these common mistakes put your business at risk'} numberOfColumn={2} />
+          <ModernSection features={features3} title={'Common TAX Risks We Fix'} desc={'Don\'t let these common mistakes put your business at risk'} numberOfColumn={2} />
           {/* <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Common VAT Risks We Fix</h2>
+            <h2 className="text-3xl font-bold mb-4">Common TAX Risks We Fix</h2>
             <p className="text-lg text-muted-foreground mb-8">
               Don't let these common mistakes put your business at risk
             </p>
@@ -107,7 +107,7 @@ export const VATConsultant = () => {
                   <div>
                     <CardTitle className="text-2xl mb-2">Protect Your Business Today</CardTitle>
                     <CardDescription className="text-base">
-                      The Federal Tax Authority conducts regular audits. Don't wait for a penalty notice to fix your VAT compliance.
+                      The Federal Tax Authority conducts regular audits. Don't wait for a penalty notice to fix your TAX compliance.
                     </CardDescription>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export const VATConsultant = () => {
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="bg-white p-4 rounded-lg">
                     <div className="text-3xl font-bold text-primary mb-1">20%</div>
-                    <p className="text-sm text-muted-foreground">Penalty on VAT amount</p>
+                    <p className="text-sm text-muted-foreground">Penalty on TAX amount</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
                     <div className="text-3xl font-bold text-primary mb-1">AED 15K</div>
@@ -137,13 +137,13 @@ export const VATConsultant = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Don't Risk VAT Penalties</h2>
+            <h2 className="text-3xl font-bold mb-4">Don't Risk TAX Penalties</h2>
             <p className="text-xl mb-8 text-white/90">
-              Book a free VAT health check now and identify risks before the FTA does
+              Book a free TAX health check now and identify risks before the TAX does
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Book Free VAT Health Check
+                Book Free TAX Health Check
               </Button>
             </a>
           </div>
