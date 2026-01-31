@@ -6,7 +6,7 @@ const ModernSection = ({features,title,desc,numberOfColumn=2,customContainerClas
   
 
   return (
-    <div className="min-h-80vh  font-sans" dir="ltr">
+    <div className="min-h-60vh  font-sans" dir="ltr">
       {/* Decorative Background Shape */}
       <div className="absolute top-0 left-0 w-full h-64 bg-linear-to-r from-blue-700 to-indigo-800 rounded-b-[3rem] shadow-xl -z-10 overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20"></div>

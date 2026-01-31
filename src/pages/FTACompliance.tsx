@@ -159,13 +159,13 @@ export const FTACompliance = () => {
       </section>
 
       {/* Warning Section */}
-      <section className="py-16 bg-destructive/5">
+      <section className="py-16 bg-primary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Card className="border-2 border-destructive">
+            <Card className="border-2 border-primary">
               <CardHeader>
                 <div className="flex items-center gap-3">
-                  <AlertCircle className="h-8 w-8 text-destructive" />
+                  <AlertCircle className="h-8 w-8 text-primary" />
                   <CardTitle className="text-2xl">Don't Wait for the Audit</CardTitle>
                 </div>
               </CardHeader>
@@ -175,19 +175,19 @@ export const FTACompliance = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <span className="text-destructive mr-2">•</span>
+                    <span className="text-primary mr-2">•</span>
                     <span>Heavy financial penalties and interest charges</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-destructive mr-2">•</span>
+                    <span className="text-primary mr-2">•</span>
                     <span>Business disruption during prolonged audit processes</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-destructive mr-2">•</span>
+                    <span className="text-primary mr-2">•</span>
                     <span>Reputation damage and loss of business credibility</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-destructive mr-2">•</span>
+                    <span className="text-primary mr-2">•</span>
                     <span>Potential legal consequences for serious violations</span>
                   </li>
                 </ul>

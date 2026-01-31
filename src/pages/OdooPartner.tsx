@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../co
 import { Badge } from '../components/ui/badge';
 import { CheckCircle2, Award, Target, Zap } from 'lucide-react';
 import { mockData } from '../data/mock';
+import ModernSection from '../components/ui/Test';
+import { features4 } from '../assets/constants';
 
 export const OdooPartner = () => {
   return (
@@ -33,8 +35,8 @@ export const OdooPartner = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">What Does Odoo Ready Partner Mean?</h2>
-            <Card className="bg-gradient-to-br from-primary/5 to-secondary/5">
-              <CardContent className="pt-6">
+            <Card className="shadow-none border-none">
+              <CardContent className="pt-6 ">
                 <p className="text-lg mb-4">
                   Odoo Ready Partners are officially recognized by Odoo S.A. for their expertise in implementing and customizing Odoo ERP solutions. This certification ensures you're working with qualified professionals who understand both the technical and business aspects of Odoo.
                 </p>
@@ -48,15 +50,16 @@ export const OdooPartner = () => {
       </section>
 
       {/* Why Choose Erad */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 ">
+        <ModernSection features={features4} title={'Why Choose Erad as Your Odoo Partner'} desc={'Accounting-led ERP implementation designed for SMEs — not generic IT projects.'} numberOfColumn={2} />
+        {/* <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Why Choose Erad as Your Odoo Partner</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <Card>
                 <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Award className="h-6 w-6 text-primary" />
+                  <div className="h-12 w-12 rounded-lg bg-[#D5872D] flex items-center justify-center mb-4">
+                    <Award className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle>Certified Expertise</CardTitle>
                   <CardDescription className="text-base">
@@ -67,8 +70,8 @@ export const OdooPartner = () => {
 
               <Card>
                 <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                    <Target className="h-6 w-6 text-secondary" />
+                  <div className="h-12 w-12 rounded-lg bg-[#D5872D] flex items-center justify-center mb-4">
+                    <Target className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle>SME-Focused</CardTitle>
                   <CardDescription className="text-base">
@@ -79,8 +82,8 @@ export const OdooPartner = () => {
 
               <Card>
                 <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                    <CheckCircle2 className="h-6 w-6 text-accent" />
+                  <div className="h-12 w-12 rounded-lg bg-[#D5872D] flex items-center justify-center mb-4">
+                    <CheckCircle2 className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle>UAE VAT Compliance</CardTitle>
                   <CardDescription className="text-base">
@@ -91,8 +94,8 @@ export const OdooPartner = () => {
 
               <Card>
                 <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Zap className="h-6 w-6 text-primary" />
+                  <div className="h-12 w-12 rounded-lg bg-[#D5872D] flex items-center justify-center mb-4">
+                    <Zap className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle>Accounting-Led Implementation</CardTitle>
                   <CardDescription className="text-base">
@@ -102,7 +105,7 @@ export const OdooPartner = () => {
               </Card>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Services */}

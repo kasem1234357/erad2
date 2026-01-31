@@ -59,10 +59,10 @@ export const AccountingSystemCleanup = () => {
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {signs.map((sign, index) => (
-                <Card key={index} className="border-l-4 border-l-destructive">
+                <Card key={index} className="border-l-4 border-l-primary">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-3">
-                      <AlertTriangle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
+                      <AlertTriangle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="font-medium">{sign}</span>
                     </div>
                   </CardContent>
@@ -157,7 +157,7 @@ export const AccountingSystemCleanup = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Card className="bg-gradient-to-br from-destructive/5 to-destructive/10 border-2 border-destructive">
+            <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary">
               <CardHeader>
                 <CardTitle className="text-2xl mb-2">The Cost of Doing Nothing</CardTitle>
                 <CardDescription className="text-base">
@@ -167,19 +167,19 @@ export const AccountingSystemCleanup = () => {
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <span className="text-destructive mr-2">•</span>
+                    <span className="text-primary mr-2">•</span>
                     <span>Failed FTA audits and heavy penalties</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-destructive mr-2">•</span>
+                    <span className="text-primary mr-2">•</span>
                     <span>Poor business decisions based on incorrect data</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-destructive mr-2">•</span>
+                    <span className="text-primary mr-2">•</span>
                     <span>Inability to implement ERP or automation tools</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-destructive mr-2">•</span>
+                    <span className="text-primary mr-2">•</span>
                     <span>Loss of investor or bank confidence</span>
                   </li>
                 </ul>

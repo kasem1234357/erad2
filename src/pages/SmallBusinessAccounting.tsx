@@ -186,41 +186,7 @@ export const SmallBusinessAccounting = () => {
         </div>
       </section>
 
-      {/* Packages for SMEs */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Packages Designed for SMEs</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {mockData.packages.map((pkg) => (
-                <Card key={pkg.id} className={pkg.popular ? 'border-2 border-secondary' : ''}>
-                  {pkg.popular && (
-                    <div className="bg-secondary text-white text-center py-1 text-sm font-medium">
-                      Most Popular
-                    </div>
-                  )}
-                  <CardHeader>
-                    <CardTitle>{pkg.name}</CardTitle>
-                    <CardDescription>{pkg.target}</CardDescription>
-                    <div className="text-2xl font-bold text-primary mt-2">{pkg.price}</div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      {pkg.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-start">
-                          <CheckCircle2 className="h-4 w-4 text-secondary mr-2 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+     
       {/* CTA */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

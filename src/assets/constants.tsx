@@ -1,4 +1,4 @@
-import { AlertCircle, BarChart3, Calculator, FileCheck, FileClock, FileQuestion, FileWarning, Layers3, Network, Settings, Shield } from "lucide-react";
+import { AlertCircle, Award, BarChart3, Calculator, CheckCircle2, FileCheck, FileClock, FileQuestion, FileWarning, Layers3, Network, Settings, Shield, Target, Zap } from "lucide-react";
 
 export const features = [
     {
@@ -74,6 +74,32 @@ Accurate bookkeeping, financial reporting, and period-end closing — fully alig
       icon: <Layers3 className="w-8 h-8 text-white" />,
       title: "Poor record-keeping",
       description: "Compliance failures during audits",
+      color: "bg-[#D5872D]"
+    }
+  ];
+ export const features4 = [
+    {
+      icon: <Award className="w-8 h-8 text-white" />,
+      title: "Certified Expertise", 
+      description: " Official Odoo Ready Partner with proven track record in UAE market",
+      color: "bg-[#D5872D]"
+    },
+    {
+      icon: <Target className="w-8 h-8 text-white" />,
+      title: "SME-Focused",
+      description: " Solutions tailored for small and medium businesses, not large enterprises",
+      color: "bg-[#D5872D]"
+    },
+    {
+      icon: <CheckCircle2 className="w-8 h-8 text-white" />,
+      title: "UAE VAT Compliance",
+      description: "Pre-configured for UAE tax regulations and FTA requirements",
+      color: "bg-[#D5872D]"
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-white" />,
+      title: "Accounting-Led Implementation",
+      description: " Accountants leading the project, ensuring financial accuracy",
       color: "bg-[#D5872D]"
     }
   ];
