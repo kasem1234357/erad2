@@ -88,22 +88,22 @@ export const mockData = {
   whyErad: [
     {
       title: "Odoo Ready Partner",
-      description: "Official certified partner for Odoo ERP implementation",
+      description: "Certified Odoo Partner to flawlessly accomplish your ERP implementation and delivery the automation you laways dreamed about for your business.",
       icon: "Award"
     },
     {
-      title: "UAE VAT Expertise",
+      title: "UAE TAX-Compliance  Masters",
       description: "15+ years of experience with UAE tax regulations",
       icon: "BookCheck"
     },
     {
       title: "SME-Focused",
-      description: "Solutions designed specifically for small and medium businesses",
+      description: "Our  target is to help businesses with 5 - 100 employee, we focus on SMEs because we have a proven success history here.",
       icon: "Users"
     },
     {
       title: "Practical, Not Theoretical",
-      description: "Real-world solutions that work for your business",
+      description: `Erad offers its enormous experience in: Hospitality, Logistics, Business Services, Trading and Distribution, Property Management, Contracting and Construction, Car service... and many other industries to support your business management, automation and Tax compliance.`,
       icon: "Target"
     }
   ],

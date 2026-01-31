@@ -14,6 +14,7 @@ import ModernSection from '../components/ui/Test';
 import { StarButton } from '../components/ui/CustmBusston';
 import { CertificateCard } from '../components/ui/Certifications';
 import Test2 from '../components/ui/Test2';
+import { features, features2 } from '../assets/constants';
 const iconMap = {
   Calculator,
   Shield,
@@ -89,69 +90,15 @@ export const Home = () => {
       {/* Pain Points Section */}
       <section className=" bg-white">
        
-          <ModernSection/>
-          {/* <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-4">The UAE SME Challenge</h2>
-            <p className="text-center text-muted-foreground mb-12">
-              Running a business in the UAE is challenging enough — these issues shouldn't slow you down
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { title: 'VAT Compliance & FTA Audits', risk: 'Heavy penalties and business disruption' },
-                { title: 'Manual Accounting Errors', risk: 'Inaccurate financial decisions' },
-                { title: 'Slow Reporting & Cash Flow Visibility', risk: 'Missed opportunities and delays' },
-                { title: 'Complex Multi-Branch Management', risk: 'Inconsistent data and control issues' }
-              ].map((pain, index) => (
-                <Card key={index} className="border-l-4 border-l-destructive">
-                  <CardHeader>
-                    <CardTitle className="text-lg">{pain.title}</CardTitle>
-                    <CardDescription className="text-destructive">
-                      Risk: {pain.risk}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              ))}
-            </div>
-          </div> */}
+          <ModernSection features={features} title={'The UAE SME Challenge :'} desc={`Running a business in the UAE is challenging enough — these issues shouldn't slow you down`}/>
+         
+      </section>
+           <section className=" bg-white">
        
+          <ModernSection features={features2} title={"What We Do"} desc={"Practical Finance Solutions for Growing UAE Businesses"} numberOfColumn={3} customContainerClass={'w-full'} customCardClass={'min-h-[300px]'}/>
+         
       </section>
-
-      {/* Core Services */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What We Do</h2>
-            <p className="text-xl text-muted-foreground">
-              Practical Finance Solutions for Growing UAE Businesses
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {mockData.services.map((service) => {
-              const Icon = iconMap[service.icon];
-              return (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle>{service.title}</CardTitle>
-                    <CardDescription className="text-base">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Link to={service.link}>
-                      <Button variant="link" className="p-0 h-auto text-secondary">
-                        Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Why Erad + Odoo */}
       <section className="py-16 bg-white">
@@ -160,17 +107,17 @@ export const Home = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Why Erad + Odoo</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Not just Odoo implementation — we combine ERP + accounting + FTA compliance expertise
+                Not only Accounting services, Not Only Odoo ERP services, get a full fledge of professional services to make sure  your business id running properly and Tax compliant.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
               {mockData.whyErad.map((item, index) => {
                 const Icon = iconMap[item.icon];
                 return (
                   <Card key={index} className="text-center">
                     <CardHeader>
-                      <div className="mx-auto h-16 w-16 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
-                        <Icon className="h-8 w-8 text-secondary" />
+                      <div className="mx-auto h-16 w-16 rounded-full bg-[#D5872D] flex items-center justify-center mb-4 ">
+                        <Icon className="h-8 w-8 text-white" />
                       </div>
                       <CardTitle className="text-lg">{item.title}</CardTitle>
                       <CardDescription>{item.description}</CardDescription>
