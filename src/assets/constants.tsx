@@ -1,4 +1,4 @@
-import { AlertCircle, BarChart3, Calculator, FileCheck, Network, Settings, Shield } from "lucide-react";
+import { AlertCircle, BarChart3, Calculator, FileCheck, FileClock, FileQuestion, FileWarning, Layers3, Network, Settings, Shield } from "lucide-react";
 
 export const features = [
     {
@@ -49,4 +49,31 @@ Accurate bookkeeping, financial reporting, and period-end closing — fully alig
 3- Automate your business like you always dreamed to ddo. </p>,
       color: "bg-[#714B67]"
     },
+  ];
+
+  export const features3 = [
+    {
+      icon: <FileWarning className="w-8 h-8 text-white" />,
+      title: "Wrong invoices and incorrect VAT rates", 
+      description: "Penalty fines from FTA",
+      color: "bg-[#D5872D]"
+    },
+    {
+      icon: <FileQuestion className="w-8 h-8 text-white" />,
+      title: "Missing or invalid tax invoices",
+      description: "Audit triggers and business disruption",
+      color: "bg-[#D5872D]"
+    },
+    {
+      icon: <FileClock className="w-8 h-8 text-white" />,
+      title: "Late or incorrect VAT filings",
+      description: "Accumulated penalties and interest",
+      color: "bg-[#D5872D]"
+    },
+    {
+      icon: <Layers3 className="w-8 h-8 text-white" />,
+      title: "Poor record-keeping",
+      description: "Compliance failures during audits",
+      color: "bg-[#D5872D]"
+    }
   ];

@@ -3,6 +3,8 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card';
 import { CheckCircle2, AlertTriangle, Shield } from 'lucide-react';
 import { mockData } from '../data/mock';
+import ModernSection from '../components/ui/Test';
+import { features, features3 } from '../assets/constants';
 
 export const VATConsultant = () => {
   const services = [
@@ -65,7 +67,8 @@ export const VATConsultant = () => {
       {/* Common VAT Risks */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <ModernSection features={features3} title={'Common VAT Risks We Fix'} desc={'Don\'t let these common mistakes put your business at risk'} numberOfColumn={2} />
+          {/* <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Common VAT Risks We Fix</h2>
             <p className="text-lg text-muted-foreground mb-8">
               Don't let these common mistakes put your business at risk
@@ -87,7 +90,7 @@ export const VATConsultant = () => {
                 </Card>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -112,15 +115,15 @@ export const VATConsultant = () => {
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="bg-white p-4 rounded-lg">
-                    <div className="text-3xl font-bold text-destructive mb-1">20%</div>
+                    <div className="text-3xl font-bold text-primary mb-1">20%</div>
                     <p className="text-sm text-muted-foreground">Penalty on VAT amount</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <div className="text-3xl font-bold text-destructive mb-1">AED 15K</div>
+                    <div className="text-3xl font-bold text-primary mb-1">AED 15K</div>
                     <p className="text-sm text-muted-foreground">Fine for late filing</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <div className="text-3xl font-bold text-destructive mb-1">300%</div>
+                    <div className="text-3xl font-bold text-primary mb-1">300%</div>
                     <p className="text-sm text-muted-foreground">Penalty for tax evasion</p>
                   </div>
                 </div>
