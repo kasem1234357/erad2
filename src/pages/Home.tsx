@@ -13,6 +13,7 @@ import certificate2 from '../assets/photo_2026-01-24_11-28-33.jpg';
 import ModernSection from '../components/ui/Test';
 import { StarButton } from '../components/ui/CustmBusston';
 import { CertificateCard } from '../components/ui/Certifications';
+import Test2 from '../components/ui/Test2';
 const iconMap = {
   Calculator,
   Shield,
@@ -280,7 +281,7 @@ export const Home = () => {
       </section>
 
       {/* Process */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">How We Work</h2>
@@ -299,7 +300,8 @@ export const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <Test2/>
 
       {/* Industries */}
       <section className="py-16 bg-muted/30">
