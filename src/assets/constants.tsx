@@ -30,19 +30,23 @@ export const features2 = [
     {
       icon: <Calculator className="w-8 h-8 text-white" />,
       title: "Accounting Services", 
-      description: "Accurate bookkeeping, financial reporting, and month-end closing — fully aligned with UAE VAT regulations.",
+      description: `Accounting Services
+Accurate bookkeeping, financial reporting, and period-end closing — fully aligned with UAE Tax and AML regulations.`,
       color: "bg-[#714B67]"
     },
     {
       icon: <Shield className="w-8 h-8 text-white" />,
-      title: "VAT & FTA Compliance",
-        description: "From VAT registration to filings and audit preparation, we protect your business from penalties.",
+      title: "TAX and AML Compliance",
+        description: "From VAT registration to filings and audit preparation for Taxes and AML, we help protecting your business from penalties.",
       color: "bg-[#714B67]"
     },
     {
       icon: <Settings className="w-8 h-8 text-white" />,
-      title: "Odoo ERP Implementation",
-      description: "Accounting-led ERP implementation designed for SMEs — not generic IT projects.",
+      title: " Odoo Business framework:",
+      description: <p>Odoo is not just an ERP, it is a platform where Erad can develop the right solutions to:<br/>
+1- cover your accounting requirements <br/>
+2- handle all of your departments <br/>
+3- Automate your business like you always dreamed to ddo. </p>,
       color: "bg-[#714B67]"
     },
   ];

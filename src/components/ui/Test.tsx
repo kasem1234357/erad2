@@ -1,5 +1,5 @@
 //@ts-nocheck
-
+import parse from 'html-react-parser';
 
 const ModernSection = ({features,title,desc,numberOfColumn=2,customContainerClass,customCardClass}:any) => {
   // ⚠️ يرجى تعبئة النصوص أدناه من الصورة التي لديك لضمان التطابق التام
@@ -19,7 +19,7 @@ const ModernSection = ({features,title,desc,numberOfColumn=2,customContainerClas
         <div className="text-center mb-4">
           
           <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
-         <p className="text-center text-muted-foreground mb-6">{desc}</p>
+         <p className="text-center text-muted-foreground mb-6">{parse(desc)}</p>
         </div>
 
         {/* Cards Grid */}
@@ -35,7 +35,7 @@ const ModernSection = ({features,title,desc,numberOfColumn=2,customContainerClas
               <div className={`absolute top-0 left-0 w-full h-1 ${feature.color.replace('bg-', 'bg-linear-to-r from-transparent to-')}`}></div>
               
               {/* Icon Container */}
-              <div className='w-full flex gap-4 items-center '>
+              <div className='w-full flex gap-4 items-start '>
                  <div className={`w-16 h-16 aspect-square rounded-2xl ${feature.color} flex items-center justify-center  shadow-md transform group-hover:rotate-6 transition-transform duration-300`}>
                 {feature.icon}
                 

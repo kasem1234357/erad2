@@ -167,19 +167,21 @@ export const Home = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {mockData.packages.map((pkg) => (
-              <Card key={pkg.id} className={`${pkg.popular ? 'border-secondary border-2' : ''} bg-white`}>
+              <Card key={pkg.id} className={`${pkg.popular ? 'border-secondary border-2' : ''} bg-white flex flex-col justify-between `}>
                 {pkg.popular && (
                   <div className="bg-secondary text-white text-center py-1 text-sm font-medium">
                     Most Popular
                   </div>
                 )}
-                <CardHeader>
+                <div className='flex flex-col'>
+                   <CardHeader>
                   <CardTitle className="text-2xl">{pkg.name}</CardTitle>
                   <CardDescription className="text-lg">{pkg.target}</CardDescription>
                   <div className="text-3xl font-bold text-primary mt-4">{pkg.price}</div>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
+              
+                <CardContent >
+                  <ul className="space-y-3 ">
                     {pkg.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
                         <CheckCircle2 className="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-0.5" />
@@ -187,12 +189,15 @@ export const Home = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full mt-6 bg-primary hover:bg-primary/90">
-                      Get Started
+                 
+                </CardContent>
+                </div>
+                
+                 <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer" className='block px-6 mb-4'>
+                    <Button className="w-full mt-6 bg-primary hover:bg-primary/90 ">
+                      {pkg.button}
                     </Button>
                   </a>
-                </CardContent>
               </Card>
             ))}
           </div>

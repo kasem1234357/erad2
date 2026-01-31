@@ -11,44 +11,48 @@ export const mockData = {
   packages: [
     {
       id: 1,
-      name: "Starter VAT & Accounting",
-      target: "10 – 25 Staff",
+      name: "Starter Pack: ",
+      target: "5 - 15 Employee",
       price: "Contact for Pricing",
       features: [
-        "Odoo Accounting & Invoicing",
-        "VAT setup & filing",
-        "Chart of Accounts setup",
-        "Basic staff training",
-        "Monthly VAT returns"
-      ]
+        "Setup Odoo Accounting + 2 essential modules to your business (3 Odoo Users - 1 year)",
+        "VAT and Tax setup",
+        "Chart of accounts setup",
+        "9 hours of executive training",
+        "Periodic Tax filling"
+      ],
+      button:"Enjoy this Package now for 799 AED / Month",
     },
     {
       id: 2,
       name: "Growth ERP",
-      target: "25 – 50 Staff",
+      target: "16 - 30 Employee",
       price: "Contact for Pricing",
       features: [
-        "Odoo Accounting, Inventory, Sales, Purchase",
-        "Automated reports & dashboards",
-        "Staff training (up to 5 users)",
-        "VAT & FTA compliance review",
-        "Custom workflows"
+        "Setup Odoo Accounting + 4 essential modules to your business (5 Odoo Users - 1 year)",
+        "VAT and Tax setup",
+        "Chart of accounts setup",
+        "15 hours of executive training",
+        "Periodic Tax filling",
+        "Weekly Accounting Review"
       ],
+      button:'Enjoy this Package now for 1399 AED / Month',
       popular: true
     },
     {
       id: 3,
       name: "Compliance & Automation Pro",
-      target: "Multi-branch SME",
+      target: "Multi branch SME",
       price: "Contact for Pricing",
       features: [
         "Multi-company / multi-branch setup",
+        "Custom Automation for your business needs",
         "Advanced inventory & asset management",
-        "Automated bank reconciliation",
-        "FTA-ready VAT automation",
-        "Accounting system cleanup",
+        "Tax and AML compliance and filing",
+        "Weekly Accounting Audit and review",
         "Priority support"
-      ]
+      ],
+      button:'Contact for pricing'
     }
   ],
   
