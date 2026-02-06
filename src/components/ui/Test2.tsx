@@ -2,17 +2,30 @@ import  { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
 import { useGetDictionary, type DictionaryType } from '../../hooks/useGetDictionary';
 
+/**
+ * تم تعديل الكود ليعمل بشكل مستقل في بيئة العرض (Preview) 
+ * مع الحفاظ على هيكلية البيانات الأصلية (Home.How_We_Work_section).
+ */
+
 export default function Test2() {
   const [isVisible, setIsVisible] = useState(false);
-  const {Home}:DictionaryType = useGetDictionary();
+  const {Home}:DictionaryType = useGetDictionary()
+  const images =[
+       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
+       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
+
+  ]
+  // المحتوى الأصلي كما هو دون أي تغيير في النصوص أو المفاتيح
+ 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  
-
   return (
-    <div className="min-h-screen bg-slate-50 py-24 px-4 sm:px-6 lg:px-8 font-sans text-slate-800 overflow-hidden relative">
+    <div className="min-h-screen bg-slate-50 py-24 px-4 sm:px-6 lg:px-8 font-sans text-slate-800 overflow-hidden relative selection:bg-blue-100">
       
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
@@ -21,84 +34,116 @@ export default function Test2() {
         <div className="absolute bottom-[-10%] left-[20%] w-96 h-96 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
 
-      {/* Header Section */}
-      <div className={`relative z-10 max-w-4xl mx-auto text-center mb-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-6 border border-blue-100">
-          <Sparkles size={16} />
-          <span>Our Process</span>
-        </div>
-        <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-2 leading-tight">
-          {Home.How_We_Work_section.title}
-        </h2>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          {Home.How_We_Work_section.description}
-        </p>
-      </div>
-
-      {/* Process Grid */}
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
-          
-          {Home.How_We_Work_section.cards.map((step, index) => (
-            <div 
-              key={step.id}
-              className={`group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-slate-100 transition-all duration-500 ease-out hover:-translate-y-2 overflow-hidden`}
-              style={{ 
-                transitionDelay: `${index * 100}ms`,
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(40px)'
-              }}
-            >
-              {/* Gradient Top Line */}
-              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-[${step.color}] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
-
-              {/* Number Watermark */}
-              <div className="absolute -right-4 -top-[80px] text-[200px] font-bold text-slate-100 opacity-50 group-hover:text-slate-100 group-hover:scale-110 transition-all duration-500 select-none z-0">
-                {step.id}
-              </div>
-
-              <div className="relative z-10">
-                {/* Step Number Badge */}
-                <div className={`w-14 h-14 rounded-2xl bg-[${step.color}] shadow-lg flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300`}>
-                  <span className="text-2xl font-bold text-white">{step.id}</span>
-                </div>
-
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-700 transition-colors">
-                  {step.title}
-                </h3>
-                
-                <p className="text-slate-600 leading-relaxed mb-6">
-                  {step.description}
-                </p>
-
-                <div className="flex items-center text-sm font-semibold text-blue-600 opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                  Learn more <ArrowRight size={16} className="ml-2" />
-                </div>
-              </div>
-            </div>
-          ))}
-
-          {/* Call to Action Card (Fills the last slot nicely) */}
-          <div 
-            className={`flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-lg text-white transition-all duration-700 delay-700 ease-out hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
-          >
-            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 animate-pulse">
-              <CheckCircle2 size={32} className="text-white" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">{Home.How_We_Work_section.next_step_card.title}</h3>
-            <p className="text-blue-100 mb-6 text-sm">{Home.How_We_Work_section.next_step_card.description}</p>
-            <button className=" px-6 py-2 rounded-lg font-bold hover:bg-blue-50 transition-colors shadow-md" style={{
-              backgroundColor:Home.How_We_Work_section.next_step_card.background_color,
-              color:Home.How_We_Work_section.next_step_card.text_color
-            }}>
-              {Home.How_We_Work_section.next_step_card.button}
-            </button>
+      <div className="relative z-10 max-w-6xl mx-auto">
+        {/* Header Section */}
+        <div className={`text-center mb-24 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-6 border border-blue-100">
+            <Sparkles size={16} />
+            <span>Our Process</span>
           </div>
+          <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-4 leading-tight">
+            {Home.How_We_Work_section.title}
+          </h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            {Home.How_We_Work_section.description}
+          </p>
+        </div>
 
+        {/* Vertical Journey Line (Desktop) */}
+        <div className="hidden lg:block absolute left-1/2 top-[400px] bottom-64 w-px -translate-x-1/2 z-0 border-l-2 border-dashed border-slate-200"></div>
+
+        {/* Process Flow - Zig Zag */}
+        <div className="relative z-10 space-y-24 lg:space-y-40">
+          {Home.How_We_Work_section.cards.map((step, index) => {
+            const isEven = index % 2 === 1;
+            return (
+              <div 
+                key={step.id}
+                className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
+                {/* Content Area */}
+                <div className={`flex-1 w-full text-center lg:text-left ${isEven ? 'lg:order-2 lg:pl-12' : 'lg:order-1 lg:pr-12'}`}>
+                  <div className="relative group p-8 bg-white/60 backdrop-blur-md rounded-3xl border border-white hover:bg-white transition-all duration-500 hover:shadow-2xl overflow-hidden">
+                    {/* Step ID Watermark */}
+                    <div className="absolute -top-6 -right-4 text-[120px] font-black text-slate-100/50 group-hover:text-slate-100 transition-colors pointer-events-none select-none z-0">
+                      {step.id}
+                    </div>
+
+                    <div className="relative z-10">
+                      <div 
+                        className="inline-flex items-center justify-center w-14 h-14 rounded-2xl text-white font-bold mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"
+                        style={{ backgroundColor: step.color }}
+                      >
+                        {step.id}
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
+                        {step.title}
+                      </h3>
+                      
+                      <p className="text-slate-600 leading-relaxed mb-6">
+                        {step.description}
+                      </p>
+
+                      <div className="flex items-center justify-center lg:justify-start text-sm font-semibold text-blue-600 group-hover:gap-3 transition-all cursor-pointer">
+                        Learn more <ArrowRight size={18} className="ml-1" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Center Node (Desktop) */}
+                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 z-20 shadow-xl transition-transform hover:scale-125" style={{ borderColor: step.color }}></div>
+
+                {/* Image Area */}
+                <div className={`flex-1 w-full ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className="relative group overflow-hidden rounded-[2.5rem] shadow-xl aspect-video lg:aspect-square max-h-[400px] mx-auto">
+                    <div 
+                      className="absolute inset-0 opacity-10 group-hover:opacity-30 transition-opacity duration-500 z-10"
+                      style={{ backgroundColor: step.color }}
+                    ></div>
+                    <img 
+                      src={images[index] || ''} 
+                      alt={step.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10"></div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* Call to Action Card */}
+          <div 
+            className={`max-w-4xl mx-auto p-12 text-center bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem] shadow-2xl text-white relative overflow-hidden transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+          >
+            {/* Background Decorative Elements */}
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-black/10 rounded-full blur-3xl animate-pulse"></div>
+
+            <div className="relative z-10">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 rotate-12">
+                <CheckCircle2 size={32} className="text-white" />
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4">{Home.How_We_Work_section.next_step_card.title}</h3>
+              <p className="text-blue-100 mb-8 text-lg max-w-xl mx-auto">{Home.How_We_Work_section.next_step_card.description}</p>
+              
+              <button 
+                className="px-10 py-4 rounded-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-blue-900/40" 
+                style={{
+                  backgroundColor: Home.How_We_Work_section.next_step_card.background_color,
+                  color: Home.How_We_Work_section.next_step_card.text_color
+                }}
+              >
+                {Home.How_We_Work_section.next_step_card.button}
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      
-      {/* CSS for Blob Animation */}
+
       <style>{`
         @keyframes blob {
           0% { transform: translate(0px, 0px) scale(1); }
