@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../co
 import { CheckCircle2, AlertTriangle, Shield } from 'lucide-react';
 import { mockData } from '../data/mock';
 import ModernSection from '../components/ui/Test';
-import { features, features3 } from '../assets/constants';
+import {  features3 } from '../assets/constants';
 
 export const VATConsultant = () => {
   const services = [

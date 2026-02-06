@@ -30,82 +30,122 @@
       
       },
       "SME_Challenge_section":{
-        "title":"The UAE SME Challenge",
+        "title":"The UAE SME Challenge :",
         "description":"Running a business in the UAE is challenging enough — these issues shouldn't slow you down",
-        "cards":{
-            "VAT_Compliance_title":"TAX Compliance & TAX Audits",
-            "TAX_Compliance_risk":"Heavy penalties and business disruption",
-            "Manual_Accounting_Errors_title":"Manual Accounting Errors",
-            "Manual_Accounting_Errors_risk":"Inaccurate financial decisions",
-            "Slow_Reporting_title":"Slow Reporting & Cash Flow Visibility",
-            "Slow_Reporting_risk":"Missed opportunities and delays",
-            "Complex_Multi_Branch_Management_title":"Complex Multi-Branch Management",
-            "Complex_Multi_Branch_Management_risk":"Inconsistent data and control issues"
-        }
+        "cards":[
+          {
+            "title":"VAT Compliance & TAX Audits",
+            "description":"Ensure seamless tax filing and full compliance with UAE tax laws, staying ready for any TAX audit with precise documentation."
+          },
+          {
+            "title": "Manual accounting errors",
+      "description": "Replace risky manual entries with automated workflows to eliminate discrepancies and ensure 100% data integrity."
+          },
+          {
+             "title": "Slow reporting & cash flow visibility",
+      "description": "Gain real-time access to financial health and cash flow movements through instant, automated reporting dashboards."
+          },
+          {
+             "title": "Complex multi-branch or multi-company management",
+      "description": "Consolidate operations across multiple entities and branches into one unified system for centralized control and visibility."
+          }
+        ]
+       
       },
       "Core_Services_section":{
         "title":"What We Do",
         "description":"Practical Finance Solutions for Growing UAE Businesses",
-        "cards":{
-            "Accounting_Services_title":"Accounting Services",
-            "Accounting_Services_description":"Accurate bookkeeping, financial reporting, and month-end closing — fully aligned with UAE TAX regulations.",
-            "FTA_Compliance_title":"Tax & TAX Compliance",
-            "FTA_Compliance_description":"From TAX registration to filings and audit preparation, we protect your business from penalties.",
-            "Odoo_Implementation_title":"Odoo ERP Implementation",
-            "Odoo_Implementation_description":"Accounting-led ERP implementation designed for SMEs — not generic IT projects."
-        }
+        "cards":[
+          {
+             "title": "Accounting Services", 
+      "description": "Accounting Services Accurate bookkeeping, financial reporting, and period-end closing — fully aligned with UAE Tax and AML regulations."
+          },
+          {
+              "title": "TAX and AML Compliance",
+        "description": "From TAX registration to filings and audit preparation for Taxes and AML, we help protecting your business from penalties."
+          },
+          {
+            "title": " Odoo Business framework:",
+      "description": "<p>Odoo is not just an ERP, it is a platform where Erad can develop the right solutions to:<br/>1- cover your accounting requirements <br/>2- handle all of your departments <br/>3- Automate your business like you always dreamed to ddo. </p>"
+          }
+        ]
       },
       "Why_Erad_Odoo_section":{
         "title":"Why Erad + Odoo",
-        "description":"Not just Odoo implementation — we combine ERP + accounting + TAX compliance expertise",
-        "cards":{
-            "Odoo Ready Partner":"Odoo Ready Partner",
-             "Odoo Ready Partner description":"Official certified partner for Odoo ERP implementation",
-             "UAE TAX Expertise":"UAE TAX Expertise",
-             "UAE TAX Expertise description":"15+ years of experience with UAE tax regulations",
-             "SME-Focused":"SME-Focused",
-             "SME-Focused description":"Solutions designed specifically for small and medium businesses",
-             "Practical title":"Practical, Not Theoretical",
-             "Practical description":"Real-world solutions that work for your business"
-        }
+        "description":" Not only Accounting services, Not Only Odoo ERP services, get a fullfledge of professional services to make sure  your business id running properly and Tax compliant.",
+        "cards":[
+           {
+      "title": "Odoo Ready Partner",
+      "description": "Certified Odoo Partner to flawlessly accomplish your ERP implementation and delivery the automation you laways dreamed about for your business.",
+      "icon": "Award"
+    },
+    {
+      "title": "UAE TAX-Compliance  Masters",
+      "description": "15+ years of experience with UAE tax regulations",
+      "icon": "BookCheck"
+    },
+    {
+      "title": "SME-Focused",
+      "description": "Our  target is to help businesses with 5 - 100 employee, we focus on SMEs because we have a proven success history here.",
+      "icon": "Users"
+    },
+    {
+      "title": "Practical, Not Theoretical",
+      "description": "Erad offers its enormous experience in: Hospitality, Logistics, Business Services, Trading and Distribution, Property Management, Contracting and Construction, Car service... and many other industries to support your business management, automation and Tax compliance.",
+      "icon": "Target"
+    }
+        ]
       },
       "Our_UAE_Specific_Packages_section":{
         "title":"Our UAE-Specific Packages",
         "description":"Solutions tailored for SMEs at every growth stage",
-        "cards":{
-            "card1":{
-                "title":"Starter TAX & Accounting",
-                 "count":"10 – 25 Staff",
-                 "description_title":"Contact for Pricing",
-                 "item1":"Odoo Accounting & Invoicing",
-                    "item2":"TAX setup & filing",
-                    "item3":"Chart of Accounts setup",
-                    "item4":"Basic staff training",
-                    "item5":"Monthly TAX returns"
-            },
-            "card2":{
-                "title":"Growth ERP",
-                 "count":"20 – 50 Staff",
-                 "description_title":"Contact for Pricing",
-                 "item1":"Odoo Accounting, Inventory, Sales, Purchase",
-                    "item2":"Automated reports & dashboards",
-                    "item3":"Staff training (up to 5 users)",
-                    "item4":"TAX & TAX compliance review",
-                    "item5":"Custom workflows"
-            },
-            "card3":{
-                "title":"Compliance & Automation Pro",
-                 "count":"Multi-branch SME",
-                 "description_title":"Contact for Pricing",
-                 "item1":"Multi-company / multi-branch setup",
-                    "item2":"Advanced inventory & asset management",
-                    "item3":"Automated bank reconciliation",
-                    "item4":"TAX-ready TAX automation",
-                    "item5":"Accounting system cleanup",
-                    "item6":"Priority support"
-            }
-
-      },
+        "Packages":[
+    {
+      "id": 1,
+      "name": "Starter Pack: ",
+      "target": "5 - 15 Employee",
+      "price": "Contact for Pricing",
+      "features": [
+        "Setup Odoo Accounting + 2 essential modules to your business (3 Odoo Users - 1 year)",
+        "TAX and Tax setup",
+        "Chart of accounts setup",
+        "9 hours of executive training",
+        "Periodic Tax filling"
+      ],
+      "button":"Enjoy this Package now for 799 AED / Month"
+    },
+    {
+      "id": 2,
+      "name": "Growth ERP",
+      "target": "16 - 30 Employee",
+      "price": "Contact for Pricing",
+      "features": [
+        "Setup Odoo Accounting + 4 essential modules to your business (5 Odoo Users - 1 year)",
+        "TAX and Tax setup",
+        "Chart of accounts setup",
+        "15 hours of executive training",
+        "Periodic Tax filling",
+        "Weekly Accounting Review"
+      ],
+      "button":"Enjoy this Package now for 1399 AED / Month",
+      "popular": true
+    },
+    {
+      "id": 3,
+      "name": "Compliance & Automation Pro",
+      "target": "Multi branch SME",
+      "price": "Contact for Pricing",
+      "features": [
+        "Multi-company / multi-branch setup",
+        "Custom Automation for your business needs",
+        "Advanced inventory & asset management",
+        "Tax and AML compliance and filing",
+        "Weekly Accounting Audit and review",
+        "Priority support"
+      ],
+      "button":"Contact for pricing"
+    }
+  ],
       "Real_Results_for_UAE_SMEs_section":{
         "title":"Real Results for UAE SMEs",
         "description":"UAE Trading Company - 25 staff",
@@ -163,14 +203,504 @@
         "button":"Book Your Free Consultation Today"
       }
     },
+    "Statictics_section":{
+      "title":"Real Results for UAE SMEs",
+       "company": "UAE Trading Company",
+    "number_of_customers": "25 staff",
+    "challenge": "Challenge: Manual accounting with frequent TAX errors",
+    "results": [
+      { "metric": "TAX errors reduced", "value": "90%" },
+      { "metric": "Monthly reporting time", "value": "5 days → 1 day" },
+      { "metric": "Annual cost savings", "value": "AED 50,000+" }
+    ]
+
+    },
+    "How_We_Work_section":{
+      "title":"How We Work",
+      "description":" A streamlined, five-step journey to optimize your accounting and compliance.",
+      "cards":[
+    {
+      "id": 1,
+      "title": "Discovery & TAX Health Check",
+      "description": "Comprehensive review of your current accounting and TAX compliance",
+      "color": "#D5872D"
+    },
+    {
+      "id": 2,
+      "title": "Accounting System Cleanup",
+      "description": "Fix errors, reconcile accounts, and prepare clean books",
+      "color": "#D5872D"
+    },
+    {
+      "id": 3,
+      "title": "Odoo ERP Implementation",
+      "description": "Custom setup and configuration for your business needs",
+      "color": "#D5872D"
+    },
+    {
+      "id": 4,
+      "title": "Staff Training & Support",
+      "description": "Comprehensive training to ensure your team is ready",
+      "color": "#D5872D"
+    },
+    {
+      "id": 5,
+      "title": "Ongoing Advisory",
+      "description": "Continuous support and compliance monitoring",
+      "color": "#D5872D"
+    }
+  ],
+  "next_step_card":{
+      "title":"Ready to Optimize?",
+      "description":"Let's get your books in order today.",
+      "button":"Get Started",
+      "text_color":"#155dfc",
+      "background_color":"#fff"
+  }
+  
+    },
+    "industries_section":{
+      "title":"Industries We Serve",
+      "industries":[
+    "Trading & Distribution",
+    "Professional Services",
+    "Hospitality",
+    "Property Management",
+    "Contracting & Construction",
+    "Startups"
+  ],
+  "description":"<strong>15+ years</strong> of experience in UAE and Middle East"
+    },
+    "connect_section":{
+     "title":"Ready to Transform Your Business?",
+     "description":"Book your free consultation today and discover how we can help you stay compliant and grow",
+     "button":"Book Your Free Consultation Today",
+     "background_color":"#0846AA"
+
+    },
     "Footer":{
       "About_Erad_section":{
         "title":"About Erad",
         "description":"Accounting, TAX & Odoo ERP Solutions for UAE SMEs. Official Odoo Ready Partner."
+        
       }
       
      
     }
         
-}
+    },
+    "Certifications":{
+      "title":"Official Certifications",
+      "description":"Official Certifications",
+      "Certificate_list":[
+        {
+    "id": 1,
+    "title": "Diploma in UAE Corporate Tax",
+    "issuer": "Association of Tax Technicians (ATT)",
+    "recipient": "Abdulraouf Abbas",
+    "description": "Awarded for successfully completing the professional requirements in UAE Corporate Tax legislation and practice.",
+    "details": [
+      { "label": "Issue Date", "value": "08/05/23" },
+      { "label": "Certificate No", "value": "266116" }
+    ],
+   
+    "fallbackText": "Diploma in UAE Corporate Tax"
+  },
+  {
+    "id": 2,
+    "title": "Fellowship Certificate",
+    "issuer": "Emirates Association for Accountants & Auditors",
+    "recipient": "Abdulraouf Abdollatif Abbas",
+    "description": "Awarded as \"Fellow Member\" based on Board Decision. Accredited in the United Arab Emirates under the UAE Professional Fellowship Programme.",
+    "details": [
+      { "label": "Fellowship No", "value": "505" },
+      { "label": "Validity", "value": "25/01/2024 - 25/01/2025" }
+    ],
+    
+    "fallbackText": "Fellowship Certificate"
+  }
+      ]
+    },
+    "About":{
+  "hero": {
+    "title": "About Erad",
+    "subtitle": "Accounting-first ERP implementation for UAE SMEs"
+  },
+  "who_we_are": {
+    "title": "Who We Are",
+    "description": [
+      "We are a team of experts in both accounting and automation, with a blend of experiences in multiple industries: trading, property management, distribution, contracting, services (shipping and clearance, admin services), hospitality (restaurants and hotels), and startups.",
+      "Over 15+ years in the UAE and Middle East, we have been able to deliver robust accounting and tax consultancies and services along with solid automation systems with the help of the Odoo framework.",
+      "Our approach is practical, not theoretical — we understand real business challenges because we've solved them across dozens of companies."
+    ]
+  },
+  "differentiators": {
+    "title": "Why We're Different",
+    "items": [
+      {
+        "title": "Accounting-First ERP",
+        "content": "Most ERP projects fail because accounting is an afterthought. At Erad, accountants lead the Odoo implementation — not just IT guys.",
+        "icon": "Award"
+      },
+      {
+        "title": "SME-Focused Solutions",
+        "content": "We understand the unique challenges of small and medium businesses. Our solutions scale with your growth, not against it.",
+        "icon": "Users"
+      },
+      {
+        "title": "TAX & TAX Expertise",
+        "content": "Deep understanding of UAE tax regulations ensures your business stays compliant and protected from penalties.",
+        "icon": "CheckCircle2"
+      },
+      {
+        "title": "Practical, Not Theoretical",
+        "content": "We deliver real-world solutions that work for your business today, with the flexibility to grow tomorrow.",
+        "icon": "Target"
+      }
+    ]
+  },
+  "experience_stats": [
+    {
+      "value": "15+",
+      "label": "Years in UAE & Middle East"
+    },
+    {
+      "value": "6+",
+      "label": "Industries Served"
+    },
+    {
+      "value": "100%",
+      "label": "SME-Focused"
+    }
+  ],
+  
+  "cta": {
+    "title": "Call Us Today",
+    "description": "Speak to one of our experts and discover how we can help your business",
+    "buttonText": "Contact an Expert"
+  }
+},
+"accounting_services": {
+    "hero": {
+      "title": "Professional Accounting Services for UAE SMEs",
+      "description": "Reliable accounting is the backbone of every successful business. At Erad, we deliver TAX-compliant accounting services tailored specifically for UAE small and medium-sized businesses.",
+      "ctaText": "Get a Free Accounting Review"
+    },
+    "our_offer": {
+      "title": "Our Accounting Services Include",
+      "services": [
+        "Bookkeeping & transaction recording",
+        "Monthly & quarterly closing",
+        "Financial statements (P&L, Balance Sheet, Cash Flow)",
+        "TAX-ready chart of accounts",
+        "Management & performance reports"
+      ]
+    },
+    "target_audience": {
+      "title": "Who It's For",
+      "segments": [
+        "SMEs and startups",
+        "Growing companies without in-house finance teams",
+        "Businesses struggling with TAX compliance",
+        "Companies preparing for audits or ERP implementation"
+      ]
+    },
+    "why_choose_erad": {
+      "title": "Why Choose Erad",
+      "reasons": [
+        { "title": "UAE Standards & TAX Expertise", "icon": "Shield" },
+        { "title": "Clear Reporting for Business Owners", "icon": "BarChart3" },
+        { "title": "Automation-Ready Systems", "icon": "Database" },
+        { "title": "Seamless Odoo ERP Integration", "icon": "FileText" }
+      ]
+    }
+  },
+  "small_business_accounting": {
+    "hero": {
+      "title": "Accounting Solutions Built for UAE Small Businesses",
+      "description": "SMEs need clarity, not complexity. Erad provides accounting services designed to grow with your business.",
+      "ctaText": "Talk to an SME Accounting Expert"
+    },
+    "challenges": {
+      "title": "Common Accounting Challenges for SMEs",
+      "subtitle": "Small businesses face unique accounting challenges",
+      "list": [
+        "Limited accounting staff or expertise",
+        "Difficulty staying TAX-compliant",
+        "Manual processes prone to errors",
+        "Lack of real-time financial visibility",
+        "Inability to scale systems as business grows"
+      ]
+    },
+    "sme_approach": {
+      "title": "Our SME Approach",
+      "items": [
+        { "title": "Scalable Accounting Systems", "description": "Start simple, grow as you need", "icon": "TrendingUp" },
+        { "title": "TAX-Ready from Day One", "description": "Compliant from your first transaction", "icon": "Shield" },
+        { "title": "Automation Using Odoo", "description": "Eliminate manual work and errors", "icon": "Zap" },
+        { "title": "Clear Reporting for Owners", "description": "Understand your numbers at a glance", "icon": "Users" }
+      ]
+    },
+    "sme_services": {
+      "title": "What We Offer Small Businesses",
+      "list": [
+        { "title": "Bookkeeping Services", "description": "Daily transaction recording, bank reconciliation, and month-end closing" },
+        { "title": "TAX Services", "description": "TAX registration, filing, compliance, and health checks" },
+        { "title": "Financial Reporting", "description": "Monthly P&L, balance sheets, and management reports you can actually understand" },
+        { "title": "Odoo ERP Setup", "description": "Start with basic accounting, add modules as you grow" },
+        { "title": "Advisory Services", "description": "Strategic guidance on cash flow, growth planning, and financial decisions" },
+        { "title": "System Cleanup", "description": "Fix messy books and get back on track" }
+      ]
+    },
+    "why_smes_choose_erad": {
+      "title": "Why UAE SMEs Choose Erad",
+      "reasons": [
+        { "title": "We Understand SMEs", "description": "15+ years working exclusively with small and medium businesses", "icon": "Users" },
+        { "title": "Grow with You", "description": "Start with basics, scale to full ERP as your business expands", "icon": "TrendingUp" },
+        { "title": "UAE Compliant", "description": "Deep expertise in UAE TAX regulations and TAX requirements", "icon": "Shield" }
+      ]
+    }
+  },
+  "vat_consultant": {
+    "hero": {
+      "title": "TAX Compliance Without Penalties",
+      "description": "TAX compliance in the UAE is not optional. Mistakes can lead to fines, audits, and business disruption. Erad provides end-to-end TAX consultancy services to help SMEs stay compliant, accurate, and protected.",
+      "ctaText": "Book a Free TAX Health Check"
+    },
+    "services": {
+      "title": "Our TAX Services",
+      "list": [
+        "TAX registration & deregistration",
+        "TAX return preparation & filing",
+        "TAX health checks",
+        "Review of tax invoices & records",
+        "TAX audit preparation & support"
+      ]
+    },
+    "risks": {
+      "title": "Common TAX Risks We Fix",
+      "subtitle": "Don't let these common mistakes put your business at risk",
+      "items": [
+        { "issue": "Wrong invoices and incorrect TAX rates", "consequence": "Penalty fines from TAX", "icon": "AlertTriangle" },
+        { "issue": "Missing or invalid tax invoices", "consequence": "Audit triggers and business disruption", "icon": "AlertTriangle" },
+        { "issue": "Late or incorrect TAX filings", "consequence": "Accumulated penalties and interest", "icon": "AlertTriangle" },
+        { "issue": "Poor record-keeping", "consequence": "Compliance failures during audits", "icon": "AlertTriangle" }
+      ]
+    },
+    "penalties_section": {
+      "title": "Protect Your Business Today",
+      "description": "The Federal Tax Authority conducts regular audits. Don't wait for a penalty notice to fix your TAX compliance.",
+      "stats": [
+        { "value": "20%", "label": "Penalty on TAX amount" },
+        { "value": "AED 15K", "label": "Fine for late filing" },
+        { "value": "300%", "label": "Penalty for tax evasion" }
+      ]
+    }
+  },
+  "vat_health_check": {
+    "hero": {
+      "title": "TAX Health Check for UAE SMEs",
+      "description": "A TAX health check identifies risks before the TAX does. Get peace of mind with a comprehensive review of your TAX compliance.",
+      "ctaText": "Book a Free TAX Health Check"
+    },
+    "review_scope": {
+      "title": "What We Review",
+      "list": [
+        "TAX returns accuracy and completeness",
+        "Tax invoices format and compliance",
+        "Accounting records and reconciliation",
+        "TAX codes and rate applications",
+        "Input and output TAX calculations"
+      ]
+    },
+    "comparison": {
+      "title": "Why You Need a TAX Health Check",
+      "without": {
+        "title": "Without TAX Health Check",
+        "points": [
+          "Hidden TAX errors accumulating",
+          "Risk of TAX penalties and fines",
+          "Unprepared for audits",
+          "Business disruption from compliance issues"
+        ]
+      },
+      "with": {
+        "title": "With TAX Health Check",
+        "points": [
+          "Identify and fix errors early",
+          "Avoid costly penalties",
+          "Audit-ready at all times",
+          "Peace of mind and confidence"
+        ]
+      }
+    },
+    "deliverables": {
+      "title": "What Erad Gives You",
+      "items": [
+        { "title": "Risk Assessment Report", "description": "Comprehensive analysis of TAX compliance status", "icon": "FileSearch" },
+        { "title": "List of Errors & Gaps", "description": "Detailed identification of all issues found", "icon": "AlertTriangle" },
+        { "title": "Clear Corrective Actions", "description": "Step-by-step remediation plan", "icon": "ClipboardCheck" }
+      ]
+    },
+    "process": {
+      "title": "How It Works",
+      "steps": [
+        { "step": 1, "title": "Book Your Check", "description": "Contact us via WhatsApp or phone to schedule your TAX health check" },
+        { "step": 2, "title": "Share Documents", "description": "Provide TAX returns, invoices, and accounting records for review" },
+        { "step": 3, "title": "Expert Analysis", "description": "Our team conducts comprehensive analysis of your TAX compliance" },
+        { "step": 4, "title": "Receive Report", "description": "Get detailed report with findings and action plan" },
+        { "step": 5, "title": "Fix Issues", "description": "We help you implement corrections and achieve full compliance" }
+      ]
+    },
+    "target_audience": {
+      "title": "Who Should Get a TAX Health Check?",
+      "segments": [
+        "Businesses registered for TAX in the UAE",
+        "Companies preparing for TAX audits",
+        "SMEs with frequent accounting changes",
+        "Businesses that have received TAX notices",
+        "Companies planning ERP implementation",
+        "Startups ensuring TAX compliance from day one"
+      ]
+    }
+  },
+  "system_cleanup": {
+    "hero": {
+      "title": "Fix Broken Accounting Systems Before They Cost You",
+      "description": "Messy books are more than an inconvenience; they're a risk. Erad specializes in accounting system cleanup for UAE businesses.",
+      "ctaText": "Fix Your Accounting System"
+    },
+    "warning_signs": {
+      "title": "Signs Your Books Are Broken",
+      "subtitle": "Do any of these sound familiar?",
+      "signs": [
+        "TAX returns don't match accounting records",
+        "Financial reports don't make sense",
+        "Multiple unreconciled balances",
+        "ERP or accounting software misconfigured",
+        "Unable to pass TAX audits",
+        "Historical data is incomplete or inaccurate"
+      ]
+    },
+    "what_we_fix": {
+      "title": "What We Fix",
+      "items": [
+        { "issue": "Incorrect Postings", "description": "Fix misclassified transactions and journal entries" },
+        { "issue": "TAX Errors", "description": "Correct TAX rates, codes, and reconciliation issues" },
+        { "issue": "Opening Balances", "description": "Reconcile and validate all opening balances" },
+        { "issue": "Chart of Accounts", "description": "Restructure for UAE compliance and clarity" }
+      ]
+    },
+    "cleanup_process": {
+      "title": "Our Cleanup Process",
+      "steps": [
+        { "step": 1, "title": "Initial Assessment", "description": "Comprehensive review of current accounting records and systems" },
+        { "step": 2, "title": "Error Identification", "description": "Identify all discrepancies, errors, and compliance gaps" },
+        { "step": 3, "title": "Data Reconciliation", "description": "Correct postings, reconcile accounts, and validate balances" },
+        { "step": 4, "title": "System Restructuring", "description": "Reorganize chart of accounts and implement proper controls" },
+        { "step": 5, "title": "Verification & Documentation", "description": "Final checks and complete documentation for future reference" }
+      ]
+    }
+  },
+  "fta_compliance": {
+    "hero": {
+      "title": "TAX Compliance Services for UAE SMEs",
+      "description": "The Federal Tax Authority expects accurate records, timely filings, and proper documentation. Erad helps you prepare before the audit happens.",
+      "ctaText": "Prepare with Erad Now"
+    },
+    "audit_areas": {
+      "title": "What the TAX Reviews",
+      "items": [
+        "TAX returns & calculations",
+        "Tax invoices & credit notes",
+        "Accounting records",
+        "TAX reconciliation",
+        "Supporting documentation"
+      ]
+    },
+    "process": {
+      "title": "Our Compliance Review Process",
+      "steps": [
+        { "step": "TAX Risk Assessment", "description": "Identify potential compliance gaps and audit triggers", "icon": "AlertCircle" },
+        { "step": "Records & Invoice Review", "description": "Verify all tax invoices and documentation meet TAX standards", "icon": "FileCheck" },
+        { "step": "System Reconciliation", "description": "Ensure accounting records match TAX returns accurately", "icon": "CheckCircle2" },
+        { "step": "Compliance Report & Action Plan", "description": "Detailed findings with clear steps to achieve full compliance", "icon": "Shield" }
+      ]
+    }
+  },
+  "odoo_services": {
+    "implementation": {
+      "hero": {
+        "title": "Odoo ERP Implemented by Accountants, Not Just IT",
+        "description": "Most ERP projects fail because accounting is an afterthought. At Erad, accountants lead the Odoo implementation.",
+        "ctaText": "Book an Odoo Consultation"
+      },
+      "modules": [
+        { "name": "Accounting", "icon": "BarChart3", "description": "Complete financial management" },
+        { "name": "Sales", "icon": "ShoppingCart", "description": "CRM and sales pipeline" },
+        { "name": "Purchase", "icon": "Package", "description": "Procurement automation" },
+        { "name": "Inventory", "icon": "Warehouse", "description": "Stock and warehouse management" },
+        { "name": "HR & Payroll", "icon": "Users", "description": "Employee management" },
+        { "name": "Projects", "icon": "Settings", "description": "Project tracking" }
+      ]
+    },
+    "partner_status": {
+      "badge": "Certified Partner",
+      "title": "Odoo Ready Partner UAE",
+      "description": "Official Odoo Ready Partner delivering ERP & Accounting Automation for SMEs in the UAE",
+      "definition": "Odoo Ready Partners are officially recognized by Odoo S.A. for their expertise in implementing and customizing Odoo ERP solutions. This certification ensures you're working with qualified professionals who understand both the technical and business aspects of Odoo.",
+      "why_erad_partner": {
+        "title": "Why Choose Erad as Your Odoo Partner",
+        "features": [
+          { "title": "Certified Expertise", "description": "Official Odoo Ready Partner with a proven track record in the UAE market" },
+          { "title": "SME-Focused", "description": "Solutions tailored for small and medium businesses, not large enterprises" },
+          { "title": "UAE TAX Compliance", "description": "Pre-configured for UAE tax regulations and TAX requirements" },
+          { "title": "Accounting-Led", "description": "Accountants leading the project, ensuring financial accuracy" }
+        ]
+      },
+      "service_list": [
+        { "title": "Odoo Implementation", "description": "Complete setup and configuration of Odoo modules tailored to your business" },
+        { "title": "Odoo Customization", "description": "Custom modules and workflows designed for your specific requirements" },
+        { "title": "Odoo Migration", "description": "Upgrade from legacy systems or older Odoo versions to the latest platform" },
+        { "title": "Odoo Training", "description": "Comprehensive staff training to maximize system adoption and efficiency" },
+        { "title": "Odoo Support", "description": "Ongoing technical support, troubleshooting, and system optimization" },
+        { "title": "Odoo Integration", "description": "Connect Odoo with your existing tools and third-party applications" }
+      ]
+    }
+  },
+  "global_cta": {
+    "title": "Ready to Get Your Business Accounting Right?",
+    "description": "Don't let messy books hold your business back. Call Erad and get your accounting right.",
+    "buttonText": "Call Erad Now"
+  },
+  "footer_data": {
+    "company_info": {
+      "name": "Erad",
+      "description": "Accounting, TAX & Odoo ERP Solutions for UAE SMEs. Official Odoo Ready Partner.",
+      "tagline": "Your partner in growth and compliance."
+    },
+    "navigation": {
+      "services": [
+        { "name": "Accounting Services", "path": "/accounting-services-uae" },
+        { "name": "TAX Consultant", "path": "/tax-consultant-uae" },
+        { "name": "TAX Compliance", "path": "/tax-compliance-uae" },
+        { "name": "System Cleanup", "path": "/accounting-system-cleanup" }
+      ],
+      "odoo_erp": [
+        { "name": "Odoo Implementation", "path": "/odoo-accounting-implementation-uae" },
+        { "name": "Odoo Partner UAE", "path": "/odoo-partner-uae" },
+        { "name": "TAX Health Check", "path": "/tax-health-check-uae" },
+        { "name": "Small Business", "path": "/accounting-for-small-business-uae" }
+      ],
+      "company": [
+        { "name": "About Erad", "path": "/about-erad" },
+        { "name": "Home", "path": "/" }
+      ]
+    },
+    "contact": {
+      "whatsapp_label": "WhatsApp",
+      "email_label": "Email",
+      "address_label": "Address"
+    }
+  }
 }

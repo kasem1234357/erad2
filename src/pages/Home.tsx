@@ -6,6 +6,7 @@ import { Badge } from '../components/ui/badge';
 import { Calculator, Shield, Settings, Award, BookCheck, Users, Target, ArrowRight, CheckCircle2, TrendingUp } from 'lucide-react';
 import { mockData } from '../data/mock';
 import bg4 from '../assets/4.jpg'
+import parse from 'html-react-parser';
 import bg2 from '../assets/2.jpg'
 import bg3 from '../assets/3.jpg'
 import certificate1 from '../assets/لقطة شاشة 2026-01-24 113705.png';
@@ -14,7 +15,8 @@ import ModernSection from '../components/ui/Test';
 import { StarButton } from '../components/ui/CustmBusston';
 import { CertificateCard } from '../components/ui/Certifications';
 import Test2 from '../components/ui/Test2';
-import { features, features2 } from '../assets/constants';
+import { Core_Services_section_cards_style, SME_Challenge_section_cards_style } from '../assets/constants';
+import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 const iconMap = {
   Calculator,
   Shield,
@@ -54,6 +56,7 @@ const certifications = [
 ];
 
 export const Home = () => {
+  const { Header,Home }: DictionaryType = useGetDictionary();
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
@@ -65,22 +68,22 @@ export const Home = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-[#714B67] text-white">Odoo Ready Partner</Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Accounting, TAX & Odoo ERP Solutions for UAE SMEs
+              {Home.h1_title}
             </h1>
             <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
-              We help SMEs stay TAX-compliant, TAX-ready, and financially organized using practical accounting expertise and smart automation powered by Odoo ERP.
+              {Home.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-secondary hover:bg-secondary scaleHover">
-                  Free TAX Health Check
+                  {Home.buttons.Free_TAX_Health_Check}
                 </Button>
               </a>
               <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
                 {/* <Button size="lg" className="bg-white hover:bg-white/90 text-primary">
                   Talk to an Accounting Expert
                 </Button> */}
-                <StarButton>Talk to an Accounting Expert</StarButton>
+                <StarButton>{Home.buttons.Talk_to_an_Accounting_Expert}</StarButton>
               </a>
             </div>
           </div>
@@ -90,12 +93,12 @@ export const Home = () => {
       {/* Pain Points Section */}
       <section className=" bg-white">
        
-          <ModernSection features={features} title={'The UAE SME Challenge :'} desc={`Running a business in the UAE is challenging enough — these issues shouldn't slow you down`}/>
+          <ModernSection content={Home.SME_Challenge_section.cards} stylesList={SME_Challenge_section_cards_style} title={Home.SME_Challenge_section.title} desc={Home.SME_Challenge_section.description}/>
          
       </section>
            <section className=" bg-white">
        
-          <ModernSection features={features2} title={"What We Do"} desc={"Practical Finance Solutions for Growing UAE Businesses"} numberOfColumn={3} customContainerClass={'w-full'} customCardClass={'min-h-[300px]'}/>
+          <ModernSection content={Home.Core_Services_section.cards} stylesList={Core_Services_section_cards_style} title={Home.Core_Services_section.title} desc={Home.Core_Services_section.description}/>
          
       </section>
      
@@ -105,13 +108,13 @@ export const Home = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Why Erad + Odoo</h2>
+              <h2 className="text-3xl font-bold mb-4">{Home.Why_Erad_Odoo_section.title}</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Not only Accounting services, Not Only Odoo ERP services, get a full fledge of professional services to make sure  your business id running properly and Tax compliant.
+              {Home.Why_Erad_Odoo_section.description}
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-              {mockData.whyErad.map((item, index) => {
+              {Home.Why_Erad_Odoo_section.cards.map((item, index) => {
                 const Icon = iconMap[item.icon];
                 return (
                   <Card key={index} className="text-center">
@@ -139,19 +142,7 @@ export const Home = () => {
             <CertificateCard key={cert.id} cert={cert} index={index} />
           ))}
         </main>
-            {/* <div className="mt-12 text-center bg-muted">
-              <div className="inline-block  p-6 rounded-lg">
-                <p className="text-lg  font-bold mb-5 ">Official Certifications</p>
-                <div className="flex items-center gap-4 justify-center flex-wrap">
-                  <div className=" w-[500px]  aspect-[3/2] bg-white rounded border flex items-center justify-center">
-                     <img className='w-full h-full' src={certificate1} alt="" />
-                  </div>
-                  <div className=" w-[500px]  aspect-[3/2] bg-white rounded border flex items-center justify-center">
-                     <img className='w-full h-full' src={certificate2} alt="" />
-                  </div>
-                </div>
-              </div>
-            </div> */}
+           
           </div>
         </div>
       </section>
@@ -160,13 +151,13 @@ export const Home = () => {
       <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our UAE-Specific Packages</h2>
+            <h2 className="text-3xl font-bold mb-4">{Home.Our_UAE_Specific_Packages_section.title}</h2>
             <p className="text-xl text-slate-300">
-              Solutions tailored for SMEs at every growth stage
+              {Home.Our_UAE_Specific_Packages_section.description}
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {mockData.packages.map((pkg) => (
+            {Home.Our_UAE_Specific_Packages_section.Packages.map((pkg) => (
               <Card key={pkg.id} className={`${pkg.popular ? 'border-secondary border-2' : ''} bg-white flex flex-col justify-between `}>
                 {pkg.popular && (
                   <div className="bg-secondary text-white text-center py-1 text-sm font-medium">
@@ -208,17 +199,17 @@ export const Home = () => {
       <section className="py-16 bg-gradient-to-br from-teal-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-4">Real Results for UAE SMEs</h2>
+            <h2 className="text-3xl font-bold text-center mb-4">{Home.Statictics_section.title}</h2>
             <p className="text-center text-muted-foreground mb-12">
-              {mockData.caseStudy.company} - {mockData.caseStudy.staff}
+              {Home.Statictics_section.company} - {Home.Statictics_section.number_of_customers}
             </p>
             <Card className="bg-white">
               <CardHeader>
-                <CardTitle>Challenge: {mockData.caseStudy.challenge}</CardTitle>
+                <CardTitle>{ Home.Statictics_section.challenge}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-6">
-                  {mockData.caseStudy.results.map((result, index) => (
+                  {Home.Statictics_section.results.map((result, index) => (
                     <div key={index} className="text-center p-4 bg-muted/50 rounded-lg">
                       <TrendingUp className="h-8 w-8 text-secondary mx-auto mb-2" />
                       <div className="text-3xl font-bold text-primary mb-1">{result.value}</div>
@@ -259,32 +250,34 @@ export const Home = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Industries We Serve</h2>
+            <h2 className="text-3xl font-bold mb-8">{Home.industries_section.title}</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {mockData.industries.map((industry, index) => (
+              {Home.industries_section.industries.map((industry, index) => (
                 <div key={index} className="bg-white p-4 rounded-lg border hover:border-secondary transition-colors">
                   <p className="font-medium">{industry}</p>
                 </div>
               ))}
             </div>
             <p className="mt-8 text-muted-foreground">
-              <strong>15+ years</strong> of experience in UAE and Middle East
+              {parse(Home.industries_section.description)}
             </p>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
+      <section className={`py-20 text-white ` } style={{
+        backgroundColor:Home.connect_section.background_color
+      }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <h2 className="text-3xl font-bold mb-4">{Home.connect_section.title}</h2>
             <p className="text-xl mb-8 text-white/90">
-              Book your free consultation today and discover how we can help you stay compliant and grow
+              {Home.connect_section.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Book Your Free Consultation Today
+                {Home.connect_section.button}
               </Button>
             </a>
           </div>

@@ -1,52 +1,37 @@
 import { AlertCircle, Award, BarChart3, Calculator, CheckCircle2, FileCheck, FileClock, FileQuestion, FileWarning, Layers3, Network, Settings, Shield, Target, Zap } from "lucide-react";
 
-export const features = [
+export const SME_Challenge_section_cards_style = [
     {
-      icon: <FileCheck className="w-8 h-8 text-white" />,
-      title: "TAX compliance & TAX audits", 
-      description: "Ensure seamless tax filing and full compliance with UAE tax laws, staying ready for any TAX audit with precise documentation.",
+      icon: <FileCheck className="w-8 h-8 text-white" />,    
       color: "bg-[#D5872D]"
     },
     {
-      icon: <AlertCircle className="w-8 h-8 text-white" />,
-      title: "Manual accounting errors",
-      description: "Replace risky manual entries with automated workflows to eliminate discrepancies and ensure 100% data integrity.",
+      icon: <AlertCircle className="w-8 h-8 text-white" />,   
       color: "bg-[#D5872D]"
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: "Slow reporting & cash flow visibility",
-      description: "Gain real-time access to financial health and cash flow movements through instant, automated reporting dashboards.",
+      icon: <BarChart3 className="w-8 h-8 text-white" />,   
       color: "bg-[#D5872D]"
     },
     {
       icon: <Network className="w-8 h-8 text-white" />,
-      title: "Complex multi-branch or multi-company management",
-      description: "Consolidate operations across multiple entities and branches into one unified system for centralized control and visibility.",
       color: "bg-[#D5872D]"
     }
   ];
-export const features2 = [
+export const Core_Services_section_cards_style = [
     {
       icon: <Calculator className="w-8 h-8 text-white" />,
-      title: "Accounting Services", 
-      description: `Accounting Services
-Accurate bookkeeping, financial reporting, and period-end closing — fully aligned with UAE Tax and AML regulations.`,
+     
       color: "bg-[#714B67]"
     },
     {
       icon: <Shield className="w-8 h-8 text-white" />,
-      title: "TAX and AML Compliance",
-        description: "From TAX registration to filings and audit preparation for Taxes and AML, we help protecting your business from penalties.",
+    
       color: "bg-[#714B67]"
     },
     {
       icon: <Settings className="w-8 h-8 text-white" />,
-      title: " Odoo Business framework:",
-      description: <p>Odoo is not just an ERP, it is a platform where Erad can develop the right solutions to:<br/>
-1- cover your accounting requirements <br/>
-2- handle all of your departments <br/>
-3- Automate your business like you always dreamed to ddo. </p>,
+     
       color: "bg-[#714B67]"
     },
   ];

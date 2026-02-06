@@ -1,45 +1,15 @@
 import  { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
+import { useGetDictionary, type DictionaryType } from '../../hooks/useGetDictionary';
 
 export default function Test2() {
   const [isVisible, setIsVisible] = useState(false);
-
+  const {Home}:DictionaryType = useGetDictionary();
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const steps = [
-    {
-      id: 1,
-      title: "Discovery & TAX Health Check",
-      description: "Comprehensive review of your current accounting and TAX compliance",
-      color: "bg-[#D5872D]"
-    },
-    {
-      id: 2,
-      title: "Accounting System Cleanup",
-      description: "Fix errors, reconcile accounts, and prepare clean books",
-      color: "bg-[#D5872D]"
-    },
-    {
-      id: 3,
-      title: "Odoo ERP Implementation",
-      description: "Custom setup and configuration for your business needs",
-      color: "bg-[#D5872D]"
-    },
-    {
-      id: 4,
-      title: "Staff Training & Support",
-      description: "Comprehensive training to ensure your team is ready",
-      color: "bg-[#D5872D]"
-    },
-    {
-      id: 5,
-      title: "Ongoing Advisory",
-      description: "Continuous support and compliance monitoring",
-      color: "bg-[#D5872D]"
-    }
-  ];
+  
 
   return (
     <div className="min-h-screen bg-slate-50 py-24 px-4 sm:px-6 lg:px-8 font-sans text-slate-800 overflow-hidden relative">
@@ -58,10 +28,10 @@ export default function Test2() {
           <span>Our Process</span>
         </div>
         <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-2 leading-tight">
-          How We Work
+          {Home.How_We_Work_section.title}
         </h2>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          A streamlined, five-step journey to optimize your accounting and compliance.
+          {Home.How_We_Work_section.description}
         </p>
       </div>
 
@@ -69,7 +39,7 @@ export default function Test2() {
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
           
-          {steps.map((step, index) => (
+          {Home.How_We_Work_section.cards.map((step, index) => (
             <div 
               key={step.id}
               className={`group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-slate-100 transition-all duration-500 ease-out hover:-translate-y-2 overflow-hidden`}
@@ -80,7 +50,7 @@ export default function Test2() {
               }}
             >
               {/* Gradient Top Line */}
-              <div className={`absolute top-0 left-0 right-0 h-1.5 ${step.color} transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-[${step.color}] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
 
               {/* Number Watermark */}
               <div className="absolute -right-4 -top-[80px] text-[200px] font-bold text-slate-100 opacity-50 group-hover:text-slate-100 group-hover:scale-110 transition-all duration-500 select-none z-0">
@@ -89,7 +59,7 @@ export default function Test2() {
 
               <div className="relative z-10">
                 {/* Step Number Badge */}
-                <div className={`w-14 h-14 rounded-2xl ${step.color} shadow-lg flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300`}>
+                <div className={`w-14 h-14 rounded-2xl bg-[${step.color}] shadow-lg flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300`}>
                   <span className="text-2xl font-bold text-white">{step.id}</span>
                 </div>
 
@@ -115,10 +85,13 @@ export default function Test2() {
             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 animate-pulse">
               <CheckCircle2 size={32} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Ready to Optimize?</h3>
-            <p className="text-blue-100 mb-6 text-sm">Let's get your books in order today.</p>
-            <button className="bg-white text-blue-600 px-6 py-2 rounded-lg font-bold hover:bg-blue-50 transition-colors shadow-md">
-              Get Started
+            <h3 className="text-xl font-bold mb-2">{Home.How_We_Work_section.next_step_card.title}</h3>
+            <p className="text-blue-100 mb-6 text-sm">{Home.How_We_Work_section.next_step_card.description}</p>
+            <button className=" px-6 py-2 rounded-lg font-bold hover:bg-blue-50 transition-colors shadow-md" style={{
+              backgroundColor:Home.How_We_Work_section.next_step_card.background_color,
+              color:Home.How_We_Work_section.next_step_card.text_color
+            }}>
+              {Home.How_We_Work_section.next_step_card.button}
             </button>
           </div>
 
