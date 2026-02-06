@@ -4,7 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../co
 import { CheckCircle2, AlertTriangle, Shield } from 'lucide-react';
 import { mockData } from '../data/mock';
 import ModernSection from '../components/ui/Test';
-import {  features3 } from '../assets/constants';
+import {  features3, vat_consultant_cards_style } from '../assets/constants';
+import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 
 export const VATConsultant = () => {
   const services = [
@@ -21,7 +22,7 @@ export const VATConsultant = () => {
     { issue: 'Late or incorrect TAX filings', consequence: 'Accumulated penalties and interest' },
     { issue: 'Poor record-keeping', consequence: 'Compliance failures during audits' }
   ];
-
+  const {vat_consultant}:DictionaryType = useGetDictionary()
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -67,7 +68,7 @@ export const VATConsultant = () => {
       {/* Common TAX Risks */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <ModernSection features={features3} title={'Common TAX Risks We Fix'} desc={'Don\'t let these common mistakes put your business at risk'} numberOfColumn={2} />
+          <ModernSection content={vat_consultant.risks.items} stylesList={vat_consultant_cards_style} titleKey={"issue"} descKey={"consequence"} title={'Common TAX Risks We Fix'} desc={'Don\'t let these common mistakes put your business at risk'} numberOfColumn={2} />
           {/* <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Common TAX Risks We Fix</h2>
             <p className="text-lg text-muted-foreground mb-8">

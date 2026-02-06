@@ -1,7 +1,7 @@
 //@ts-nocheck
 import parse from 'html-react-parser';
 
-const ModernSection = ({content,title,desc,numberOfColumn=2,customContainerClass,customCardClass,stylesList}:any) => {
+const ModernSection = ({content,title,desc,numberOfColumn=2,customContainerClass,customCardClass,stylesList,titleKey="title",descKey='description'}:any) => {
   // ⚠️ يرجى تعبئة النصوص أدناه من الصورة التي لديك لضمان التطابق التام
   
 
@@ -24,7 +24,7 @@ const ModernSection = ({content,title,desc,numberOfColumn=2,customContainerClass
 
         {/* Cards Grid */}
         <div className={`grid grid-cols-1 md:grid-cols-${numberOfColumn} lg:grid-cols-${numberOfColumn} gap-4 w-[90%]  mx-auto ${customContainerClass ? customContainerClass : ''}`}>
-          {content.map((feature, index) => {
+          {content?.map((feature, index) => {
             const isLastOddItem = content.length % 2 !== 0 && index === content.length - 1;
             return(
             <div 
@@ -42,10 +42,10 @@ const ModernSection = ({content,title,desc,numberOfColumn=2,customContainerClass
               </div>
               <div className='flex flex-col gap-2'>
                   <h3 className="text-xl font-bold text-slate-800  group-hover:text-blue-700 transition-colors">
-                {feature.title}
+                {feature[titleKey]}
               </h3>
                <p className="text-slate-600  leading-6">
-                {parse(feature.description)}
+                {parse(feature[descKey])}
               </p>
               </div>
              

@@ -6,7 +6,10 @@ import { mockData } from '../data/mock';
 import certificate1 from '../assets/rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg';
 import certificate2 from '../assets/photo_2026-01-24_11-28-33.jpg';
 import certificate3 from '../assets/لقطة شاشة 2026-01-24 113705.png'
+import aboutBg from '../assets/4.jpg'
 import { CertificateCard } from '../components/ui/Certifications';
+import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
+import CarouselSection from '../components/ui/CarouselSection';
 const certifications = [
   {
     id: 1,
@@ -37,18 +40,24 @@ const certifications = [
 ];
 
 export const About = () => {
+  const {About}:DictionaryType = useGetDictionary()
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-slate-50 to-white py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-linear-to-br from-slate-50 via-white to-secondary/10 py-20 pb-0 lg:py-32 min-h-screen flex">
+      <div className="absolute inset-0 w-full h-full   bg-black/60">
+        <img src={aboutBg} alt="" className='w-full h-full object-cover opacity-50'/>
+      </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-30 grid place-content-center" >
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              About Erad
+           
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              {About.hero.title}
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Accounting-first ERP implementation for UAE SMEs
+            <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
+              {About.hero.subtitle}
             </p>
+            
           </div>
         </div>
       </section>
@@ -163,21 +172,7 @@ export const About = () => {
       </section>
 
       {/* Industries */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Industries We Serve</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {mockData.industries.map((industry, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg border text-center hover:border-secondary transition-colors">
-                  <p className="font-medium">{industry}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+     <CarouselSection/>
       {/* Certifications */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

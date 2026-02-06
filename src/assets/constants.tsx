@@ -1,4 +1,4 @@
-import { AlertCircle, Award, BarChart3, Calculator, CheckCircle2, FileCheck, FileClock, FileQuestion, FileWarning, Layers3, Network, Settings, Shield, Target, Zap } from "lucide-react";
+import { AlertCircle, ArchiveX, Award, BarChart3, Calculator, CalendarX, CheckCircle2, FileCheck, FileClock, FileQuestion, FileWarning, Layers3, Network, ReceiptText, Settings, Shield, Target, Zap } from "lucide-react";
 
 export const SME_Challenge_section_cards_style = [
     {
@@ -15,6 +15,24 @@ export const SME_Challenge_section_cards_style = [
     },
     {
       icon: <Network className="w-8 h-8 text-white" />,
+      color: "bg-[#D5872D]"
+    }
+  ];
+  export const vat_consultant_cards_style = [
+    {
+      icon: <ReceiptText className="w-8 h-8 text-white" />,    
+      color: "bg-[#D5872D]"
+    },
+    {
+      icon: <FileQuestion className="w-8 h-8 text-white" />,   
+      color: "bg-[#D5872D]"
+    },
+    {
+      icon: <CalendarX className="w-8 h-8 text-white" />,   
+      color: "bg-[#D5872D]"
+    },
+    {
+      icon: <ArchiveX className="w-8 h-8 text-white" />,
       color: "bg-[#D5872D]"
     }
   ];
