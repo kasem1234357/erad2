@@ -17,6 +17,7 @@ import { CertificateCard } from '../components/ui/Certifications';
 import Test2 from '../components/ui/Test2';
 import { Core_Services_section_cards_style, SME_Challenge_section_cards_style } from '../assets/constants';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
+import CarouselSection from '../components/ui/CarouselSection';
 const iconMap = {
   Calculator,
   Shield,
@@ -247,7 +248,7 @@ export const Home = () => {
       <Test2/>
 
       {/* Industries */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">{Home.industries_section.title}</h2>
@@ -263,7 +264,8 @@ export const Home = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
+      <CarouselSection/>
 
       {/* CTA Section */}
       <section className={`py-20 text-white ` } style={{
