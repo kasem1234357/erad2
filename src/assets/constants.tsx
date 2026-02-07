@@ -40,17 +40,17 @@ export const Core_Services_section_cards_style = [
     {
       icon: <Calculator className="w-8 h-8 text-white" />,
      
-      color: "bg-[#714B67]"
+      color: "bg-[#D5872D]"
     },
     {
       icon: <Shield className="w-8 h-8 text-white" />,
     
-      color: "bg-[#714B67]"
+      color: "bg-[#D5872D]"
     },
     {
       icon: <Settings className="w-8 h-8 text-white" />,
      
-      color: "bg-[#714B67]"
+      color: "bg-[#D5872D]"
     },
   ];
 
