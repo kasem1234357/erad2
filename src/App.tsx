@@ -12,8 +12,23 @@ import OdooImplementation from "./pages/OdooImplementation";
 import OdooPartner from "./pages/OdooPartner";
 import VATHealthCheck from "./pages/VATHealthCheck";
 import SmallBusinessAccounting from "./pages/SmallBusinessAccounting";
+import { useDispatch, useSelector } from "react-redux";
+import { useTranslationsQuery } from "./lib/redux/services/Api";
+import { useEffect } from "react";
+import { setDictonary } from "./lib/redux/slices/controlSlice";
 
 function App() {
+    const dispatch = useDispatch();
+  const lang = useSelector((state: any) => state?.control?.lang);
+  const { data, isSuccess } = useTranslationsQuery(lang);
+  useEffect(() => {
+
+    if (data && isSuccess) {
+      console.log(data);
+
+      dispatch(setDictonary(data));
+    }
+  }, [lang, data, isSuccess]);
   return (
     <div className="App">
       <BrowserRouter>

@@ -1,8 +1,11 @@
 
+import { useSelector } from "react-redux";
 import dictionary from "../assets/en.json";
 export type DictionaryType = typeof dictionary;
 export function useGetDictionary(): any {
-
+  const serverDictionary: DictionaryType = useSelector(
+    (state: any) => state.control.dictionary
+  );
   const mergeDictionaries = (
     server: DictionaryType,
     local: DictionaryType = dictionary
@@ -30,5 +33,5 @@ export function useGetDictionary(): any {
     // return server;
   };
 
-  return mergeDictionaries({} as DictionaryType, dictionary);
+  return mergeDictionaries(serverDictionary, dictionary);
 }
