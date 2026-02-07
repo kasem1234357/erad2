@@ -117,7 +117,7 @@ export default function Test2() {
 
           {/* Call to Action Card */}
           <div 
-            className={`max-w-4xl mx-auto p-12 text-center bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem] shadow-2xl text-white relative overflow-hidden transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+            className={`max-w-4xl mx-auto p-12 text-center bg-[#2D538A] rounded-[3rem] shadow-2xl text-white relative overflow-hidden transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
           >
             {/* Background Decorative Elements */}
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
