@@ -6,11 +6,7 @@ export const Api = createApi({
   reducerPath: "Api",
   refetchOnMountOrArgChange: true,
   baseQuery: fetchBaseQuery({
-    baseUrl: "/api",
-    
-  prepareHeaders: (headers) => {
-    
-  },
+    baseUrl: "https://cms.erad-erp.com",
   }),
   tagTypes: [],
   endpoints: (builder) => ({

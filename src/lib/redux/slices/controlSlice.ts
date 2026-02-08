@@ -11,7 +11,7 @@ export type controllSliceType = {
 const controlSlice = createSlice({
   name: "control",
   initialState: {
-     lang:"ar",
+     lang:"en",
      dictionary:{}
   },
   reducers: {
