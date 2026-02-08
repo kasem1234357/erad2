@@ -1,6 +1,6 @@
 import  { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
-import { useGetDictionary, type DictionaryType } from '../../hooks/useGetDictionary';
+import { useGetDictionary, type DictionaryType,  } from '../../hooks/useGetDictionary';
 
 /**
  * تم تعديل الكود ليعمل بشكل مستقل في بيئة العرض (Preview) 
@@ -10,6 +10,8 @@ import { useGetDictionary, type DictionaryType } from '../../hooks/useGetDiction
 export default function Test2() {
   const [isVisible, setIsVisible] = useState(false);
   const {Home}:DictionaryType = useGetDictionary()
+  console.log(Home);
+  
   const images =[
        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
@@ -54,7 +56,7 @@ export default function Test2() {
 
         {/* Process Flow - Zig Zag */}
         <div className="relative z-10 space-y-24 lg:space-y-40">
-          {Home.How_We_Work_section.cards.map((step, index) => {
+          {Home?.How_We_Work_section.cards?.map((step, index) => {
             const isEven = index % 2 === 1;
             return (
               <div 

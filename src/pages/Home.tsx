@@ -18,6 +18,7 @@ import Test2 from '../components/ui/Test2';
 import { Core_Services_section_cards_style, SME_Challenge_section_cards_style } from '../assets/constants';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 import CarouselSection from '../components/ui/CarouselSection';
+const Why_Erad_Odoo_sectionIcons = ["Award","BookCheck","Users","Target"];
 const iconMap = {
   Calculator,
   Shield,
@@ -58,6 +59,7 @@ const certifications = [
 
 export const Home = () => {
   const { Header,Home }: DictionaryType = useGetDictionary();
+   
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
@@ -115,8 +117,8 @@ export const Home = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-              {Home.Why_Erad_Odoo_section.cards.map((item, index) => {
-                const Icon = iconMap[item.icon];
+              {Home?.Why_Erad_Odoo_section?.cards?.map((item, index) => {
+                const Icon = iconMap[Why_Erad_Odoo_sectionIcons[index]];
                 return (
                   <Card key={index} className="text-center">
                     <CardHeader>
@@ -152,13 +154,13 @@ export const Home = () => {
       <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">{Home.Our_UAE_Specific_Packages_section.title}</h2>
+            <h2 className="text-3xl font-bold mb-4">{Home?.Our_UAE_Specific_Packages_section.title}</h2>
             <p className="text-xl text-slate-300">
-              {Home.Our_UAE_Specific_Packages_section.description}
+              {Home?.Our_UAE_Specific_Packages_section.description}
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {Home.Our_UAE_Specific_Packages_section.Packages.map((pkg) => (
+            {Home?.Our_UAE_Specific_Packages_section?.Packages.map((pkg) => (
               <Card key={pkg.id} className={`${pkg.popular ? 'border-secondary border-2' : ''} bg-white flex flex-col justify-between `}>
                 {pkg.popular && (
                   <div className="bg-secondary text-white text-center py-1 text-sm font-medium">
