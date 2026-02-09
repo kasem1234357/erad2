@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { set } from "react-hook-form";
+
 export type controllSliceType = {
   control:{
     calenderBookingType:string
