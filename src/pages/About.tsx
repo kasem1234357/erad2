@@ -10,6 +10,8 @@ import aboutBg from '../assets/4.jpg'
 import { CertificateCard } from '../components/ui/Certifications';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 import CarouselSection from '../components/ui/CarouselSection';
+import { useSelector } from 'react-redux';
+import parse from 'html-react-parser';
 const certifications = [
   {
     id: 1,
@@ -41,8 +43,12 @@ const certifications = [
 
 export const About = () => {
   const {About}:DictionaryType = useGetDictionary()
+  const lang = useSelector((state: any) => state.control.lang);
+  
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{
+      direction:lang === 'ar'?"rtl":'ltr'
+    }}>
       {/* Hero */}
       <section className="relative bg-linear-to-br from-slate-50 via-white to-secondary/10 py-20 pb-0 lg:py-32 min-h-screen flex">
       <div className="absolute inset-0 w-full h-full   bg-black/60">
@@ -66,17 +72,16 @@ export const About = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
+            <h2 className="text-3xl font-bold mb-6">{About.who_we_are.title}</h2>
             <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-muted-foreground mb-4">
-                We are a team of experts in both accounting and automation, with a blend of experiences in multiple industries: trading, property management, distribution, contracting, services (shipping and clearance, admin services), hospitality (restaurants and hotels), and startups.
+               {typeof About.who_we_are.description === 'object'? About.who_we_are.description?.map((item,index)=>{
+                return<p className="text-lg text-muted-foreground">
+                  {parse(item)}
               </p>
-              <p className="text-lg text-muted-foreground mb-4">
-                Over 15+ years in the UAE and Middle East, we have been able to deliver robust accounting and tax consultancies and services along with solid automation systems with the help of the Odoo framework.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                Our approach is practical, not theoretical — we understand real business challenges because we've solved them across dozens of companies.
-              </p>
+               }):<p className="text-lg text-muted-foreground">
+                  {parse(About?.who_we_are?.description || '')}
+              </p>}
+              
             </div>
           </div>
         </div>
@@ -86,63 +91,29 @@ export const About = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Why We're Different</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{About.differentiators.title}</h2>
+
             <div className="grid md:grid-cols-2 gap-6">
-              <Card>
+              {About.differentiators.items?.map((item,index)=>{
+                return (
+                  <Card key={index}>
                 <CardHeader>
                   <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <Award className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle>Accounting-First ERP</CardTitle>
+                  <CardTitle>{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Most ERP projects fail because accounting is an afterthought. At Erad, accountants lead the Odoo implementation — not just IT guys.
+                    {parse(item.content)}
                   </p>
                 </CardContent>
               </Card>
+                )
+              })}
+              
 
-              <Card>
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-secondary" />
-                  </div>
-                  <CardTitle>SME-Focused Solutions</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    We understand the unique challenges of small and medium businesses. Our solutions scale with your growth, not against it.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                    <CheckCircle2 className="h-6 w-6 text-accent" />
-                  </div>
-                  <CardTitle>TAX & TAX Expertise</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Deep understanding of UAE tax regulations ensures your business stays compliant and protected from penalties.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Target className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle>Practical, Not Theoretical</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    We deliver real-world solutions that work for your business today, with the flexibility to grow tomorrow.
-                  </p>
-                </CardContent>
-              </Card>
+              
             </div>
           </div>
         </div>
@@ -152,19 +123,19 @@ export const About = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Our Experience</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center"></h2>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">15+</div>
-                <p className="text-muted-foreground">Years in UAE & Middle East</p>
+                <div className="text-4xl font-bold text-primary mb-2">{About.experience_stats[0].value}</div>
+                <p className="text-muted-foreground">{About.experience_stats[0].label}</p>
               </div>
               <div>
-                <div className="text-4xl font-bold text-secondary mb-2">6+</div>
-                <p className="text-muted-foreground">Industries Served</p>
+                <div className="text-4xl font-bold text-secondary mb-2">{About.experience_stats[1].value}</div>
+                <p className="text-muted-foreground">{About.experience_stats[1].label}</p>
               </div>
               <div>
-                <div className="text-4xl font-bold text-accent mb-2">100%</div>
-                <p className="text-muted-foreground">SME-Focused</p>
+                <div className="text-4xl font-bold text-accent mb-2">{About.experience_stats[2].value}</div>
+                <p className="text-muted-foreground">{About.experience_stats[2].label}</p>
               </div>
             </div>
           </div>
@@ -198,13 +169,13 @@ export const About = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Call Us Today</h2>
+            <h2 className="text-3xl font-bold mb-4">{About.cta.title}</h2>
             <p className="text-xl mb-8 text-white/90">
-              Speak to one of our experts and discover how we can help your business
+              {About.cta.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Contact an Expert
+                {About.cta.buttonText}
               </Button>
             </a>
           </div>

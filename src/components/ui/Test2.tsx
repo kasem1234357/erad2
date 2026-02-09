@@ -44,10 +44,10 @@ export default function Test2() {
             <span>Our Process</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-4 leading-tight">
-            {Home.How_We_Work_section.title}
+            {Home?.How_We_Work_section?.title}
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            {Home.How_We_Work_section.description}
+            {Home?.How_We_Work_section?.description}
           </p>
         </div>
 
@@ -129,17 +129,17 @@ export default function Test2() {
               <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 rotate-12">
                 <CheckCircle2 size={32} className="text-white" />
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">{Home.How_We_Work_section.next_step_card.title}</h3>
-              <p className="text-blue-100 mb-8 text-lg max-w-xl mx-auto">{Home.How_We_Work_section.next_step_card.description}</p>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4">{Home?.How_We_Work_section?.next_step_card?.title}</h3>
+              <p className="text-blue-100 mb-8 text-lg max-w-xl mx-auto">{Home?.How_We_Work_section?.next_step_card?.description}</p>
               
               <button 
                 className="px-10 py-4 rounded-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-blue-900/40" 
                 style={{
-                  backgroundColor: Home.How_We_Work_section.next_step_card.background_color,
-                  color: Home.How_We_Work_section.next_step_card.text_color
+                  backgroundColor: Home?.How_We_Work_section?.next_step_card?.background_color,
+                  color: Home?.How_We_Work_section?.next_step_card?.text_color
                 }}
               >
-                {Home.How_We_Work_section.next_step_card.button}
+                {Home?.How_We_Work_section?.next_step_card?.button}
               </button>
             </div>
           </div>

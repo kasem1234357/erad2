@@ -42,6 +42,8 @@ export default function CarouselSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const {Home}:DictionaryType = useGetDictionary()
+  //@ts-ignore
+  const indutriesKey = Home['industries_section']||Home['Industries_We_Serve_section']
   // حساب عدد العناصر المعروضة بناءً على حجم الشاشة (محاكاة بسيطة)
 //   const itemsPerPage = 3; 
 
@@ -60,7 +62,7 @@ export default function CarouselSection() {
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">{Home.industries_section.title}</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">{indutriesKey?.title}</h2>
           <div className="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
         </div>
 
@@ -107,7 +109,7 @@ export default function CarouselSection() {
                     
                     {/* Content */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <h3 className="text-xl font-bold leading-tight">{Home.industries_section.industries[index]}</h3>
+                      <h3 className="text-xl font-bold leading-tight">{indutriesKey?.industries[index]}</h3>
                       <p className="text-sm text-blue-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         View Solutions &rarr;
                       </p>
@@ -138,7 +140,7 @@ export default function CarouselSection() {
         {/* Footer Text */}
         <div className="mt-12 text-center text-slate-600">
           <p className="text-lg " dir='ltr'>
-            {parse(Home.industries_section.description)}
+            {parse(indutriesKey?.description || '')}
           </p>
         </div>
         

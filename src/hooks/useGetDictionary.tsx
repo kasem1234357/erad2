@@ -1,17 +1,20 @@
 import { useSelector } from "react-redux";
 
-import dictionary from "../assets/en.json";
-export type DictionaryType = typeof dictionary;
+import enDictionary from "../assets/en.json";
+import arDictionary from "../assets/ar.json";
+export type DictionaryType = typeof enDictionary;
+
 export function useGetDictionary(): any {
   const serverDictionary: DictionaryType = useSelector(
     (state: any) => state.control.dictionary
   );
-  console.log(serverDictionary);
+  const language = useSelector((state: any) => state.control.lang);
+
   
 
   const mergeDictionaries = (
     server: DictionaryType,
-    local: DictionaryType = dictionary
+    local: DictionaryType = enDictionary
   ): any => {
     // console.log('server',server);
     // console.log('local',local);
@@ -35,6 +38,6 @@ export function useGetDictionary(): any {
 
     // return server;
   };
-
-  return mergeDictionaries(serverDictionary, dictionary);
+//@ts-ignore
+  return mergeDictionaries(serverDictionary, language === "ar" ? arDictionary : enDictionary);
 }

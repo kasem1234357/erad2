@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { set } from "react-hook-form";
 export type controllSliceType = {
   control:{
     calenderBookingType:string
@@ -18,7 +19,10 @@ const controlSlice = createSlice({
       setDictonary: (state: any, action: { payload: any }) => {
     state.dictionary = action.payload;
   },
+     setLang: (state: any, action: { payload: any }) => {
+    state.lang = action.payload;
+  }
   }
 })
-export const {setDictonary} = controlSlice.actions
+export const {setDictonary,setLang} = controlSlice.actions
 export default controlSlice.reducer

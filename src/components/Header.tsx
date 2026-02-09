@@ -6,6 +6,7 @@ import { Menu, X, Phone } from 'lucide-react';
 import { mockData } from '../data/mock';
 import logo from '../assets/logo.png'
 import odooPartner from '../assets/odoo_ready_partners_rgb.png'
+import LanguageSwitcher from './ui/LanguageSwitcher';
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -85,6 +86,7 @@ export const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageSwitcher/>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="sm" className='hover:bg-[#714B67] hover:text-white'>
                 <Phone className="h-4 w-4 mr-2" />
@@ -97,13 +99,19 @@ export const Header = () => {
               </Button>
             </a>
           </div>
-
-          <button
+          <div className='flex gap-2 md:hidden'>
+            <div className='md:hidden'>
+            <LanguageSwitcher/>
+          </div>
+             <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
+          
+          </div>
+         
         </div>
 
         {isMenuOpen && (
@@ -136,6 +144,7 @@ export const Header = () => {
               </div>
             ))}
             <div className="space-y-2 mt-4">
+               
               <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="w-full">
                   <Phone className="h-4 w-4 mr-2" />

@@ -18,6 +18,8 @@ import Test2 from '../components/ui/Test2';
 import { Core_Services_section_cards_style, SME_Challenge_section_cards_style } from '../assets/constants';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 import CarouselSection from '../components/ui/CarouselSection';
+import { useSelector } from 'react-redux';
+import { cn } from '../lib/utils';
 const Why_Erad_Odoo_sectionIcons = ["Award","BookCheck","Users","Target"];
 const iconMap = {
   Calculator,
@@ -59,9 +61,13 @@ const certifications = [
 
 export const Home = () => {
   const { Header,Home }: DictionaryType = useGetDictionary();
+  const lang = useSelector((state: any) => state.control.lang);
+   console.log(Home);
    
   return (
-    <div className="min-h-screen ">
+    <div className={cn("min-h-screen ")} style={{
+      direction:lang === 'ar'?"rtl":'ltr'
+    }}>
       {/* Hero Section */}
       <section className="relative bg-linear-to-br from-slate-50 via-white to-secondary/10 py-20 pb-0 lg:py-32 min-h-screen flex">
       <div className="absolute inset-0 w-full h-full   bg-black/60">
@@ -94,7 +100,7 @@ export const Home = () => {
       </section>
 
       {/* Pain Points Section */}
-      <section className=" bg-white">
+      <section className={cn(" bg-white ")}>
        
           <ModernSection content={Home.SME_Challenge_section.cards} stylesList={SME_Challenge_section_cards_style} title={Home.SME_Challenge_section.title} desc={Home.SME_Challenge_section.description}/>
          
@@ -202,17 +208,17 @@ export const Home = () => {
       <section className="py-16 bg-gradient-to-br from-teal-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-4">{Home.Statictics_section.title}</h2>
+            <h2 className="text-3xl font-bold text-center mb-4">{Home?.Statictics_section?.title}</h2>
             <p className="text-center text-muted-foreground mb-12">
-              {Home.Statictics_section.company} - {Home.Statictics_section.number_of_customers}
+              {Home.Statictics_section?.company} - {Home.Statictics_section?.number_of_customers}
             </p>
             <Card className="bg-white">
               <CardHeader>
-                <CardTitle>{ Home.Statictics_section.challenge}</CardTitle>
+                <CardTitle>{ Home.Statictics_section?.challenge}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-6">
-                  {Home.Statictics_section.results.map((result, index) => (
+                  {Home.Statictics_section?.results.map((result, index) => (
                     <div key={index} className="text-center p-4 bg-muted/50 rounded-lg">
                       <TrendingUp className="h-8 w-8 text-secondary mx-auto mb-2" />
                       <div className="text-3xl font-bold text-primary mb-1">{result.value}</div>
@@ -271,17 +277,17 @@ export const Home = () => {
 
       {/* CTA Section */}
       <section className={`py-20 text-white ` } style={{
-        backgroundColor:Home.connect_section.background_color
+        backgroundColor:Home?.connect_section?.background_color
       }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">{Home.connect_section.title}</h2>
+            <h2 className="text-3xl font-bold mb-4">{Home.connect_section?.title}</h2>
             <p className="text-xl mb-8 text-white/90">
-              {Home.connect_section.description}
+              {Home.connect_section?.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                {Home.connect_section.button}
+                {Home.connect_section?.button}
               </Button>
             </a>
           </div>
