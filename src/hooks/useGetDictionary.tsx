@@ -5,9 +5,9 @@ import arDictionary from "../assets/ar.json";
 export type DictionaryType = typeof enDictionary;
 
 export function useGetDictionary(): any {
-  const serverDictionary: DictionaryType = useSelector(
-    (state: any) => state.control.dictionary
-  );
+  // const serverDictionary: DictionaryType = useSelector(
+  //   (state: any) => state.control.dictionary
+  // );
   const language = useSelector((state: any) => state.control.lang);
 
   
@@ -39,5 +39,5 @@ export function useGetDictionary(): any {
     // return server;
   };
 //@ts-ignore
-  return mergeDictionaries(serverDictionary, language === "ar" ? arDictionary : enDictionary);
+  return mergeDictionaries({} as DictionaryType, language === "ar" ? arDictionary : enDictionary);
 }
