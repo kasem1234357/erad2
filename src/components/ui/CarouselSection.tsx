@@ -2,7 +2,6 @@ import  { useState,  } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useGetDictionary, type DictionaryType } from '../../hooks/useGetDictionary';
-import ProfessionalServices from '../../assets/Professional Services.jpg';
 import parse from 'html-react-parser'
 import in1 from '../../assets/in1.jpg'
 import in2 from '../../assets/in2.jpg'
