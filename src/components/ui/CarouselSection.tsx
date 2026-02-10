@@ -4,37 +4,42 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useGetDictionary, type DictionaryType } from '../../hooks/useGetDictionary';
 import ProfessionalServices from '../../assets/Professional Services.jpg';
 import parse from 'html-react-parser'
-
+import in1 from '../../assets/in1.jpg'
+import in2 from '../../assets/in2.jpg'
+import in3 from '../../assets/in3.jpg'
+import in4 from '../../assets/in4.jpg'
+import in5 from '../../assets/in5.jpg'
+import in6 from '../../assets/in6.jpg'
 const industries = [
   {
     title: "Trading & Distribution",
     titleAr: "التجارة والتوزيع",
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=800",
+    image: in3,
   },
   {
     title: "Professional Services",
     titleAr: "الخدمات المهنية",
-    image: ProfessionalServices,
+    image: in5,
   },
   {
     title: "Hospitality",
     titleAr: "الضيافة",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800",
+    image: in1,
   },
   {
     title: "Property Management",
     titleAr: "إدارة العقارات",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
+    image: in4,
   },
   {
     title: "Contracting & Construction",
     titleAr: "المقاولات والإنشاءات",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800",
+    image: in2,
   },
   {
     title: "Startups",
     titleAr: "الشركات الناشئة",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=800",
+    image: in6,
   }
 ];
 

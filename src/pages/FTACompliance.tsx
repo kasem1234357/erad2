@@ -3,38 +3,47 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card';
 import { CheckCircle2, FileCheck, Shield, AlertCircle } from 'lucide-react';
 import { mockData } from '../data/mock';
+import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 
 export const FTACompliance = () => {
-  const ftaReviews = [
-    'TAX returns & calculations',
-    'Tax invoices & credit notes',
-    'Accounting records',
-    'TAX reconciliation',
-    'Supporting documentation'
-  ];
+  const {fta_compliance}:DictionaryType = useGetDictionary()
+  const iconMap = {
+    AlertCircle,
+    FileCheck,
+    CheckCircle2,
+    Shield
+  }
+  const benefitIcons = [Shield,FileCheck,CheckCircle2];
+  // const ftaReviews = [
+  //   'TAX returns & calculations',
+  //   'Tax invoices & credit notes',
+  //   'Accounting records',
+  //   'TAX reconciliation',
+  //   'Supporting documentation'
+  // ];
 
-  const complianceProcess = [
-    {
-      step: 'TAX Risk Assessment',
-      description: 'Identify potential compliance gaps and audit triggers',
-      icon: AlertCircle
-    },
-    {
-      step: 'Records & Invoice Review',
-      description: 'Verify all tax invoices and documentation meet TAX standards',
-      icon: FileCheck
-    },
-    {
-      step: 'System Reconciliation',
-      description: 'Ensure accounting records match TAX returns accurately',
-      icon: CheckCircle2
-    },
-    {
-      step: 'Compliance Report & Action Plan',
-      description: 'Detailed findings with clear steps to achieve full compliance',
-      icon: Shield
-    }
-  ];
+  // const complianceProcess = [
+  //   {
+  //     step: 'TAX Risk Assessment',
+  //     description: 'Identify potential compliance gaps and audit triggers',
+  //     icon: AlertCircle
+  //   },
+  //   {
+  //     step: 'Records & Invoice Review',
+  //     description: 'Verify all tax invoices and documentation meet TAX standards',
+  //     icon: FileCheck
+  //   },
+  //   {
+  //     step: 'System Reconciliation',
+  //     description: 'Ensure accounting records match TAX returns accurately',
+  //     icon: CheckCircle2
+  //   },
+  //   {
+  //     step: 'Compliance Report & Action Plan',
+  //     description: 'Detailed findings with clear steps to achieve full compliance',
+  //     icon: Shield
+  //   }
+  // ];
 
   return (
     <div className="min-h-screen">
@@ -43,14 +52,14 @@ export const FTACompliance = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              TAX Compliance Services for UAE SMEs
+              {fta_compliance.hero.title}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              The Federal Tax Authority expects accurate records, timely filings, and proper documentation. Erad helps you prepare before the audit happens.
+              {fta_compliance.hero.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90">
-                Prepare with Erad Now
+                {fta_compliance.hero.ctaText}
               </Button>
             </a>
           </div>
@@ -61,14 +70,14 @@ export const FTACompliance = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">What the TAX Reviews</h2>
+            <h2 className="text-3xl font-bold mb-4">{fta_compliance.audit_areas.title}</h2>
             <p className="text-lg text-muted-foreground mb-8">
               During an audit, the Federal Tax Authority scrutinizes these critical areas
             </p>
             <Card className="border-l-4 border-l-primary">
               <CardContent className="pt-6">
                 <ul className="space-y-4">
-                  {ftaReviews.map((item, index) => (
+                  {fta_compliance.audit_areas.items.map((item, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" />
                       <span className="text-lg">{item}</span>
@@ -85,10 +94,10 @@ export const FTACompliance = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Our Compliance Review Process</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{fta_compliance.process.title}</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {complianceProcess.map((item, index) => {
-                const Icon = item.icon;
+              {fta_compliance.process.steps.map((item, index) => {
+                const Icon = iconMap[item.icon];
                 return (
                   <Card key={index}>
                     <CardHeader>
@@ -116,43 +125,24 @@ export const FTACompliance = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Why Prepare with Erad</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{fta_compliance.Benefits.title}</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Card className="text-center">
-                <CardHeader>
-                  <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle>Avoid Penalties</CardTitle>
-                  <CardDescription>
-                    Identify and fix issues before TAX audits find them
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+              {fta_compliance.Benefits.cards.map((item, index) => {
+                const Icon = benefitIcons[index];
+                return (
+                  <Card key={index}>
+                    <CardHeader>
+                      <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <Icon className="h-8 w-8 text-primary" />
+                      </div>
+                      <CardTitle className="text-lg">{item.title}</CardTitle>
+                      <CardDescription>{item.description}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                );
+              })}
 
-              <Card className="text-center">
-                <CardHeader>
-                  <div className="h-16 w-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
-                    <FileCheck className="h-8 w-8 text-secondary" />
-                  </div>
-                  <CardTitle>Complete Documentation</CardTitle>
-                  <CardDescription>
-                    Ensure all records meet TAX standards
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card className="text-center">
-                <CardHeader>
-                  <div className="h-16 w-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle2 className="h-8 w-8 text-accent" />
-                  </div>
-                  <CardTitle>Peace of Mind</CardTitle>
-                  <CardDescription>
-                    Be audit-ready at all times with ongoing compliance
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+  
             </div>
           </div>
         </div>

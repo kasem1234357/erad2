@@ -826,6 +826,23 @@
           "icon": "Shield"
         }
       ]
+    },
+    "Benefits":{
+      "title":"Why Prepare with Erad",
+      "cards":[
+        {
+          "title":"Avoid Penalties",
+          "description":"  Identify and fix issues before TAX audits find them"
+        },
+        {
+          "title":"Complete Documentation",
+          "description":" Ensure all records meet TAX standards"
+        },
+        {
+          "title":"Peace of Mind",
+          "description":" Be audit-ready at all times with ongoing compliance"
+        }
+      ]
     }
   },
   "odoo_services": {
