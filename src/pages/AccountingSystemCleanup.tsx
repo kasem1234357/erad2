@@ -4,34 +4,27 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../co
 import { CheckCircle2, AlertTriangle, Wrench, TrendingUp } from 'lucide-react';
 import { mockData } from '../data/mock';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
+import { useSelector } from 'react-redux';
 
 export const AccountingSystemCleanup = () => {
   const {system_cleanup}:DictionaryType = useGetDictionary()
-  const signs = [
-    'TAX returns don\'t match accounting records',
-    'Financial reports don\'t make sense',
-    'Multiple unreconciled balances',
-    'ERP or accounting software misconfigured',
-    'Unable to pass TAX audits',
-    'Historical data is incomplete or inaccurate'
-  ];
+  const lang = useSelector((state: any) => state?.control?.lang);
 
-  const whatWeFix = [
-    { issue: 'Incorrect Postings', description: 'Fix misclassified transactions and journal entries' },
-    { issue: 'TAX Errors', description: 'Correct TAX rates, codes, and reconciliation issues' },
-    { issue: 'Opening Balances', description: 'Reconcile and validate all opening balances' },
-    { issue: 'Chart of Accounts', description: 'Restructure for UAE compliance and clarity' }
-  ];
+
 
   const benefits = [
     { title: 'Accurate Financial Reports', icon: TrendingUp },
     { title: 'TAX-Ready Records', icon: CheckCircle2 },
     { title: 'Audit-Ready Systems', icon: CheckCircle2 },
     { title: 'Clean Foundation for ERP', icon: Wrench }
-  ];
+  ].map((item:any,index:number)=>{
+    return Object.assign(item,{title:system_cleanup.Benefits[index]})
+  });
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{
+      direction:lang === 'ar'? 'rtl' : 'ltr'
+    }}>
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-50 to-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,7 +122,7 @@ export const AccountingSystemCleanup = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Cleanup Benefits</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{system_cleanup.BenefitsTitle}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => {
                 const Icon = benefit.icon;
@@ -155,29 +148,23 @@ export const AccountingSystemCleanup = () => {
           <div className="max-w-3xl mx-auto">
             <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary">
               <CardHeader>
-                <CardTitle className="text-2xl mb-2">The Cost of Doing Nothing</CardTitle>
+                <CardTitle className="text-2xl mb-2">
+                  {system_cleanup.costs.title}
+                </CardTitle>
                 <CardDescription className="text-base">
-                  Broken accounting systems lead to:
+                  {system_cleanup.costs.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Failed TAX audits and heavy penalties</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Poor business decisions based on incorrect data</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Inability to implement ERP or automation tools</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Loss of investor or bank confidence</span>
-                  </li>
+                  {system_cleanup.costs.items.map((item,index)=>{
+                    return <li key={index} className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  })
+                  }
+   
                 </ul>
               </CardContent>
             </Card>
@@ -189,13 +176,15 @@ export const AccountingSystemCleanup = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Fix Your Accounting System Today</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              {system_cleanup.cta.title}
+            </h2>
             <p className="text-xl mb-8 text-white/90">
-              Don't let messy books hold your business back. Call Erad and get your accounting right.
+              {system_cleanup.cta.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Call Erad Now
+                {system_cleanup.cta.cta_button}
               </Button>
             </a>
           </div>

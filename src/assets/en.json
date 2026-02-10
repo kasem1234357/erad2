@@ -415,6 +415,11 @@
         { "title": "Automation-Ready Systems", "icon": "Database" },
         { "title": "Seamless Odoo ERP Integration", "icon": "FileText" }
       ]
+    },
+    "cta":{
+      "title":"Ready to Get Your Accounting Right?",
+      "description":" Get a free accounting review and see how we can help your business stay compliant and organized",
+      "buttonText":"Get Free Review Now"
     }
   },
   "small_business_accounting": {
@@ -612,6 +617,29 @@
         { "step": 4, "title": "System Restructuring", "description": "Reorganize chart of accounts and implement proper controls" },
         { "step": 5, "title": "Verification & Documentation", "description": "Final checks and complete documentation for future reference" }
       ]
+    },
+    "BenefitsTitle":"Cleanup Benefits",
+    "Benefits":[
+      "Accurate Financial Reports",
+      "TAX-Ready Records",
+      "Audit-Ready Systems",
+      "Clean Foundation for ERP"
+    ],
+    "costs":{
+      "title":"The Cost of Doing Nothing",
+      "description":"Broken accounting systems lead to:",
+      "items":[
+        "Failed TAX audits and heavy penalties",
+        "Poor business decisions based on incorrect data",
+        "Inability to implement ERP or automation tools",
+        "Loss of investor or bank confidence",
+        "Cost of compliance"
+      ]
+    },
+    "cta":{
+      "title":"Fix Your Accounting System Today",
+      "description":"Don't let messy books hold your business back. Call Erad and get your accounting right.",
+      "cta_button":"Call Erad Now"
     }
   },
   "fta_compliance": {
@@ -622,6 +650,7 @@
     },
     "audit_areas": {
       "title": "What the TAX Reviews",
+      "description": "During an audit, the Federal Tax Authority scrutinizes these critical areas",
       "items": [
         "TAX returns & calculations",
         "Tax invoices & credit notes",
@@ -655,6 +684,21 @@
           "description":" Be audit-ready at all times with ongoing compliance"
         }
       ]
+    },
+    "tax_audit":{
+      "title":"Don't Wait for the Audit",
+      "description":" TAX audits can happen at any time. Being unprepared can result in:",
+      "list":[
+        "Heavy financial penalties and interest charges",
+        "Business disruption during prolonged audit processes",
+        "Reputation damage and loss of business credibility",
+        "Potential legal consequences for serious violations"
+      ]
+    },
+    "cta":{
+      "title":"Prepare Before the TAX Audits You",
+      "description":"Get a comprehensive compliance review and action plan to protect your business",
+      "buttonText":"Start Compliance Review"
     }
   },
   "odoo_services": {
@@ -671,7 +715,93 @@
         { "name": "Inventory", "icon": "Warehouse", "description": "Stock and warehouse management" },
         { "name": "HR & Payroll", "icon": "Users", "description": "Employee management" },
         { "name": "Projects", "icon": "Settings", "description": "Project tracking" }
-      ]
+      ],
+      "what_is_odoo":{
+        "title":"What is Odoo?",
+        "description":[
+          " Odoo is a comprehensive suite of open-source business applications that covers all your company needs: Accounting, Sales, CRM, Inventory, Manufacturing, Project Management, HR, and more.",
+          "Unlike fragmented systems, Odoo provides a unified platform where all your business processes work together seamlessly."
+        ]
+      },
+      "why_erad_partner": {
+        "title": "Why Choose Erad for Odoo",
+        "features": [
+    "Official Odoo Ready Partner",
+    "UAE TAX-first setup",
+    "Implementation based on your specific business requirements",
+    "Practical training and ongoing support",
+    "Accountants leading the implementation, not just IT"
+  ]
+      },
+      "implementation_process": {
+    "title": "Our Implementation Process",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Discovery & Requirements",
+        "description": "Understanding your business processes and specific needs"
+      },
+      {
+        "step": 2,
+        "title": "System Design",
+        "description": "Designing Odoo configuration aligned with UAE compliance"
+      },
+      {
+        "step": 3,
+        "title": "Configuration & Setup",
+        "description": "Installing and configuring Odoo modules for your business"
+      },
+      {
+        "step": 4,
+        "title": "Data Migration",
+        "description": "Transferring your existing data to Odoo safely"
+      },
+      {
+        "step": 5,
+        "title": "Training & Go-Live",
+        "description": "Comprehensive staff training and system launch"
+      },
+      {
+        "step": 6,
+        "title": "Ongoing Support",
+        "description": "Continuous support and optimization as you grow"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of Odoo ERP",
+    "benefits_list": [
+      {
+        "title": "Unified System",
+        "description": "All business processes in one platform"
+      },
+      {
+        "title": "Real-Time Data",
+        "description": "Instant access to accurate business information"
+      },
+      {
+        "title": "Automation",
+        "description": "Reduce manual work and human errors"
+      },
+      {
+        "title": "Scalability",
+        "description": "Add modules as your business grows"
+      },
+      {
+        "title": "UAE Compliance",
+        "description": "TAX-ready and TAX-compliant from day one"
+      },
+      {
+        "title": "Cost-Effective",
+        "description": "Open-source with no hidden licensing fees"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business with Odoo?",
+    "description": "Book an Odoo consultation with Erad and see how ERP can drive your growth",
+    "button_text": "Book Odoo Consultation Now"
+  }
     },
     "partner_status": {
       "badge": "Certified Partner",

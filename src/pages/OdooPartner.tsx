@@ -2,28 +2,34 @@
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
-import { CheckCircle2, Award, Target, Zap } from 'lucide-react';
+
 import { mockData } from '../data/mock';
-import ModernSection from '../components/ui/Test';
-import { features4 } from '../assets/constants';
+import { useSelector } from 'react-redux';
+import CarouselSection from '../components/ui/CarouselSection';
+import CertificationsSection from '../components/ui/CertificationsSection';
+import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 
 export const OdooPartner = () => {
+  const lang = useSelector((state: any) => state?.control?.lang);
+  const {odoo_services}:DictionaryType = useGetDictionary()
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{
+      direction:lang === 'ar'?"rtl":"ltr"
+    }}>
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-50 to-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-secondary text-white">Certified Partner</Badge>
+            <Badge className="mb-4 bg-secondary text-white">{odoo_services.partner_status.badge}</Badge>
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              Odoo Ready Partner UAE
+              {odoo_services.partner_status.title}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Official Odoo Ready Partner delivering ERP & Accounting Automation for SMEs in the UAE
+              {odoo_services.partner_status.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90">
-                Book a Demo Today
+                {odoo_services.partner_status.button_text}
               </Button>
             </a>
           </div>
@@ -48,66 +54,6 @@ export const OdooPartner = () => {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Erad */}
-      <section className="py-16 ">
-        <ModernSection features={features4} title={'Why Choose Erad as Your Odoo Partner'} desc={'Accounting-led ERP implementation designed for SMEs — not generic IT projects.'} numberOfColumn={2} />
-        {/* <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Why Choose Erad as Your Odoo Partner</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card>
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-[#D5872D] flex items-center justify-center mb-4">
-                    <Award className="h-6 w-6 text-white" />
-                  </div>
-                  <CardTitle>Certified Expertise</CardTitle>
-                  <CardDescription className="text-base">
-                    Official Odoo Ready Partner with proven track record in UAE market
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-[#D5872D] flex items-center justify-center mb-4">
-                    <Target className="h-6 w-6 text-white" />
-                  </div>
-                  <CardTitle>SME-Focused</CardTitle>
-                  <CardDescription className="text-base">
-                    Solutions tailored for small and medium businesses, not large enterprises
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-[#D5872D] flex items-center justify-center mb-4">
-                    <CheckCircle2 className="h-6 w-6 text-white" />
-                  </div>
-                  <CardTitle>UAE TAX Compliance</CardTitle>
-                  <CardDescription className="text-base">
-                    Pre-configured for UAE tax regulations and TAX requirements
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-[#D5872D] flex items-center justify-center mb-4">
-                    <Zap className="h-6 w-6 text-white" />
-                  </div>
-                  <CardTitle>Accounting-Led Implementation</CardTitle>
-                  <CardDescription className="text-base">
-                    Accountants leading the project, ensuring financial accuracy
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            </div>
-          </div>
-        </div> */}
-      </section>
-
       {/* Services */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -153,43 +99,10 @@ export const OdooPartner = () => {
       </section>
 
       {/* Certification Badge */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Our Certifications</h2>
-            <div className="flex justify-center items-center gap-8 flex-wrap">
-              <div className="h-40 w-56 bg-white rounded-lg border-2 border-secondary flex items-center justify-center shadow-lg">
-                <div className="text-center">
-                  <Award className="h-12 w-12 text-secondary mx-auto mb-2" />
-                  <span className="text-lg font-semibold">Odoo Ready Partner</span>
-                </div>
-              </div>
-              <div className="h-40 w-56 bg-white rounded-lg border-2 flex items-center justify-center shadow-lg">
-                <div className="text-center">
-                  <CheckCircle2 className="h-12 w-12 text-primary mx-auto mb-2" />
-                  <span className="text-lg font-semibold">UAE TAX Certified</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     <CertificationsSection/>
 
       {/* Industries */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Industries We Serve</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {mockData.industries.map((industry, index) => (
-                <div key={index} className="bg-muted p-4 rounded-lg border text-center hover:border-secondary transition-colors">
-                  <p className="font-medium">{industry}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+     <CarouselSection/>
 
       {/* CTA */}
       <section className="py-20 bg-primary text-white">

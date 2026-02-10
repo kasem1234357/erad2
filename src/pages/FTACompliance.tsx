@@ -4,9 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../co
 import { CheckCircle2, FileCheck, Shield, AlertCircle } from 'lucide-react';
 import { mockData } from '../data/mock';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
+import { useSelector } from 'react-redux';
 
 export const FTACompliance = () => {
   const {fta_compliance}:DictionaryType = useGetDictionary()
+  const lang = useSelector((state: any) => state?.control?.lang);
   const iconMap = {
     AlertCircle,
     FileCheck,
@@ -46,7 +48,9 @@ export const FTACompliance = () => {
   // ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{
+      direction:lang === 'ar'? 'rtl' : 'ltr'
+    }}>
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-50 to-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,7 +76,7 @@ export const FTACompliance = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">{fta_compliance.audit_areas.title}</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              During an audit, the Federal Tax Authority scrutinizes these critical areas
+              {fta_compliance.audit_areas.description}
             </p>
             <Card className="border-l-4 border-l-primary">
               <CardContent className="pt-6">
@@ -156,30 +160,25 @@ export const FTACompliance = () => {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <AlertCircle className="h-8 w-8 text-primary" />
-                  <CardTitle className="text-2xl">Don't Wait for the Audit</CardTitle>
+                  <CardTitle className="text-2xl">
+                    {fta_compliance.tax_audit.title}
+                  </CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-lg mb-4">
-                  TAX audits can happen at any time. Being unprepared can result in:
+                  {fta_compliance.tax_audit.description}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Heavy financial penalties and interest charges</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Business disruption during prolonged audit processes</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Reputation damage and loss of business credibility</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Potential legal consequences for serious violations</span>
-                  </li>
+                  {
+                    fta_compliance.tax_audit.list.map((item,index)=>{
+                      return <li key={index} className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span>{item}</span>
+                      </li>
+                    })
+                  }
+                
                 </ul>
               </CardContent>
             </Card>
@@ -191,13 +190,15 @@ export const FTACompliance = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Prepare Before the TAX Audits You</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              {fta_compliance.cta.title}
+            </h2>
             <p className="text-xl mb-8 text-white/90">
-              Get a comprehensive compliance review and action plan to protect your business
+              {fta_compliance.cta.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Start Compliance Review
+                {fta_compliance.cta.buttonText}
               </Button>
             </a>
           </div>

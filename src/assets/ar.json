@@ -462,6 +462,11 @@
           "icon": "FileText"
         }
       ]
+    },
+    "cta":{
+      "title":"هل أنت مستعد لتصحيح محاسبتك؟",
+      "description":" احصل على مراجعة محاسبية مجانية وشاهد كيف يمكننا مساعدة عملك على البقاء متوافقًا ومنظمًا",
+      "buttonText":"احصل على مراجعة مجانية الآن"
     }
   },
   "small_business_accounting": {
@@ -794,6 +799,29 @@
           "description": "الفحوصات النهائية والتوثيق الكامل للرجوع إليه مستقبلاً"
         }
       ]
+    },
+    "BenefitsTitle":"فوائد التنظيف",
+    "Benefits":[
+      "تقارير مالية دقيقة",
+      "السجلات الجاهزة للضرائب",
+      "أنظمة جاهزة للتدقيق",
+      "الأساس النظيف لتخطيط موارد المؤسسات"
+    ],
+     "costs":{
+      "title":"تكلفة عدم القيام بأي شيء",
+      "description":"تؤدي أنظمة المحاسبة المكسورة إلى:",
+      "items":[
+        "فشل عمليات التدقيق الضريبي والعقوبات الشديدة",
+        "قرارات تجارية سيئة مبنية على بيانات غير صحيحة",
+        "عدم القدرة على تنفيذ أدوات تخطيط موارد المؤسسات أو الأتمتة",
+        "فقدان ثقة المستثمر أو البنك",
+        "تكلفة الامتثال"
+      ]
+    },
+    "cta":{
+      "title":"أصلح نظامك المحاسبي اليوم",
+      "description":"لا تدع الكتب الفوضوية تعيق عملك. اتصل بإراد واحصل على المحاسبة الصحيحة.",
+      "cta_button":"اتصل بإراد الآن"
     }
   },
   "fta_compliance": {
@@ -804,6 +832,7 @@
     },
     "audit_areas": {
       "title": "ما هي المراجعة الضريبية؟",
+      "description": "أثناء عملية التدقيق، تقوم مصلحة الضرائب الفيدرالية بفحص هذه المجالات الحرجة",
       "items": [
         "الإقرارات الضريبية والحسابات",
         "الفواتير الضريبية وإشعارات الدائن",
@@ -838,21 +867,36 @@
       ]
     },
     "Benefits":{
-      "title":"Why Prepare with Erad",
+      "title":"لماذا الاستعداد مع إراد",
       "cards":[
         {
-          "title":"Avoid Penalties",
-          "description":"  Identify and fix issues before TAX audits find them"
+          "title":"تجنب العقوبات",
+          "description":"  تحديد المشكلات وإصلاحها قبل أن تجدها عمليات التدقيق الضريبي"
         },
         {
-          "title":"Complete Documentation",
-          "description":" Ensure all records meet TAX standards"
+          "title":"توثيقا كاملا",
+          "description":" تأكد من أن جميع السجلات تلبي المعايير الضريبية"
         },
         {
-          "title":"Peace of Mind",
-          "description":" Be audit-ready at all times with ongoing compliance"
+          "title":"راحة البال",
+          "description":" كن جاهزًا للتدقيق في جميع الأوقات مع الالتزام المستمر"
         }
       ]
+    },
+     "tax_audit":{
+      "title":"لا تنتظر التدقيق",
+      "description":" يمكن أن تتم عمليات التدقيق الضريبي في أي وقت. عدم الاستعداد يمكن أن يؤدي إلى:",
+      "list":[
+        "عقوبات مالية باهظة ورسوم فائدة",
+        "انقطاع الأعمال أثناء عمليات التدقيق المطولة",
+        "الإضرار بالسمعة وفقدان مصداقية الأعمال",
+        "العواقب القانونية المحتملة للانتهاكات الجسيمة"
+      ]
+    },
+    "cta":{
+      "title":"الاستعداد قبل عمليات التدقيق الضريبي",
+      "description":"احصل على مراجعة شاملة للامتثال وخطة عمل لحماية عملك",
+      "buttonText":"ابدأ مراجعة الامتثال"
     }
   },
   "odoo_services": {
@@ -860,32 +904,29 @@
       "modules": [
         {
           "name": "المحاسبة",
-          "icon": "BarChart3",
           "description": "إدارة مالية متكاملة"
         },
         {
           "name": "المبيعات",
-          "icon": "سلة التسوق",
           "description": "إدارة علاقات العملاء ومسار المبيعات"
         },
         {
           "name": "المشتريات",
-          "icon": "الحزم",
+
           "description": "أتمتة المشتريات"
         },
         {
           "name": "المخزون",
-          "icon": "المستودع",
+
           "description": "إدارة المخزون والمستودعات"
         },
         {
           "name": "الموارد البشرية والرواتب",
-          "icon": "المستخدمون",
+
           "description": "إدارة الموظفين"
         },
         {
           "name": "المشاريع",
-          "icon": "الإعدادات",
           "description": "تتبع المشروع"
         }
       ],
@@ -893,12 +934,100 @@
         "title": "تركيب وتشغيل أنظمة Odoo من قبل فريق متكامل، وليس مرمجين فقط!",
         "description": "تفشل معظم مشاريع تخطيط موارد المؤسسات (ERP) لأن المحاسبة تُعتبر أمراً ثانوياً. أما في شركة إيراد، فيتولى المحاسبون قيادة عملية تطبيق نظام أودو.",
         "ctaText": "احجز موعد المجاني لنقدم لك استشارة حول أنظمة أودو"
+      },
+      "what_is_odoo":{
+       "title":"ما هو أودو؟",
+        "description":[
+          " Odoo عبارة عن مجموعة شاملة من تطبيقات الأعمال مفتوحة المصدر التي تغطي جميع احتياجات شركتك: المحاسبة والمبيعات وإدارة علاقات العملاء والمخزون والتصنيع وإدارة المشاريع والموارد البشرية والمزيد.",
+          "على عكس الأنظمة المجزأة، يوفر Odoo منصة موحدة حيث تعمل جميع عمليات عملك معًا بسلاسة."
+        ]
+      },
+
+      "why_erad_partner": {
+        "title": "لماذا تختار Erad لـ Odoo",
+        "features": [
+    "Official Odoo Ready Partner",
+    "UAE TAX-first setup",
+    "Implementation based on your specific business requirements",
+    "Practical training and ongoing support",
+    "Accountants leading the implementation, not just IT"
+  ]
+      },
+      "implementation_process": {
+    "title": "Our Implementation Process",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Discovery & Requirements",
+        "description": "Understanding your business processes and specific needs"
+      },
+      {
+        "step": 2,
+        "title": "System Design",
+        "description": "Designing Odoo configuration aligned with UAE compliance"
+      },
+      {
+        "step": 3,
+        "title": "Configuration & Setup",
+        "description": "Installing and configuring Odoo modules for your business"
+      },
+      {
+        "step": 4,
+        "title": "Data Migration",
+        "description": "Transferring your existing data to Odoo safely"
+      },
+      {
+        "step": 5,
+        "title": "Training & Go-Live",
+        "description": "Comprehensive staff training and system launch"
+      },
+      {
+        "step": 6,
+        "title": "Ongoing Support",
+        "description": "Continuous support and optimization as you grow"
       }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of Odoo ERP",
+    "benefits_list": [
+      {
+        "title": "Unified System",
+        "description": "All business processes in one platform"
+      },
+      {
+        "title": "Real-Time Data",
+        "description": "Instant access to accurate business information"
+      },
+      {
+        "title": "Automation",
+        "description": "Reduce manual work and human errors"
+      },
+      {
+        "title": "Scalability",
+        "description": "Add modules as your business grows"
+      },
+      {
+        "title": "UAE Compliance",
+        "description": "TAX-ready and TAX-compliant from day one"
+      },
+      {
+        "title": "Cost-Effective",
+        "description": "Open-source with no hidden licensing fees"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business with Odoo?",
+    "description": "Book an Odoo consultation with Erad and see how ERP can drive your growth",
+    "button_text": "Book Odoo Consultation Now"
+  }
     },
     "partner_status": {
       "badge": "وكيل معتمد",
       "title": "شريك أودو في الإمارات العربية المتحدة",
       "description": "شريك رسمي معتمد لمنصة Odoo، يقدم حلول تخطيط موارد المؤسسات (ERP) وأتمتة المحاسبة للشركات الصغيرة والمتوسطة في الإمارات العربية المتحدة",
+      "button_text":"احجز عرضًا توضيحيًا اليوم",
       "definition": "شركاء Odoo المعتمدون هم شركاء معترف بهم رسميًا من قبل شركة Odoo S.A. لخبرتهم في تطبيق وتخصيص حلول Odoo ERP. تضمن هذه الشهادة أنك تعمل مع محترفين مؤهلين يفهمون الجوانب التقنية والتجارية لـ Odoo.",
       "service_list": [
         {

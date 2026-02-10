@@ -4,9 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
 import { CheckCircle2, FileText, BarChart3, Shield, Database } from 'lucide-react';
 import { mockData } from '../data/mock';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
+import { useSelector } from 'react-redux';
 
 export const AccountingServices = () => {
   const {accounting_services}:DictionaryType = useGetDictionary()
+  const lang = useSelector((state: any) => state?.control?.lang);
   const iconMap = {
     Shield,
     BarChart3,
@@ -17,7 +19,9 @@ export const AccountingServices = () => {
 
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{
+      direction: lang === 'ar'? 'rtl' : 'ltr'
+    }}>
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-50 to-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,13 +111,15 @@ export const AccountingServices = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Your Accounting Right?</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              {accounting_services.cta.title}
+            </h2>
             <p className="text-xl mb-8 text-white/90">
-              Get a free accounting review and see how we can help your business stay compliant and organized
+             {accounting_services.cta.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Get Free Review Now
+                {accounting_services.cta.buttonText}
               </Button>
             </a>
           </div>

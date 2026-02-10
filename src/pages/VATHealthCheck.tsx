@@ -4,9 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../co
 import { CheckCircle2, FileSearch, AlertTriangle, ClipboardCheck } from 'lucide-react';
 import { mockData } from '../data/mock';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
+import { useSelector } from 'react-redux';
 
 export const VATHealthCheck = () => {
   const {vat_health_check}:DictionaryType = useGetDictionary()
+  const lang = useSelector((state: any) => state?.control?.lang);
   const iconMap ={
     AlertTriangle,
     FileSearch,
@@ -28,7 +30,9 @@ export const VATHealthCheck = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{
+      direction:lang === 'ar'? 'rtl' : 'ltr'
+    }}>
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-50 to-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

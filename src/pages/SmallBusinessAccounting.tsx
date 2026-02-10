@@ -3,8 +3,10 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card';
 import { CheckCircle2, TrendingUp, Users, Zap, Shield } from 'lucide-react';
 import { mockData } from '../data/mock';
+import { useSelector } from 'react-redux';
 
 export const SmallBusinessAccounting = () => {
+  const lang = useSelector((state: any) => state?.control?.lang);
   const challenges = [
     'Limited accounting staff or expertise',
     'Difficulty staying TAX-compliant',
@@ -21,7 +23,9 @@ export const SmallBusinessAccounting = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{
+      direction:lang === 'ar'?"rtl":"ltr"
+    }}>
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-50 to-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -6,9 +6,11 @@ import { mockData } from '../data/mock';
 import ModernSection from '../components/ui/Test';
 import {  features3, vat_consultant_cards_style } from '../assets/constants';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
+import { useSelector } from 'react-redux';
 
 export const VATConsultant = () => {
   const {vat_consultant}:DictionaryType = useGetDictionary()
+  const lang = useSelector((state: any) => state?.control?.lang);
   const services = [
     'TAX registration & deregistration',
     'TAX return preparation & filing',
@@ -24,7 +26,9 @@ export const VATConsultant = () => {
     { issue: 'Poor record-keeping', consequence: 'Compliance failures during audits' }
   ];
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{
+      direction:lang === 'ar'? 'rtl' : 'ltr'
+    }}>
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-50 to-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
