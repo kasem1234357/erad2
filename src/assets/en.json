@@ -710,20 +710,20 @@
     },
     "navigation": {
       "services": [
-        { "name": "Accounting Services", "path": "/accounting-services-uae" },
-        { "name": "TAX Consultant", "path": "/tax-consultant-uae" },
-        { "name": "TAX Compliance", "path": "/tax-compliance-uae" },
-        { "name": "System Cleanup", "path": "/accounting-system-cleanup" }
+        { "name": "Accounting Services" },
+        { "name": "TAX Consultant"},
+        { "name": "TAX Compliance" },
+        { "name": "System Cleanup" }
       ],
       "odoo_erp": [
-        { "name": "Odoo Implementation", "path": "/odoo-accounting-implementation-uae" },
-        { "name": "Odoo Partner UAE", "path": "/odoo-partner-uae" },
-        { "name": "TAX Health Check", "path": "/tax-health-check-uae" },
-        { "name": "Small Business", "path": "/accounting-for-small-business-uae" }
+        { "name": "Odoo Implementation" },
+        { "name": "Odoo Partner UAE" },
+        { "name": "TAX Health Check" },
+        { "name": "Small Business" }
       ],
       "company": [
-        { "name": "About Erad", "path": "/about-erad" },
-        { "name": "Home", "path": "/" }
+        { "name": "About Erad" },
+        { "name": "Home" }
       ]
     },
     "contact": {
