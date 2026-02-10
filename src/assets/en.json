@@ -497,6 +497,11 @@
         { "value": "AED 15K", "label": "Fine for late filing" },
         { "value": "300%", "label": "Penalty for tax evasion" }
       ]
+    },
+    "cta":{
+      "title":"Don't Risk TAX Penalties",
+      "description":"Book a free TAX health check now and identify risks before the TAX does",
+      "cta_button":"Book Free TAX Health Check"
     }
   },
   "vat_health_check": {
@@ -564,7 +569,12 @@
         "Companies planning ERP implementation",
         "Startups ensuring TAX compliance from day one"
       ]
-    }
+    },
+      "cta":{
+      "title":"Don't Wait for an TAX Audit",
+      "description":"Book a free TAX health check now and identify risks before they become penalties",
+      "cta_button":"Book Free Check Now — Call Erad!"
+  }
   },
   "system_cleanup": {
     "hero": {

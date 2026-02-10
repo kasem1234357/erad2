@@ -8,6 +8,7 @@ import {  features3, vat_consultant_cards_style } from '../assets/constants';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 
 export const VATConsultant = () => {
+  const {vat_consultant}:DictionaryType = useGetDictionary()
   const services = [
     'TAX registration & deregistration',
     'TAX return preparation & filing',
@@ -22,7 +23,6 @@ export const VATConsultant = () => {
     { issue: 'Late or incorrect TAX filings', consequence: 'Accumulated penalties and interest' },
     { issue: 'Poor record-keeping', consequence: 'Compliance failures during audits' }
   ];
-  const {vat_consultant}:DictionaryType = useGetDictionary()
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -30,14 +30,14 @@ export const VATConsultant = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              TAX Compliance Without Penalties
+              {vat_consultant.hero.title}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              TAX compliance in the UAE is not optional. Mistakes can lead to fines, audits, and business disruption. Erad provides end-to-end TAX consultancy services to help SMEs stay compliant, accurate, and protected.
+              {vat_consultant.hero.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90">
-                Book a Free TAX Health Check
+                {vat_consultant.hero.ctaText}
               </Button>
             </a>
           </div>
@@ -48,11 +48,11 @@ export const VATConsultant = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Our TAX Services</h2>
+            <h2 className="text-3xl font-bold mb-8">{vat_consultant.services.title}</h2>
             <Card className="border-l-4 border-l-secondary">
               <CardContent className="pt-6">
                 <ul className="space-y-4">
-                  {services.map((service, index) => (
+                  {vat_consultant.services.list.map((service, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle2 className="h-6 w-6 text-secondary mr-3 flex-shrink-0 mt-0.5" />
                       <span className="text-lg">{service}</span>
@@ -68,7 +68,7 @@ export const VATConsultant = () => {
       {/* Common TAX Risks */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <ModernSection content={vat_consultant.risks.items} stylesList={vat_consultant_cards_style} titleKey={"issue"} descKey={"consequence"} title={'Common TAX Risks We Fix'} desc={'Don\'t let these common mistakes put your business at risk'} numberOfColumn={2} />
+          <ModernSection content={vat_consultant.risks.items} stylesList={vat_consultant_cards_style} titleKey={"issue"} descKey={"consequence"} title={vat_consultant.risks.title} desc={vat_consultant.risks.subtitle} numberOfColumn={2} />
           {/* <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Common TAX Risks We Fix</h2>
             <p className="text-lg text-muted-foreground mb-8">
@@ -106,27 +106,25 @@ export const VATConsultant = () => {
                     <Shield className="h-8 w-8 text-secondary" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl mb-2">Protect Your Business Today</CardTitle>
+                    <CardTitle className="text-2xl mb-2">{
+                      vat_consultant.penalties_section.title
+                      }</CardTitle>
                     <CardDescription className="text-base">
-                      The Federal Tax Authority conducts regular audits. Don't wait for a penalty notice to fix your TAX compliance.
+                      {vat_consultant.penalties_section.description}
                     </CardDescription>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-4">
-                  <div className="bg-white p-4 rounded-lg">
-                    <div className="text-3xl font-bold text-primary mb-1">20%</div>
-                    <p className="text-sm text-muted-foreground">Penalty on TAX amount</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg">
-                    <div className="text-3xl font-bold text-primary mb-1">AED 15K</div>
-                    <p className="text-sm text-muted-foreground">Fine for late filing</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg">
-                    <div className="text-3xl font-bold text-primary mb-1">300%</div>
-                    <p className="text-sm text-muted-foreground">Penalty for tax evasion</p>
-                  </div>
+                  {vat_consultant.penalties_section.stats.map((stat, index) => (
+                    <div key={index} className="bg-white p-4 rounded-lg">
+                      <div className="text-3xl font-bold text-primary mb-1">{stat.value}</div>
+                      <p className="text-sm text-muted-foreground">{stat.label}</p>
+                    </div>
+                  ))}
+                 
+                 
                 </div>
               </CardContent>
             </Card>
@@ -138,13 +136,13 @@ export const VATConsultant = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Don't Risk TAX Penalties</h2>
+            <h2 className="text-3xl font-bold mb-4">{vat_consultant.cta.title}</h2>
             <p className="text-xl mb-8 text-white/90">
-              Book a free TAX health check now and identify risks before the TAX does
+              {vat_consultant.cta.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Book Free TAX Health Check
+                {vat_consultant.cta.cta_button}
               </Button>
             </a>
           </div>

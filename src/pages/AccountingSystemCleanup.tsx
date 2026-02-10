@@ -3,8 +3,10 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card';
 import { CheckCircle2, AlertTriangle, Wrench, TrendingUp } from 'lucide-react';
 import { mockData } from '../data/mock';
+import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 
 export const AccountingSystemCleanup = () => {
+  const {system_cleanup}:DictionaryType = useGetDictionary()
   const signs = [
     'TAX returns don\'t match accounting records',
     'Financial reports don\'t make sense',
@@ -35,14 +37,14 @@ export const AccountingSystemCleanup = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              Fix Broken Accounting Systems Before They Cost You
+              {system_cleanup.hero.title}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Messy books are more than an inconvenience; they're a risk. Erad specializes in accounting system cleanup for UAE businesses.
+              {system_cleanup.hero.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90">
-                Fix Your Accounting System
+                {system_cleanup.hero.ctaText}
               </Button>
             </a>
           </div>
@@ -53,12 +55,12 @@ export const AccountingSystemCleanup = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Signs Your Books Are Broken</h2>
+            <h2 className="text-3xl font-bold mb-4">{system_cleanup.warning_signs.title}</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Do any of these sound familiar?
+              {system_cleanup.warning_signs.subtitle}
             </p>
             <div className="grid md:grid-cols-2 gap-4">
-              {signs.map((sign, index) => (
+              {system_cleanup.warning_signs.signs.map((sign, index) => (
                 <Card key={index} className="border-l-4 border-l-primary">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-3">
@@ -77,9 +79,9 @@ export const AccountingSystemCleanup = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">What We Fix</h2>
+            <h2 className="text-3xl font-bold mb-8">{system_cleanup.what_we_fix.title}</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {whatWeFix.map((item, index) => (
+              {system_cleanup.what_we_fix.items.map((item, index) => (
                 <Card key={index}>
                   <CardHeader>
                     <div className="h-12 w-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-2">
@@ -101,15 +103,9 @@ export const AccountingSystemCleanup = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Our Cleanup Process</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{system_cleanup.cleanup_process.title}</h2>
             <div className="space-y-4">
-              {[
-                { step: 1, title: 'Initial Assessment', description: 'Comprehensive review of current accounting records and systems' },
-                { step: 2, title: 'Error Identification', description: 'Identify all discrepancies, errors, and compliance gaps' },
-                { step: 3, title: 'Data Reconciliation', description: 'Correct postings, reconcile accounts, and validate balances' },
-                { step: 4, title: 'System Restructuring', description: 'Reorganize chart of accounts and implement proper controls' },
-                { step: 5, title: 'Verification & Documentation', description: 'Final checks and complete documentation for future reference' }
-              ].map((item) => (
+              {system_cleanup.cleanup_process.steps.map((item, index) => (
                 <Card key={item.step} className="border-l-4 border-l-primary">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">

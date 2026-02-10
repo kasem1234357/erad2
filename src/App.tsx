@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useTranslationsQuery } from "./lib/redux/services/Api";
 import { useEffect } from "react";
 import { setDictonary } from "./lib/redux/slices/controlSlice";
+import { cn } from "./lib/utils";
 
 function App() {
     const dispatch = useDispatch();
@@ -30,7 +31,7 @@ function App() {
     }
   }, [lang, data, isSuccess]);
   return (
-    <div className="App">
+    <div className={cn("App",lang === 'ar'&& 'customFont')}>
       <BrowserRouter>
         <Header />
         <Routes>

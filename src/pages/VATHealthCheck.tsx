@@ -3,8 +3,16 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card';
 import { CheckCircle2, FileSearch, AlertTriangle, ClipboardCheck } from 'lucide-react';
 import { mockData } from '../data/mock';
+import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 
 export const VATHealthCheck = () => {
+  const {vat_health_check}:DictionaryType = useGetDictionary()
+  const iconMap ={
+    AlertTriangle,
+    FileSearch,
+    CheckCircle2,
+    ClipboardCheck
+  }
   const whatWeReview = [
     'TAX returns accuracy and completeness',
     'Tax invoices format and compliance',
@@ -26,14 +34,14 @@ export const VATHealthCheck = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              TAX Health Check for UAE SMEs
+              {vat_health_check.hero.title}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              A TAX health check identifies risks before the TAX does. Get peace of mind with a comprehensive review of your TAX compliance.
+              {vat_health_check.hero.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90">
-                Book a Free TAX Health Check
+                {vat_health_check.hero.ctaText}
               </Button>
             </a>
           </div>
@@ -44,11 +52,11 @@ export const VATHealthCheck = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">What We Review</h2>
+            <h2 className="text-3xl font-bold mb-8">{vat_health_check.review_scope.title}</h2>
             <Card className="border-l-4 border-l-secondary">
               <CardContent className="pt-6">
                 <ul className="space-y-4">
-                  {whatWeReview.map((item, index) => (
+                  {vat_health_check.review_scope.list.map((item, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle2 className="h-6 w-6 text-secondary mr-3 flex-shrink-0 mt-0.5" />
                       <span className="text-lg">{item}</span>
@@ -65,56 +73,36 @@ export const VATHealthCheck = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Why You Need a TAX Health Check</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{vat_health_check.comparison.title}</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg text-destructive">Without TAX Health Check</CardTitle>
+                  <CardTitle className="text-lg text-destructive">{vat_health_check.comparison.without.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <span className="text-destructive mr-2">✗</span>
-                      <span>Hidden TAX errors accumulating</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-destructive mr-2">✗</span>
-                      <span>Risk of TAX penalties and fines</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-destructive mr-2">✗</span>
-                      <span>Unprepared for audits</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-destructive mr-2">✗</span>
-                      <span>Business disruption from compliance issues</span>
-                    </li>
+                    {vat_health_check.comparison.without.points.map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-destructive mr-2">✗</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </CardContent>
               </Card>
 
               <Card className="border-2 border-secondary">
                 <CardHeader>
-                  <CardTitle className="text-lg text-secondary">With TAX Health Check</CardTitle>
+                  <CardTitle className="text-lg text-secondary">{vat_health_check.comparison.with.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-secondary mr-2 flex-shrink-0" />
-                      <span>Identify and fix errors early</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-secondary mr-2 flex-shrink-0" />
-                      <span>Avoid costly penalties</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-secondary mr-2 flex-shrink-0" />
-                      <span>Audit-ready at all times</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-secondary mr-2 flex-shrink-0" />
-                      <span>Peace of mind and confidence</span>
-                    </li>
+                    {vat_health_check.comparison.with.points.map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle2 className="h-5 w-5 text-secondary mr-2 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </CardContent>
               </Card>
@@ -127,10 +115,10 @@ export const VATHealthCheck = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">What Erad Gives You</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{vat_health_check.deliverables.title}</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              {deliverables.map((item, index) => {
-                const Icon = item.icon;
+              {vat_health_check.deliverables.items.map((item, index) => {
+                const Icon = iconMap[item.icon];
                 return (
                   <Card key={index} className="text-center">
                     <CardHeader>
@@ -154,15 +142,9 @@ export const VATHealthCheck = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">How It Works</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{vat_health_check.process.title}</h2>
             <div className="space-y-4">
-              {[
-                { step: 1, title: 'Book Your Check', description: 'Contact us via WhatsApp or phone to schedule your TAX health check' },
-                { step: 2, title: 'Share Documents', description: 'Provide TAX returns, invoices, and accounting records for review' },
-                { step: 3, title: 'Expert Analysis', description: 'Our team conducts comprehensive analysis of your TAX compliance' },
-                { step: 4, title: 'Receive Report', description: 'Get detailed report with findings and action plan' },
-                { step: 5, title: 'Fix Issues', description: 'We help you implement corrections and achieve full compliance' }
-              ].map((item) => (
+              {vat_health_check.process.steps.map((item, index) => (
                 <Card key={item.step} className="border-l-4 border-l-secondary">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
@@ -186,16 +168,9 @@ export const VATHealthCheck = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Who Should Get a TAX Health Check?</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{vat_health_check.target_audience.title}</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {[
-                'Businesses registered for TAX in the UAE',
-                'Companies preparing for TAX audits',
-                'SMEs with frequent accounting changes',
-                'Businesses that have received TAX notices',
-                'Companies planning ERP implementation',
-                'Startups ensuring TAX compliance from day one'
-              ].map((item, index) => (
+              {vat_health_check.target_audience.segments.map((item, index) => (
                 <Card key={index}>
                   <CardContent className="pt-6">
                     <div className="flex items-center">
@@ -214,13 +189,13 @@ export const VATHealthCheck = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Don't Wait for an TAX Audit</h2>
+            <h2 className="text-3xl font-bold mb-4">{vat_health_check.cta.title}</h2>
             <p className="text-xl mb-8 text-white/90">
-              Book a free TAX health check now and identify risks before they become penalties
+              {vat_health_check.cta.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Book Free Check Now — Call Erad!
+                {vat_health_check.cta.cta_button}
               </Button>
             </a>
           </div>
