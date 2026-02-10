@@ -20,6 +20,7 @@ import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary
 import CarouselSection from '../components/ui/CarouselSection';
 import { useSelector } from 'react-redux';
 import { cn } from '../lib/utils';
+import CertificationsSection from '../components/ui/CertificationsSection';
 const Why_Erad_Odoo_sectionIcons = ["Award","BookCheck","Users","Target"];
 const iconMap = {
   Calculator,
@@ -65,7 +66,7 @@ export const Home = () => {
    console.log(Home);
    
   return (
-    <div className={cn("min-h-screen ")} style={{
+    <div className={cn("min-h-screen ",lang==='ar' && 'customFont')} style={{
       direction:lang === 'ar'?"rtl":'ltr'
     }}>
       {/* Hero Section */}
@@ -76,7 +77,7 @@ export const Home = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-30">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-[#714B67] text-white">Odoo Ready Partner</Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 ">
               {Home.h1_title}
             </h1>
             <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
@@ -138,19 +139,7 @@ export const Home = () => {
                 );
               })}
             </div>
-            <header className="text-center mt-24 mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
-            Official Certifications
-          </h2>
-          <div className="mt-4 h-1.5 w-24 bg-blue-600 mx-auto rounded-full"></div>
-        </header>
-
-        {/* Certification Entries */}
-        <main className="space-y-32">
-          {certifications.map((cert, index) => (
-            <CertificateCard key={cert.id} cert={cert} index={index} />
-          ))}
-        </main>
+          <CertificationsSection/>
            
           </div>
         </div>

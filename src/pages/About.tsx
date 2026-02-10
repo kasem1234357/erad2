@@ -3,46 +3,18 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { CheckCircle2, Users, Award, Target } from 'lucide-react';
 import { mockData } from '../data/mock';
-import certificate1 from '../assets/rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg';
-import certificate2 from '../assets/photo_2026-01-24_11-28-33.jpg';
-import certificate3 from '../assets/لقطة شاشة 2026-01-24 113705.png'
+
 import aboutBg from '../assets/4.jpg'
 import { CertificateCard } from '../components/ui/Certifications';
 import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 import CarouselSection from '../components/ui/CarouselSection';
 import { useSelector } from 'react-redux';
 import parse from 'html-react-parser';
-const certifications = [
-  {
-    id: 1,
-    title: "Diploma in UAE Corporate Tax",
-    issuer: "Association of Tax Technicians (ATT)",
-    recipient: "Abdulraouf Abbas",
-    description: "Awarded for successfully completing the professional requirements in UAE Corporate Tax legislation and practice.",
-    details: [
-      { label: "Issue Date", value: "08/05/23" },
-      { label: "Certificate No", value: "266116" }
-    ],
-    image: certificate3,
-    fallbackText: "Diploma in UAE Corporate Tax"
-  },
-  {
-    id: 2,
-    title: "Fellowship Certificate",
-    issuer: "Emirates Association for Accountants & Auditors",
-    recipient: "Abdulraouf Abdollatif Abbas",
-    description: "Awarded as \"Fellow Member\" based on Board Decision. Accredited in the United Arab Emirates under the UAE Professional Fellowship Programme.",
-    details: [
-      { label: "Fellowship No", value: "505" },
-      { label: "Validity", value: "25/01/2024 - 25/01/2025" }
-    ],
-    image: certificate2,
-    fallbackText: "Fellowship Certificate"
-  }
-];
+import CertificationsSection from '../components/ui/CertificationsSection';
+
 
 export const About = () => {
-  const {About}:DictionaryType = useGetDictionary()
+  const {About,Certifications}:DictionaryType = useGetDictionary()
   const lang = useSelector((state: any) => state.control.lang);
   
   return (
@@ -145,25 +117,7 @@ export const About = () => {
       {/* Industries */}
      <CarouselSection/>
       {/* Certifications */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <header className="text-center mt-24 mb-12">
-                    <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
-                      Official Certifications
-                    </h2>
-                    <div className="mt-4 h-1.5 w-24 bg-blue-600 mx-auto rounded-full"></div>
-                  </header>
-          
-                  {/* Certification Entries */}
-                  <main className="space-y-32">
-                    {certifications.map((cert, index) => (
-                      <CertificateCard key={cert.id} cert={cert} index={index} />
-                    ))}
-                  </main>
-          </div>
-        </div>
-      </section>
+      <CertificationsSection/>
 
       {/* CTA */}
       <section className="py-20 bg-primary text-white">

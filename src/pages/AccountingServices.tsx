@@ -3,29 +3,18 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { CheckCircle2, FileText, BarChart3, Shield, Database } from 'lucide-react';
 import { mockData } from '../data/mock';
+import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 
 export const AccountingServices = () => {
-  const services = [
-    'Bookkeeping & transaction recording',
-    'Monthly & quarterly closing',
-    'Financial statements (P&L, Balance Sheet, Cash Flow)',
-    'TAX-ready chart of accounts',
-    'Management & performance reports'
-  ];
+  const {accounting_services}:DictionaryType = useGetDictionary()
+  const iconMap = {
+    Shield,
+    BarChart3,
+    Database,
+    FileText,
+    CheckCircle2
+  }
 
-  const whoItsFor = [
-    'SMEs and startups',
-    'Growing companies without in-house finance teams',
-    'Businesses struggling with TAX compliance',
-    'Companies preparing for audits or ERP implementation'
-  ];
-
-  const whyErad = [
-    { title: 'UAE Standards & TAX Expertise', icon: Shield },
-    { title: 'Clear Reporting for Business Owners', icon: BarChart3 },
-    { title: 'Automation-Ready Systems', icon: Database },
-    { title: 'Seamless Odoo ERP Integration', icon: FileText }
-  ];
 
   return (
     <div className="min-h-screen">
@@ -34,14 +23,14 @@ export const AccountingServices = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              Professional Accounting Services for UAE SMEs
+              {accounting_services.hero.title}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Reliable accounting is the backbone of every successful business. At Erad, we deliver TAX-compliant accounting services tailored specifically for UAE small and medium-sized businesses.
+              {accounting_services.hero.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90">
-                Get a Free Accounting Review
+                {accounting_services.hero.ctaText}
               </Button>
             </a>
           </div>
@@ -52,11 +41,11 @@ export const AccountingServices = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Our Accounting Services Include</h2>
+            <h2 className="text-3xl font-bold mb-8"> {accounting_services.our_offer.title}</h2>
             <Card>
               <CardContent className="pt-6">
                 <ul className="space-y-4">
-                  {services.map((service, index) => (
+                  {accounting_services.our_offer.services.map((service, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle2 className="h-6 w-6 text-secondary mr-3 flex-shrink-0 mt-0.5" />
                       <span className="text-lg">{service}</span>
@@ -73,9 +62,9 @@ export const AccountingServices = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Who It's For</h2>
+            <h2 className="text-3xl font-bold mb-8">{accounting_services.target_audience.title}</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {whoItsFor.map((item, index) => (
+              {accounting_services.target_audience.segments.map((item, index) => (
                 <Card key={index}>
                   <CardContent className="pt-6">
                     <div className="flex items-center">
@@ -94,10 +83,10 @@ export const AccountingServices = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Why Choose Erad</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{accounting_services.why_choose_erad.title}</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {whyErad.map((item, index) => {
-                const Icon = item.icon;
+              {accounting_services.why_choose_erad.reasons.map((item, index) => {
+                const Icon = iconMap[item.icon];
                 return (
                   <Card key={index}>
                     <CardHeader>

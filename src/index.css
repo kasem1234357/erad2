@@ -1,6 +1,18 @@
 
 @import "tailwindcss";
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/myFont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/myFont-bold.ttf') format('truetype');
+  font-weight: 700; /* سماكة */
+  font-style: normal;
+}
 @theme {
   /* Theme Colors */
   --color-background: hsl(var(--background));
@@ -73,7 +85,7 @@
     --chart-5: 210 40% 50%;
     --radius: 0.5rem;
   }
-
+   
   .dark {
     --background: 222 47% 11%;
     --foreground: 0 0% 98%;
@@ -99,6 +111,9 @@
     --chart-3: 45 93% 57%;
     --chart-4: 210 40% 70%;
     --chart-5: 215 20% 65%;
+  }
+  .customFont{
+    font-family: 'MyCustomFont';
   }
 }
 

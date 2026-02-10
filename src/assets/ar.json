@@ -5,15 +5,17 @@
     "About_title": "عن إيراد",
     "Services_title": "خدماتنا",
     "Odoo_Partner_title": "شريك أودو",
-    "VAT_Health_Check_title": "فحص جودة الإلتزام الضريبي",
-    "Small_Business_title": "الشركات الصغيرة",
+     "Contact_us_button":"اتصل بنا",
+     "Free_TAX_Health_Check_button":"فحص مجاني لفحص الامتثال الضريبي",
     "About_Erad_title": "حول شركة إيراد",
     "Services": {
       "title": "خدماتنا",
       "Accounting_Services_title": "إدارة الحسابات",
       "TAX_Consultant_title": "الاستشارات الضريبية",
       "FTA_Compliance_title": "الامتثال الضريبي",
-      "System_Cleanup_title": "تنظيف البرنامج المحاسبي"
+      "System_Cleanup_title": "تنظيف البرنامج المحاسبي",
+       "VAT_Health_Check_title": "فحص جودة الإلتزام الضريبي",
+    "Small_Business_title": "الشركات الصغيرة"
     },
     "Odoo_Partner": {
       "title": "شريك أودو",
@@ -453,7 +455,7 @@
         },
         {
           "title": "أنظمة جاهزة للأتمتة",
-          "icon": "قاعدة بيانات"
+          "icon":"Database"
         },
         {
           "title": "تكامل سلس مع نظام تخطيط موارد المؤسسات Odoo",

@@ -2,34 +2,51 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Key } from 'lucide-react';
 import { mockData } from '../data/mock';
 import logo from '../assets/logo.png'
 import odooPartner from '../assets/odoo_ready_partners_rgb.png'
 import LanguageSwitcher from './ui/LanguageSwitcher';
+import { useGetDictionary, type DictionaryType } from '../hooks/useGetDictionary';
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const {Header}:DictionaryType = useGetDictionary();
+  console.log(Header);
+  
   const location = useLocation();
-
+//  "About_Erad":"About Erad",
+//         "Home_title":"Home",
+//         "About_title":"About",
+//         "Services_title":"Services",
+//         "Odoo_Partner_title":"Odoo Partner",
+//         "VAT_Health_Check_title":"TAX Health Check",
+//         "Small_Business_title":"Small Business",
+//         "About_Erad_title":"About Erad"
   const navigation = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about-erad' },
+    { name: 'Home', path: '/',key:"Home_title" },
+    { name: 'About', path: '/about-erad',key:"About_title" },
     {
       name: 'Services',
+      key:"Services_title",
+      sectionKey:"Services",
       submenu: [
-        { name: 'Accounting Services', path: '/accounting-services-uae' },
-        { name: 'TAX Consultant', path: '/tax-consultant-uae' },
-        { name: 'TAX Compliance', path: '/tax-compliance-uae' },
-        { name: 'System Cleanup', path: '/accounting-system-cleanup' },
-        { name: 'TAX Health Check', path: '/tax-health-check-uae' },
-        { name: 'Small Business Accounting', path: '/accounting-for-small-business-uae' }
+        {
+          name: 'Accounting Services', path: '/accounting-services-uae',key:"Accounting_Services_title"
+        },
+        { name: 'TAX Consultant', path: '/tax-consultant-uae',key:"TAX_Consultant_title" },
+        { name: 'TAX Compliance', path: '/tax-compliance-uae',key:"FTA_Compliance_title" },
+        { name: 'System Cleanup', path: '/accounting-system-cleanup',key:"System_Cleanup_title" },
+        { name: 'TAX Health Check', path: '/tax-health-check-uae' ,key:"VAT_Health_Check_title" },
+        { name: 'Small Business Accounting', path: '/accounting-for-small-business-uae',key:"Small_Business_title" }
       ]
     },
     {
       name: 'Odoo ERP',
+      key:"Odoo_Partner_title",
+      sectionKey:"Odoo_Partner",
       submenu: [
-        { name: 'Odoo Implementation', path: '/odoo-accounting-implementation-uae' },
-        { name: 'Odoo Partner', path: '/odoo-partner-uae' }
+        { name: 'Odoo Implementation', path: '/odoo-accounting-implementation-uae',key:"Odoo_Implementation_title" },
+        { name: 'Odoo Partner', path: '/odoo-partner-uae',key:"Odoo_Partner_UAE_title" }
       ]
     }
   ];
@@ -55,7 +72,7 @@ export const Header = () => {
                 {item.submenu ? (
                   <>
                     <button className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                      {item.name}
+                      {Header[item.key] || item.name}
                     </button>
                     <div className="absolute left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-lg shadow-lg border py-2">
                       {item.submenu.map((subitem) => (
@@ -64,7 +81,7 @@ export const Header = () => {
                           to={subitem.path}
                           className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
                         >
-                          {subitem.name}
+                          {Header?.[item.sectionKey]?.[subitem.key] || subitem.name}
                         </Link>
                       ))}
                     </div>
@@ -78,7 +95,7 @@ export const Header = () => {
                         : 'text-foreground hover:text-primary'
                     }`}
                   >
-                    {item.name}
+                    {Header[item.key] || item.name}
                   </Link>
                 )}
               </div>
@@ -90,12 +107,12 @@ export const Header = () => {
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="sm" className='hover:bg-[#714B67] hover:text-white'>
                 <Phone className="h-4 w-4 mr-2" />
-                Contact Us
+                {Header.Contact_us_button}
               </Button>
             </a>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="bg-secondary hover:bg-secondary/90">
-                Free TAX Check
+                {Header.Free_TAX_Health_Check_button}
               </Button>
             </a>
           </div>
@@ -120,7 +137,7 @@ export const Header = () => {
               <div key={item.name} className="py-2">
                 {item.submenu ? (
                   <>
-                    <div className="font-medium text-sm mb-2">{item.name}</div>
+                    <div className="font-medium text-sm mb-2">{Header[item.key] || item.name}</div>
                     {item.submenu.map((subitem) => (
                       <Link
                         key={subitem.path}
@@ -128,7 +145,7 @@ export const Header = () => {
                         className="block py-2 pl-4 text-sm text-muted-foreground hover:text-primary"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        {subitem.name}
+                        {Header?.[item.sectionKey]?.[subitem.key] || subitem.name}
                       </Link>
                     ))}
                   </>
@@ -138,7 +155,7 @@ export const Header = () => {
                     className="block py-2 text-sm font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {item.name}
+                    { Header[item.key] || item.name}
                   </Link>
                 )}
               </div>
@@ -148,12 +165,12 @@ export const Header = () => {
               <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="w-full">
                   <Phone className="h-4 w-4 mr-2" />
-                  Contact Us
+                  {Header.Contact_us_button}
                 </Button>
               </a>
               <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="w-full bg-secondary hover:bg-secondary/90">
-                  Free TAX Check
+                  {Header.Free_TAX_Health_Check_button}
                 </Button>
               </a>
             </div>

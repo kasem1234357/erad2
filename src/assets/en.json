@@ -5,7 +5,9 @@
             "Accounting_Services_title":"Accounting Services",
             "TAX_Consultant_title":"TAX Consultant",
             "FTA_Compliance_title":"TAX Compliance",
-            "System_Cleanup_title":"System Cleanup"
+            "System_Cleanup_title":"System Cleanup",
+            "VAT_Health_Check_title":"TAX Health Check",
+        "Small_Business_title":"Small Business"
         },
         "Odoo_Partner":{
             "title":"Odoo Partner",
@@ -17,8 +19,8 @@
         "About_title":"About",
         "Services_title":"Services",
         "Odoo_Partner_title":"Odoo Partner",
-        "VAT_Health_Check_title":"TAX Health Check",
-        "Small_Business_title":"Small Business",
+        "Contact_us_button":"Contact Us",
+     "Free_TAX_Health_Check_button":"Free TAX Check",
         "About_Erad_title":"About Erad"
     },
     "Home":{
