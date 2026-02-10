@@ -466,8 +466,13 @@
         { "title": "Grow with You", "description": "Start with basics, scale to full ERP as your business expands", "icon": "TrendingUp" },
         { "title": "UAE Compliant", "description": "Deep expertise in UAE TAX regulations and TAX requirements", "icon": "Shield" }
       ]
-    }
-  },
+    },
+    "cta":{
+      "title":"Ready to Get Your Accounting Right?",
+      "description":" Get a free accounting review and see how we can help your business stay compliant and organized",
+      "buttonText":"Get Free Review Now"
+  }
+},
   "vat_consultant": {
     "hero": {
       "title": "TAX Compliance Without Penalties",
