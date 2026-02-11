@@ -708,6 +708,7 @@
   },
   "odoo_services": {
     "implementation": {
+      "modules_title":"Odoo Modules for Your Business",
       "hero": {
         "title": "Odoo ERP Implemented by Accountants, Not Just IT",
         "description": "Most ERP projects fail because accounting is an afterthought. At Erad, accountants lead the Odoo implementation.",
@@ -812,7 +813,13 @@
       "badge": "Certified Partner",
       "title": "Odoo Ready Partner UAE",
       "description": "Official Odoo Ready Partner delivering ERP & Accounting Automation for SMEs in the UAE",
-      "definition": "Odoo Ready Partners are officially recognized by Odoo S.A. for their expertise in implementing and customizing Odoo ERP solutions. This certification ensures you're working with qualified professionals who understand both the technical and business aspects of Odoo.",
+      "button_text":"Book a Demo Today",
+      "definition_title":"What Does Odoo Ready Partner Mean?",
+      "odoo_services_title":"Our Odoo Services",
+      "definition": [
+        "Odoo Ready Partners are officially recognized by Odoo S.A. for their expertise in implementing and customizing Odoo ERP solutions. This certification ensures you're working with qualified professionals who understand both the technical and business aspects of Odoo.",
+        "At Erad, we combine this technical certification with deep UAE accounting and TAX compliance expertise — making us uniquely qualified to serve UAE SMEs."
+      ],
       "why_erad_partner": {
         "title": "Why Choose Erad as Your Odoo Partner",
         "features": [
@@ -829,7 +836,12 @@
         { "title": "Odoo Training", "description": "Comprehensive staff training to maximize system adoption and efficiency" },
         { "title": "Odoo Support", "description": "Ongoing technical support, troubleshooting, and system optimization" },
         { "title": "Odoo Integration", "description": "Connect Odoo with your existing tools and third-party applications" }
-      ]
+      ],
+      "cta":{
+        "title":"Partner with Erad for Your Odoo Journey",
+        "description":"Work with a certified Odoo Ready Partner who understands your business",
+        "cta_button":"Book a Demo Today"
+      }
     }
   },
   "global_cta": {

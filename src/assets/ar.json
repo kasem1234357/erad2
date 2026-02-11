@@ -906,6 +906,7 @@
   },
   "odoo_services": {
     "implementation": {
+      "modules_title":"وحدات Odoo لشركتك",
       "modules": [
         {
           "name": "المحاسبة",
@@ -951,81 +952,81 @@
       "why_erad_partner": {
         "title": "لماذا تختار Erad لـ Odoo",
         "features": [
-    "Official Odoo Ready Partner",
-    "UAE TAX-first setup",
-    "Implementation based on your specific business requirements",
-    "Practical training and ongoing support",
-    "Accountants leading the implementation, not just IT"
+    "الشريك الرسمي لـ Odoo Ready",
+    "إعداد الضرائب في الإمارات العربية المتحدة أولاً",
+    "التنفيذ بناءً على متطلبات عملك المحددة",
+    "التدريب العملي والدعم المستمر",
+    "المحاسبون الذين يقودون التنفيذ، وليس فقط تكنولوجيا المعلومات"
   ]
       },
       "implementation_process": {
-    "title": "Our Implementation Process",
+    "title": "عملية التنفيذ لدينا",
     "steps": [
       {
         "step": 1,
-        "title": "Discovery & Requirements",
-        "description": "Understanding your business processes and specific needs"
+        "title": "الاكتشاف والمتطلبات",
+        "description": "فهم عمليات عملك واحتياجاتك المحددة"
       },
       {
         "step": 2,
-        "title": "System Design",
-        "description": "Designing Odoo configuration aligned with UAE compliance"
+        "title": "تصميم نظام",
+        "description": "تصميم إعدادات Odoo بما يتماشى مع متطلبات دولة الإمارات العربية المتحدة"
       },
       {
         "step": 3,
-        "title": "Configuration & Setup",
-        "description": "Installing and configuring Odoo modules for your business"
+        "title": "التكوين والإعداد",
+        "description": "تثبيت وتكوين وحدات Odoo لشركتك"
       },
       {
         "step": 4,
-        "title": "Data Migration",
-        "description": "Transferring your existing data to Odoo safely"
+        "title": "ترحيل البيانات",
+        "description": "نقل بياناتك الحالية إلى Odoo بأمان"
       },
       {
         "step": 5,
-        "title": "Training & Go-Live",
-        "description": "Comprehensive staff training and system launch"
+        "title": "التدريب والبدء في العمل",
+        "description": "التدريب الشامل للموظفين وإطلاق النظام"
       },
       {
         "step": 6,
-        "title": "Ongoing Support",
-        "description": "Continuous support and optimization as you grow"
+        "title": "دعم متواصل",
+        "description": "الدعم والتحسين المستمر مع نموك"
       }
     ]
   },
   "benefits": {
-    "title": "Benefits of Odoo ERP",
+    "title": "فوائد Odoo ERP",
     "benefits_list": [
       {
-        "title": "Unified System",
-        "description": "All business processes in one platform"
+        "title": "نظام موحد",
+        "description": "جميع العمليات التجارية في منصة واحدة"
       },
       {
-        "title": "Real-Time Data",
-        "description": "Instant access to accurate business information"
+        "title": "بيانات في الوقت الفعلي",
+        "description": "الوصول الفوري إلى معلومات تجارية دقيقة"
       },
       {
-        "title": "Automation",
-        "description": "Reduce manual work and human errors"
+        "title": "الأتمتة",
+        "description": "تقليل العمل اليدوي والأخطاء البشرية"
       },
       {
-        "title": "Scalability",
-        "description": "Add modules as your business grows"
+        "title": "قابليّة التّوسّع",
+        "description": "أضف وحدات مع نمو عملك"
       },
       {
-        "title": "UAE Compliance",
-        "description": "TAX-ready and TAX-compliant from day one"
+        "title": "الامتثال لدولة الإمارات العربية المتحدة",
+        "description": "جاهز للضرائب ومتوافق مع الضرائب منذ اليوم الأول"
       },
       {
-        "title": "Cost-Effective",
-        "description": "Open-source with no hidden licensing fees"
+        "title": "اقتصادي",
+        "description": "مفتوح المصدر بدون رسوم ترخيص مخفية"
       }
     ]
   },
   "cta": {
-    "title": "Ready to Transform Your Business with Odoo?",
-    "description": "Book an Odoo consultation with Erad and see how ERP can drive your growth",
-    "button_text": "Book Odoo Consultation Now"
+    "title": "هل أنت مستعد لتحويل عملك مع Odoo؟",
+    "description": "احجز استشارة Odoo مع Erad وشاهد كيف يمكن لـ ERP أن يقود نموك",
+    "button_text": "احجز استشارة Odoo الآن"
   }
     },
     "partner_status": {
@@ -1033,7 +1034,12 @@
       "title": "شريك أودو في الإمارات العربية المتحدة",
       "description": "شريك رسمي معتمد لمنصة Odoo، يقدم حلول تخطيط موارد المؤسسات (ERP) وأتمتة المحاسبة للشركات الصغيرة والمتوسطة في الإمارات العربية المتحدة",
       "button_text":"احجز عرضًا توضيحيًا اليوم",
-      "definition": "شركاء Odoo المعتمدون هم شركاء معترف بهم رسميًا من قبل شركة Odoo S.A. لخبرتهم في تطبيق وتخصيص حلول Odoo ERP. تضمن هذه الشهادة أنك تعمل مع محترفين مؤهلين يفهمون الجوانب التقنية والتجارية لـ Odoo.",
+      "definition_title":"ماذا يعني Odoo Ready Partner؟",
+      "odoo_services_title":"خدمات Odoo الخاصة بنا",
+      "definition": [
+        "تم الاعتراف رسميًا بـ Odoo Ready Partners من قبل Odoo SA لخبرتهم في تنفيذ وتخصيص حلول Odoo ERP. تضمن هذه الشهادة أنك تعمل مع محترفين مؤهلين يفهمون الجوانب الفنية والتجارية لـ Odoo.",
+        "في Erad، نجمع بين هذه الشهادة الفنية والخبرة العميقة في مجال المحاسبة والامتثال الضريبي في دولة الإمارات العربية المتحدة - مما يجعلنا مؤهلين بشكل فريد لخدمة الشركات الصغيرة والمتوسطة في دولة الإمارات العربية المتحدة."
+      ],
       "service_list": [
         {
           "title": "تنفيذ أودو",
@@ -1080,6 +1086,11 @@
             "description": "محاسبون يقودون المشروع, ويضمنون الدقة المالية"
           }
         ]
+      },
+       "cta":{
+        "title":"كن شريكًا مع Erad في رحلتك مع Odoo",
+        "description":"اعمل مع شريك Odoo Ready المعتمد الذي يفهم عملك",
+        "cta_button":"احجز عرضًا توضيحيًا اليوم"
       }
     }
   },

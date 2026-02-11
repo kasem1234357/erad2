@@ -40,15 +40,13 @@ export const OdooPartner = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">What Does Odoo Ready Partner Mean?</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{ odoo_services.partner_status.definition_title }</h2>
             <Card className="shadow-none border-none">
               <CardContent className="pt-6 ">
-                <p className="text-lg mb-4">
-                  Odoo Ready Partners are officially recognized by Odoo S.A. for their expertise in implementing and customizing Odoo ERP solutions. This certification ensures you're working with qualified professionals who understand both the technical and business aspects of Odoo.
-                </p>
-                <p className="text-lg">
-                  At Erad, we combine this technical certification with deep UAE accounting and TAX compliance expertise — making us uniquely qualified to serve UAE SMEs.
-                </p>
+                {odoo_services.partner_status.definition.map((item,index)=>{
+                  return <p className="text-lg mb-4" key={index}>{item}</p>
+                })
+                }
               </CardContent>
             </Card>
           </div>
@@ -58,34 +56,9 @@ export const OdooPartner = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Our Odoo Services</h2>
+            <h2 className="text-3xl font-bold mb-8">{odoo_services.partner_status.odoo_services_title}</h2>
             <div className="space-y-6">
-              {[
-                {
-                  title: 'Odoo Implementation',
-                  description: 'Complete setup and configuration of Odoo modules tailored to your business'
-                },
-                {
-                  title: 'Odoo Customization',
-                  description: 'Custom modules and workflows designed for your specific requirements'
-                },
-                {
-                  title: 'Odoo Migration',
-                  description: 'Upgrade from legacy systems or older Odoo versions to the latest platform'
-                },
-                {
-                  title: 'Odoo Training',
-                  description: 'Comprehensive staff training to maximize system adoption and efficiency'
-                },
-                {
-                  title: 'Odoo Support',
-                  description: 'Ongoing technical support, troubleshooting, and system optimization'
-                },
-                {
-                  title: 'Odoo Integration',
-                  description: 'Connect Odoo with your existing tools and third-party applications'
-                }
-              ].map((service, index) => (
+              {odoo_services.partner_status.service_list.map((service, index) => (
                 <Card key={index} className="border-l-4 border-l-secondary">
                   <CardHeader>
                     <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -108,13 +81,13 @@ export const OdooPartner = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Partner with Erad for Your Odoo Journey</h2>
+            <h2 className="text-3xl font-bold mb-4">{odoo_services.partner_status.cta.title}</h2>
             <p className="text-xl mb-8 text-white/90">
-              Work with a certified Odoo Ready Partner who understands your business
+              {odoo_services.partner_status.cta.description}
             </p>
             <a href={`https://wa.me/${mockData.company.whatsapp}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Book a Demo Today
+                {odoo_services.partner_status.cta.cta_button}
               </Button>
             </a>
           </div>

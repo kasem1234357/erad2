@@ -76,7 +76,7 @@ export const OdooImplementation = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Odoo Modules for Your Business</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{odoo_services.implementation?.modules_title}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {modules.map((module, index) => {
                 const Icon = module.icon || Database;
