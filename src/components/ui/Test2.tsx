@@ -1,5 +1,10 @@
 import  { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
+import step1 from '../../assets/step1.png'
+import step2 from '../../assets/step2.png'
+import step3 from '../../assets/step3.png'
+import step4 from '../../assets/step4.png'
+import step5 from '../../assets/step5.png'
 import { useGetDictionary, type DictionaryType,  } from '../../hooks/useGetDictionary';
 
 /**
@@ -13,11 +18,11 @@ export default function Test2() {
   console.log(Home);
   
   const images =[
-       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
-       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-       "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800"
+       step1,
+       step2,
+       step3,
+       step4, 
+       step5
 
   ]
   // المحتوى الأصلي كما هو دون أي تغيير في النصوص أو المفاتيح
