@@ -2,13 +2,13 @@
 @import "tailwindcss";
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('fonts/myFont.ttf') ;
+  src: url('/fonts/myFont.ttf') ;
 
 }
 
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('fonts/myFont.TTF') ;
+  src: url('/fonts/myFont.ttf') ;
 }
 @theme {
   /* Theme Colors */
