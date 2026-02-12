@@ -8,7 +8,7 @@ type Props = {}
 
 function CertificationsSection({}: Props) {
     const certificateImages = [ 
-       certificate2,certificate3
+       certificate3,certificate2
     ]
     const {Certifications}:DictionaryType = useGetDictionary()
 

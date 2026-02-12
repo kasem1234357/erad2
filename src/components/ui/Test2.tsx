@@ -66,7 +66,7 @@ export default function Test2() {
             return (
               <div 
                 key={step.id}
-                className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+                className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 transition-all duration-1000 ease-out m-10 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Content Area */}
@@ -124,7 +124,7 @@ export default function Test2() {
 
           {/* Call to Action Card */}
           <div 
-            className={`max-w-4xl mx-auto p-12 text-center bg-[#2D538A] rounded-[3rem] shadow-2xl text-white relative overflow-hidden transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+            className={`max-w-4xl mx-auto p-12 text-center bg-[#2D538A] rounded-[3rem] shadow-2xl text-white relative overflow-hidden transition-all duration-1000 delay-500 mt-20 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
           >
             {/* Background Decorative Elements */}
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
